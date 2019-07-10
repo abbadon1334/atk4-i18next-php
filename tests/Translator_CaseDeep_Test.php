@@ -2,7 +2,7 @@
 
 namespace I18Next\Tests;
 
-class Translator_CaseDeep_Test extends TranslatorBaseTestCase
+class Translator_CaseDeep_Test extends TranslatorBaseCase
 {
     public function testDeep()
     {

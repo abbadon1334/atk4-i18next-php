@@ -45,6 +45,7 @@ $cases = [
     'friend'                         => [
         'en' => 'A friend',
         'it' => 'Un conoscente',
+        'ro' => 'Un prieten'
     ],
     'friend_male'                    => [
         'en' => 'A boyfriend',
@@ -118,6 +119,18 @@ $cases = [
     'test_other_language_single_key' => [
         'ro' => 'alta limba',
     ],
+    'atk4_model' => [
+        'en' => 'user : {{first_name}} {{last_name}} with email : {{email}}',
+        'it' => 'utente : {{first_name}} {{last_name}} con email : {{email}}'
+    ],
+    'atk4_model_object' => [
+        'en' => 'user : {{user.first_name}} {{user.last_name}} with email : {{user.email}}',
+        'it' => 'utente : {{user.first_name}} {{user.last_name}} con email : {{user.email}}'
+    ],
+    'atk4_model_object2' => [
+        'en' => 'user : {{user.first_name}} {{user.last_name}} with email : {{address.email}}',
+        'it' => 'utente : {{user.first_name}} {{user.last_name}} con email : {{address.email}}'
+    ]
 ];
 
 $path_def = [];
@@ -137,6 +150,10 @@ foreach ($cases as $key => $code_def) {
                 break;
             case 'key':
                 $file_name = 'key';
+                break;
+
+            case 'atk':
+                $file_name = 'atk';
                 break;
             default:
                 $file_name = $key;

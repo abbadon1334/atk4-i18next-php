@@ -8,7 +8,7 @@ use I18Next\Exception\LanguageAlreadyPresent;
 use I18Next\Exception\LanguageLocaleNotExists;
 use I18Next\Exception\LanguagePathNotDefined;
 
-class Translator
+class Translator implements TranslatorInterface
 {
     /** @var Locale[] */
     public $locales = [];

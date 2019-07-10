@@ -1,6 +1,6 @@
 <?php
 
-include 'cases.php';
+include __DIR__.'/cases.php';
 
 foreach ($path_def as $path => $array_def) {
     foreach ($array_def as $key => $def) {

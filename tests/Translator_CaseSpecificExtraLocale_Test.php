@@ -2,7 +2,7 @@
 
 namespace I18Next\Tests;
 
-class Translator_CaseSpecificExtraLocale_Test extends TranslatorBaseTestCase
+class Translator_CaseSpecificExtraLocale_Test extends TranslatorBaseCase
 {
     public function test()
     {

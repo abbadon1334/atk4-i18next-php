@@ -6,7 +6,7 @@ use I18Next\Exception\LanguageAlreadyPresent;
 use I18Next\Exception\LanguageLocaleNotExists;
 use I18Next\Exception\LanguagePathNotDefined;
 
-class Translator_Exceptions_Test extends TranslatorBaseTestCase
+class Translator_Exceptions_Test extends TranslatorBaseCase
 {
     public function test()
     {

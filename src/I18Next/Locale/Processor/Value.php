@@ -26,11 +26,50 @@ class Value extends AbstractProcessor
             return $found_key;
         }
 
-        foreach ($parameters as $index => $value) {
-            $found_key = str_replace('{{'.$index.'}}', $value, $found_key);
-            $this->processValueNested($found_key, $parameters);
+        $re = '/{{([\S]+)}}/m';
+        preg_match_all($re, $found_key, $matches, PREG_SET_ORDER, 0);
+
+        foreach ($matches as $group) {
+            foreach ($group as $key => $index) {
+                if(0 === $key)
+                {
+                    continue;
+                }
+
+                $found_key = $this->processValueReplaceParamenter($found_key, $index, $parameters);
+                $this->processValueNested($found_key, $parameters);
+            }
         }
 
+        return $found_key;
+    }
+
+    private function processValueReplaceParamenter(string &$found_key, $index, $parameters)
+    {
+        $value = $parameters[$index] ?? null;
+
+        $token = explode('.',$index);
+        if(isset($token[1]))
+        {
+            $value = $parameters[$token[0]] ?? null;
+
+            if(is_a($value,'\atk4\data\Model'))
+            {
+                $value = $value->get();
+            }
+
+            if(is_object($value))
+            {
+                $value = (array) $value;
+            }
+
+            if(is_array($value))
+            {
+                $value = $value[$token[1]];
+            }
+        }
+
+        $found_key = str_replace('{{' . $index . '}}', $value, $found_key);
         return $found_key;
     }
 
@@ -66,4 +105,5 @@ class Value extends AbstractProcessor
             $found_key = str_replace($match_found, $value, $found_key);
         }
     }
+
 }

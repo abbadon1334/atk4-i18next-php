@@ -2,7 +2,7 @@
 
 namespace I18Next\Tests;
 
-class Translator_CasePlural_Test extends TranslatorBaseTestCase
+class Translator_CasePlural_Test extends TranslatorBaseCase
 {
     public function test0_int()
     {

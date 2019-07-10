@@ -2,7 +2,7 @@
 
 namespace I18Next\Tests;
 
-class Translator_CaseSimple_Test extends TranslatorBaseTestCase
+class Translator_CaseSimple_Test extends TranslatorBaseCase
 {
     public function testNoFallback()
     {

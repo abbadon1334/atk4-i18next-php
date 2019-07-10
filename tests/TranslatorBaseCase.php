@@ -5,7 +5,7 @@ namespace I18Next\Tests;
 use I18Next\Translator;
 use PHPUnit\Framework\TestCase;
 
-class TranslatorBaseTestCase extends TestCase
+abstract class TranslatorBaseCase extends TestCase
 {
     /** @var Translator */
     public $translator;
@@ -13,7 +13,7 @@ class TranslatorBaseTestCase extends TestCase
     protected function setUp(): void
     {
         $this->translator = new TranslatorMock();
-        $this->translator->setTranslationsPath(__DIR__.'/../demos/locales');
+        $this->translator->setTranslationsPath(__DIR__.'/data/locales');
     }
 
     protected function setupTranslatorLanguages(string $language, ?string $fallback = null)
