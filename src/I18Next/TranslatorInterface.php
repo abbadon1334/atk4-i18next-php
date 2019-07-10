@@ -14,5 +14,5 @@ interface TranslatorInterface
      *
      * @return string The translated string
      */
-    public function _(string $key, ?array $parameters = NULL, ?string $context = NULL, ?string $locale = NULL): string;
+    public function _(string $key, ?array $parameters = null, ?string $context = null, ?string $locale = null): string;
 }
