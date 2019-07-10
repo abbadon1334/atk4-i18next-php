@@ -33,7 +33,6 @@ jobs:
             - v1-dependencies-
 
       - run: composer install -n --prefer-dist
-      - run: composer require codeception/codeception
 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
@@ -42,5 +41,6 @@ jobs:
 
       # run tests with phpunit or codecept
       #- run: ./vendor/bin/phpunit
+      - run: ./vendor/bin/codecept bootstrap
       - run: ./vendor/bin/codecept build
-      - run: ./vendor/bin/codecept run
+      - run: ./vendor/bin/codecept run --xml result.xml

@@ -18,6 +18,7 @@
     "require-dev": {
         "atk4/data": "dev-develop@dev",
         "codacy/coverage": "dev-master@dev",
+        "codeception/codeception": "^3.0",
         "friendsofphp/php-cs-fixer": "dev-master@dev",
         "phpmd/phpmd": "2.6.1",
         "phpmetrics/phpmetrics": "dev-master@dev",
