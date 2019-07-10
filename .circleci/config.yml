@@ -33,6 +33,7 @@ jobs:
             - v1-dependencies-
 
       - run: composer install -n --prefer-dist
+      - run: composer require codeception/codeception
 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
