@@ -1,9 +1,0 @@
-{
-    "friend": "Un conoscente",
-    "friend_male": "Un amico",
-    "friend_female": "Un'amica",
-    "friend_male_plural": "amici",
-    "friend_female_plural": "amiche",
-    "friend_male_withCount_plural": "{{count}} amici",
-    "friend_female_withCount_plural": "{{count}} amiche"
-}
