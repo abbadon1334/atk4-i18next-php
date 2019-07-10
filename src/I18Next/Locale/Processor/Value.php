@@ -49,7 +49,6 @@ class Value extends AbstractProcessor
 
         $token = explode('.', $index);
         if (isset($token[1])) {
-
             $value = $parameters[$token[0]] ?? null;
 
             if (is_subclass_of($value, '\atk4\data\Model', true)) {
