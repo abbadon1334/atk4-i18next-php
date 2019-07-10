@@ -1,0 +1,5 @@
+{
+    "atk4_model": "user : {{first_name}} {{last_name}} with email : {{email}}",
+    "atk4_model_object": "user : {{user.first_name}} {{user.last_name}} with email : {{user.email}}",
+    "atk4_model_object2": "user : {{user.first_name}} {{user.last_name}} with email : {{address.email}}"
+}

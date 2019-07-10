@@ -1,0 +1,27 @@
+{
+    "key": "a key",
+    "key_no_fallback": "not exists in language, return a key from fallback",
+    "key_deep": {
+        "deep": {
+            "deep": "key deep"
+        }
+    },
+    "key_inline.deep.inline": "key deep in line",
+    "key_context": "key with context",
+    "key_interpolate": "{{what}} is {{how}}",
+    "key_interpolate_array": "I am {{author.name}} and i have {{author.age}} years old",
+    "key_escaped": "no danger {{myVar}}",
+    "key_unescaped": "no danger {{-myVar}}",
+    "key_format_date": "The current date is {{date, MM\/DD\/YYYY}}",
+    "key_format_uppercase": "{{text, uppercase}} just uppercased",
+    "key_format_lowercase": "{{text, lowercase}} just lowercased",
+    "key_format_ucfirst": "{{text, ucfirst}} just ucfirst",
+    "key_0": "zero",
+    "key_1": "one",
+    "key_2": "two",
+    "key_3": "few",
+    "key_4": "many",
+    "key_5": "other",
+    "key_nesting_interpolate1": "hello world",
+    "key_nesting_interpolate2": "say {{val}}"
+}
