@@ -16,6 +16,7 @@
         "atk4/core": "dev-develop@dev"
     },
     "require-dev": {
+        "atk4/data": "dev-develop@dev",
         "codacy/coverage": "dev-master@dev",
         "friendsofphp/php-cs-fixer": "dev-master@dev",
         "phpmd/phpmd": "2.6.1",

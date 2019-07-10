@@ -16,7 +16,7 @@
         </whitelist>
     </filter>
     <testsuites>
-        <testsuite name="I18Next-php">
+        <testsuite name="ATK4-I18Next-php">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
