@@ -23,6 +23,7 @@ final class Translations
 
     /**
      * @param string      $path
+     * @param bool        $use_filename_as_namespace
      * @param string|null ...$namespace_priority
      *
      * @throws Exception

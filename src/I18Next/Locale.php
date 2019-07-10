@@ -25,6 +25,7 @@ class Locale
 
     /**
      * @param string      $path
+     * @param bool        $use_filename_as_namespace
      * @param string|null ...$namespace_priority
      *
      * @throws Exception
@@ -32,11 +33,6 @@ class Locale
     public function load(string $path, bool $use_filename_as_namespace, ?string ...$namespace_priority): void
     {
         $this->translations->load($path.DIRECTORY_SEPARATOR.$this->code, $use_filename_as_namespace, ...$namespace_priority);
-    }
-
-    public function useNamespace(): bool
-    {
-        return $this->translations->useNamespaces();
     }
 
     public function process(string $key, ?array $parameters = null, ?string $context = null): ?string

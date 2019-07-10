@@ -30,6 +30,13 @@ class Translator_Atk4Trait_Test extends TranslatorBaseCase
         $result = $child->_('friend', null, null, 'ro');
         $this->assertEquals('Un prieten', $result);
     }
+
+    public function testException()
+    {
+        $this->expectException(Exception::class);
+        $app = new ATK4AppScopeMock();
+        $app->_('friend');
+    }
 }
 
 // @codingStandardsIgnoreStart

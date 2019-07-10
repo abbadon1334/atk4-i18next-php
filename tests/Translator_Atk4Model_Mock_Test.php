@@ -70,6 +70,30 @@ class Translator_Atk4Model_Test extends TranslatorBaseCase
         ]);
         $this->assertEquals('utente : John Smith con email : sara.jones@agiletoolkit.com', $result);
     }
+
+    public function testWithModel()
+    {
+        $this->model->load(1);
+
+        $this->setupTranslatorLanguages('it', 'en');
+
+        $result = $this->translator->_('atk4_model_object2', [
+            'user' => $this->model,
+            'address' => $this->model,
+        ]);
+        $this->assertEquals('utente : John Smith con email : john.smith@agiletoolkit.com', $result);
+    }
+
+    public function testWithObject()
+    {
+        $this->model->load(2);
+
+        $this->setupTranslatorLanguages('it', 'en');
+
+        $result = $this->translator->_('atk4_model_object', ['user' => (object) ($this->model->data) ]);
+        $this->assertEquals('utente : Sarah Jones con email : sara.jones@agiletoolkit.com', $result);
+    }
+
 }
 // @codingStandardsIgnoreStart
 class ATK4ModelMock extends Model

@@ -35,7 +35,7 @@ class Value extends AbstractProcessor
                     continue;
                 }
 
-                $found_key = $this->processValueReplaceParamenter($found_key, $index, $parameters);
+                $found_key = $this->processValueReplaceParameter($found_key, $index, $parameters);
                 $this->processValueNested($found_key, $parameters);
             }
         }
@@ -43,15 +43,16 @@ class Value extends AbstractProcessor
         return $found_key;
     }
 
-    private function processValueReplaceParamenter(string &$found_key, $index, $parameters)
+    private function processValueReplaceParameter(string &$found_key, $index, $parameters)
     {
         $value = $parameters[$index] ?? null;
 
         $token = explode('.', $index);
         if (isset($token[1])) {
+
             $value = $parameters[$token[0]] ?? null;
 
-            if (is_a($value, '\atk4\data\Model')) {
+            if (is_subclass_of($value, '\atk4\data\Model', true)) {
                 $value = $value->get();
             }
 

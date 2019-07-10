@@ -57,4 +57,22 @@ class Translator_CaseNamespace_Test extends TranslatorBaseCase
         $result = $this->translator->_('namespace3:nskey');
         $this->assertEquals('namespace3 key', $result);
     }
+
+    public function test2_int()
+    {
+        $this->translator->setNamespacePriority('key');
+        $this->setupTranslatorLanguages('en');
+
+        $result = $this->translator->_('key', ['count' => 2]);
+        $this->assertEquals('two', $result);
+    }
+
+    public function test6_int()
+    {
+        $this->translator->setNamespacePriority('key');
+        $this->setupTranslatorLanguages('it', 'en');
+
+        $result = $this->translator->_('key', ['count' => 6]);
+        $this->assertEquals('other', $result);
+    }
 }

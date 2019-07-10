@@ -25,9 +25,7 @@ class Key extends AbstractProcessor
             return $this->processWithCounter($key, $counter);
         }
 
-        if ($this->translations->useNamespaces()) {
-            return $this->processWithNamespaceWithCounter($key, $counter);
-        }
+        return $this->processWithNamespaceWithCounter($key, $counter);
     }
 
     private function processWithCounter(string $key, ?int $counter = null)
