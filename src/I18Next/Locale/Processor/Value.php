@@ -31,8 +31,7 @@ class Value extends AbstractProcessor
 
         foreach ($matches as $group) {
             foreach ($group as $key => $index) {
-                if(0 === $key)
-                {
+                if (0 === $key) {
                     continue;
                 }
 
@@ -48,28 +47,25 @@ class Value extends AbstractProcessor
     {
         $value = $parameters[$index] ?? null;
 
-        $token = explode('.',$index);
-        if(isset($token[1]))
-        {
+        $token = explode('.', $index);
+        if (isset($token[1])) {
             $value = $parameters[$token[0]] ?? null;
 
-            if(is_a($value,'\atk4\data\Model'))
-            {
+            if (is_a($value, '\atk4\data\Model')) {
                 $value = $value->get();
             }
 
-            if(is_object($value))
-            {
+            if (is_object($value)) {
                 $value = (array) $value;
             }
 
-            if(is_array($value))
-            {
+            if (is_array($value)) {
                 $value = $value[$token[1]];
             }
         }
 
-        $found_key = str_replace('{{' . $index . '}}', $value, $found_key);
+        $found_key = str_replace('{{'.$index.'}}', $value, $found_key);
+
         return $found_key;
     }
 
@@ -105,5 +101,4 @@ class Value extends AbstractProcessor
             $found_key = str_replace($match_found, $value, $found_key);
         }
     }
-
 }

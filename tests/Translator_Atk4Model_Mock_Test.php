@@ -2,13 +2,8 @@
 
 namespace I18Next\Tests;
 
-use atk4\core\AppScopeTrait;
-use atk4\core\ContainerTrait;
-use atk4\core\Exception;
-use atk4\core\InitializerTrait;
 use atk4\data\Model;
 use atk4\data\Persistence\Array_;
-use I18Next\atk4\TranslatorI18NextTrait;
 
 class Translator_Atk4Model_Test extends TranslatorBaseCase
 {
@@ -29,7 +24,7 @@ class Translator_Atk4Model_Test extends TranslatorBaseCase
             ],
         ];
 
-        $p           = new Array_($a);
+        $p = new Array_($a);
         $this->model = new ATK4ModelMock($p, 'user');
     }
 
@@ -42,7 +37,7 @@ class Translator_Atk4Model_Test extends TranslatorBaseCase
         $result = $this->translator->_('atk4_model', $this->model->data);
         $this->assertEquals('utente : John Smith con email : john.smith@agiletoolkit.com', $result);
 
-        $result = $this->translator->_('atk4_model', $this->model->data, NULL, 'en');
+        $result = $this->translator->_('atk4_model', $this->model->data, null, 'en');
         $this->assertEquals('user : John Smith with email : john.smith@agiletoolkit.com', $result);
 
         // using model as context is the same as atk4_model, because context added _ between $key and $context
@@ -71,14 +66,14 @@ class Translator_Atk4Model_Test extends TranslatorBaseCase
 
         $result = $this->translator->_('atk4_model_object2', [
             'user' => $this->model->get(),
-            'address' => $this->model->load(2)->get()
+            'address' => $this->model->load(2)->get(),
         ]);
         $this->assertEquals('utente : John Smith con email : sara.jones@agiletoolkit.com', $result);
     }
 }
 // @codingStandardsIgnoreStart
-class ATK4ModelMock extends Model {
-
+class ATK4ModelMock extends Model
+{
     public function init()
     {
         parent::init();

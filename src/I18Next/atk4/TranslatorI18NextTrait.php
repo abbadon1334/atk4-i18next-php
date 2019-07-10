@@ -2,8 +2,8 @@
 
 namespace I18Next\atk4;
 
-use I18Next\TranslatorInterface;
 use atk4\core\Exception;
+use I18Next\TranslatorInterface;
 
 trait TranslatorI18NextTrait
 {
@@ -33,12 +33,11 @@ trait TranslatorI18NextTrait
      */
     public function _(
         string $message,
-        ?array $parameters = NULL,
-        ?string $domain = NULL,
-        ?string $locale = NULL
+        ?array $parameters = null,
+        ?string $domain = null,
+        ?string $locale = null
     ): string {
-
-        if ($this->translator === NULL) {
+        if ($this->translator === null) {
             throw new Exception('Translator for TranslatorI18NextTrait must be defined with setTranslator');
         }
 
