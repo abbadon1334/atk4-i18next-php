@@ -1,6 +1,5 @@
 <?php
 
-
 namespace I18Next\Tests;
 
 use I18Next\Translator;
@@ -14,14 +13,14 @@ class TranslatorBaseTestCase extends TestCase
     protected function setUp(): void
     {
         $this->translator = new TranslatorMock();
-        $this->translator->setTranslationsPath(__DIR__ . '/../demos/locales');
+        $this->translator->setTranslationsPath(__DIR__.'/../demos/locales');
     }
 
-    protected function setupTranslatorLanguages(string $language, ?string $fallback = NULL)
+    protected function setupTranslatorLanguages(string $language, ?string $fallback = null)
     {
         $this->translator->setLanguagePrimary($language);
 
-        if ($fallback !== NULL) {
+        if ($fallback !== null) {
             $this->translator->setLanguageFallback($fallback);
         }
     }

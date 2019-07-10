@@ -9,7 +9,7 @@ class Translator_CaseSpecificExtraLocale_Test extends TranslatorBaseTestCase
         $this->setupTranslatorLanguages('it', 'en');
         $this->translator->addLanguage('ro');
 
-        $result = $this->translator->_('test_other_language_single_key', NULL, NULL, 'ro');
-        $this->assertEquals("alta limba", $result);
+        $result = $this->translator->_('test_other_language_single_key', null, null, 'ro');
+        $this->assertEquals('alta limba', $result);
     }
 }

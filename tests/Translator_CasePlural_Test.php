@@ -9,7 +9,7 @@ class Translator_CasePlural_Test extends TranslatorBaseTestCase
         $this->setupTranslatorLanguages('en');
 
         $result = $this->translator->_('key', ['count' => 0]);
-        $this->assertEquals("zero", $result);
+        $this->assertEquals('zero', $result);
     }
 
     public function test1_int()
@@ -17,7 +17,7 @@ class Translator_CasePlural_Test extends TranslatorBaseTestCase
         $this->setupTranslatorLanguages('en');
 
         $result = $this->translator->_('key', ['count' => 1]);
-        $this->assertEquals("one", $result);
+        $this->assertEquals('one', $result);
     }
 
     public function test2_int()
@@ -25,7 +25,7 @@ class Translator_CasePlural_Test extends TranslatorBaseTestCase
         $this->setupTranslatorLanguages('en');
 
         $result = $this->translator->_('key', ['count' => 2]);
-        $this->assertEquals("two", $result);
+        $this->assertEquals('two', $result);
     }
 
     public function test6_int()
@@ -33,6 +33,6 @@ class Translator_CasePlural_Test extends TranslatorBaseTestCase
         $this->setupTranslatorLanguages('it', 'en');
 
         $result = $this->translator->_('key', ['count' => 6]);
-        $this->assertEquals("other", $result);
+        $this->assertEquals('other', $result);
     }
 }

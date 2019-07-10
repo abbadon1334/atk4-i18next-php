@@ -9,6 +9,6 @@ class Translator_CaseInterpolation_Test extends TranslatorBaseTestCase
         $this->setupTranslatorLanguages('it', 'en');
 
         $result = $this->translator->_('nesting1');
-        $this->assertEquals("1 2 3", $result);
+        $this->assertEquals('1 2 3', $result);
     }
 }

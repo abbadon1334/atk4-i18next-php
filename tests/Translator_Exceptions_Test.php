@@ -38,6 +38,6 @@ class Translator_Exceptions_Test extends TranslatorBaseTestCase
         $this->expectException(LanguageLocaleNotExists::class);
 
         $this->translator = new TranslatorMock();
-        $this->translator->_('test', NULL, NULL, 'no-language');
+        $this->translator->_('test', null, null, 'no-language');
     }
 }

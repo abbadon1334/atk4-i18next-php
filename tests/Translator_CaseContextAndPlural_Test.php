@@ -9,6 +9,6 @@ class Translator_CaseContextAndPlural_Test extends TranslatorBaseTestCase
         $this->setupTranslatorLanguages('it', 'en');
 
         $result = $this->translator->_('friend', ['count' => 2], 'female');
-        $this->assertEquals("amiche", $result);
+        $this->assertEquals('amiche', $result);
     }
 }

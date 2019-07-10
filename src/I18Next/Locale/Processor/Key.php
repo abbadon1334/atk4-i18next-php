@@ -1,5 +1,6 @@
-<?php declare(strict_types=1);
+<?php
 
+declare(strict_types=1);
 
 namespace I18Next\Locale\Processor;
 
@@ -12,15 +13,15 @@ class Key extends AbstractProcessor
      *
      * @return string|null
      */
-    public function processKey(string $key, ?string $context = NULL, ?int $counter = NULL)
+    public function processKey(string $key, ?string $context = null, ?int $counter = null)
     {
         // if defined add context needed in any case
         if ($context) {
-            $key .= '_' . $context;
+            $key .= '_'.$context;
         }
 
         // exit if not use namespaces
-        if (!$this->translations->useNamespaces()) {
+        if (! $this->translations->useNamespaces()) {
             return $this->processWithCounter($key, $counter);
         }
 
@@ -29,9 +30,9 @@ class Key extends AbstractProcessor
         }
     }
 
-    private function processWithCounter(string $key, ?int $counter = NULL)
+    private function processWithCounter(string $key, ?int $counter = null)
     {
-        if (NULL === $counter) {
+        if (null === $counter) {
             $result = $this->process($key);
             // cover case : when key has plural but is called without specific $counter
             if (is_array($result) && isset($result[1])) {
@@ -44,75 +45,73 @@ class Key extends AbstractProcessor
         // if there is a counter can be higher than defined
         $key_all_plurals = $this->process($key);
         // not is array return null
-        if (!is_array($key_all_plurals)) {
-            return NULL;
+        if (! is_array($key_all_plurals)) {
+            return null;
         }
 
         $key_all_plurals_keys = array_keys($key_all_plurals);
 
-        $counter             = $counter ?? 1;
-        $key_all_plurals_max = (int)end($key_all_plurals_keys);
+        $counter = $counter ?? 1;
+        $key_all_plurals_max = (int) end($key_all_plurals_keys);
         if ($counter > $key_all_plurals_max) {
             return end($key_all_plurals);
         }
 
-        return $this->process($key . '/' . $counter);
+        return $this->process($key.'/'.$counter);
     }
 
     private function process($key)
     {
         $key = str_replace('.', '/', $key);
 
-        return $this->translations->getConfig($key) ?? NULL;
+        return $this->translations->getConfig($key) ?? null;
     }
 
-    private function processWithNamespaceWithCounter(string $key, ?int $counter = NULL)
+    private function processWithNamespaceWithCounter(string $key, ?int $counter = null)
     {
-        if (NULL === $counter) {
+        if (null === $counter) {
             return $this->processWithNamespace($key);
         }
 
         // if there is a counter can be higher than defined
         $key_all_plurals = $this->processWithNamespace($key);
         // not is array return null
-        if (!is_array($key_all_plurals)) {
-            return NULL;
+        if (! is_array($key_all_plurals)) {
+            return null;
         }
 
         $key_all_plurals_keys = array_keys($key_all_plurals);
 
-        $counter             = $counter ?? 1;
-        $key_all_plurals_max = (int)end($key_all_plurals_keys);
+        $counter = $counter ?? 1;
+        $key_all_plurals_max = (int) end($key_all_plurals_keys);
         if ($counter > $key_all_plurals_max) {
             return end($key_all_plurals);
         }
 
-        return $this->processWithNamespace($key . '/' . $counter);
+        return $this->processWithNamespace($key.'/'.$counter);
     }
 
     private function processWithNamespace($key)
     {
         $key_namespace = $this->getKeyNamespace($key);
-        $key           = $this->getOnlyKeyFromNamespacedKey($key, $key_namespace);
+        $key = $this->getOnlyKeyFromNamespacedKey($key, $key_namespace);
 
         // try get original namespaced key
-        $found = $this->process($key_namespace . '/' . $key);
+        $found = $this->process($key_namespace.'/'.$key);
         // if found exit
-        if (NULL !== $found) {
+        if (null !== $found) {
             return $found;
         }
 
         // if not found try to find key with fallback namespaces
         foreach ($this->translations->getNamespaceRanked() as $namespace_ranked) {
             // try found with fallback namespace
-            $found = $this->process($namespace_ranked . '/' . $key);
+            $found = $this->process($namespace_ranked.'/'.$key);
             // if found exit
-            if (NULL !== $found) {
+            if (null !== $found) {
                 return $found;
             }
         }
-
-        return NULL;
     }
 
     private function getKeyNamespace($key)
@@ -120,13 +119,13 @@ class Key extends AbstractProcessor
         // any strange charcter is forced by filesystem and i hope common sense
         preg_match('/[\S]+:/A', $key, $matches);
 
-        $result = $matches[0] ?? NULL;
+        $result = $matches[0] ?? null;
 
-        return NULL !== $result ? trim($result, ':') : NULL;
+        return null !== $result ? trim($result, ':') : null;
     }
 
     private function getOnlyKeyFromNamespacedKey($key, $namespace)
     {
-        return substr($key, $namespace ? strlen($namespace . ':') : 0);
+        return substr($key, $namespace ? strlen($namespace.':') : 0);
     }
 }

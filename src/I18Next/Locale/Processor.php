@@ -1,5 +1,6 @@
-<?php declare(strict_types=1);
+<?php
 
+declare(strict_types=1);
 
 namespace I18Next\Locale;
 
@@ -19,8 +20,8 @@ class Processor
 
     public function __construct(Translations $translations)
     {
-        $this->translations   = $translations;
-        $this->processorKey   = new Key($this->translations);
+        $this->translations = $translations;
+        $this->processorKey = new Key($this->translations);
         $this->processorValue = new Value($this->translations);
     }
 
@@ -31,7 +32,7 @@ class Processor
      *
      * @return string|null
      */
-    public function process(string $key, ?array $parameters = NULL, ?string $context = NULL): ?string
+    public function process(string $key, ?array $parameters = null, ?string $context = null): ?string
     {
         $counter = $this->getCountFromParameters($parameters);
         $context = $this->getContextFromParameters($parameters, $context);
@@ -41,12 +42,12 @@ class Processor
         return $this->processorValue->processValue($found_key, $parameters);
     }
 
-    protected function getCountFromParameters(?array $parameters = NULL): ?int
+    protected function getCountFromParameters(?array $parameters = null): ?int
     {
-        return isset($parameters['count']) ? (int)$parameters['count'] : NULL;
+        return isset($parameters['count']) ? (int) $parameters['count'] : null;
     }
 
-    protected function getContextFromParameters(?array $parameters = NULL, ?string $context = NULL): ?string
+    protected function getContextFromParameters(?array $parameters = null, ?string $context = null): ?string
     {
         return $parameters['context'] ?? $context;
     }

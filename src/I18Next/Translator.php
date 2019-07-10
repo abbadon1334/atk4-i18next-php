@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace I18Next;
 
@@ -62,8 +64,7 @@ class Translator
         }
 
         $this->locales[$code] = new Locale($code);
-        $this->locales[$code]->load($this->translations_path, $this->use_filename_as_namespace, ...
-            $this->namespace_priority);
+        $this->locales[$code]->load($this->translations_path, $this->use_filename_as_namespace, ...$this->namespace_priority);
     }
 
     public function setLanguageFallback(string $fallback_code): void
@@ -72,7 +73,7 @@ class Translator
         $this->addLanguage($fallback_code);
     }
 
-    public function _(string $key, ?array $parameters = NULL, ?string $context = NULL, ?string $locale = NULL): string
+    public function _(string $key, ?array $parameters = null, ?string $context = null, ?string $locale = null): string
     {
         if ($locale) {
             return $this->getLocale($locale)->process($key, $parameters, $context) ?? $key;
@@ -80,14 +81,14 @@ class Translator
 
         // try resolve in primary language
         $result = $this->getLocale($this->language)->process($key, $parameters, $context);
-        if (NULL !== $result) {
+        if (null !== $result) {
             return $result;
         }
 
         // try resolve in fallback language
         if ($this->fallback) {
             $result = $this->getLocale($this->fallback)->process($key, $parameters, $context);
-            if (NULL !== $result) {
+            if (null !== $result) {
                 return $result;
             }
         }
@@ -97,9 +98,9 @@ class Translator
 
     protected function getLocale(string $locale): Locale
     {
-        $result = $this->locales[$locale] ?? NULL;
+        $result = $this->locales[$locale] ?? null;
 
-        if (NULL !== $result) {
+        if (null !== $result) {
             return $result;
         }
 

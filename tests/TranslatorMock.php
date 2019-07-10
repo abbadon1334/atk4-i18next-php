@@ -6,5 +6,4 @@ use I18Next\Translator;
 
 class TranslatorMock extends Translator
 {
-
 }

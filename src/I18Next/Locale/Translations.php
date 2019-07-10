@@ -1,5 +1,6 @@
-<?php declare(strict_types=1);
+<?php
 
+declare(strict_types=1);
 
 namespace I18Next\Locale;
 
@@ -33,7 +34,7 @@ final class Translations
 
         $configs = [];
         foreach (new DirectoryIterator($path) as $fileInfo) {
-            if (!$fileInfo->isFile()) {
+            if (! $fileInfo->isFile()) {
                 continue;
             }
 
@@ -53,6 +54,7 @@ final class Translations
         // if namespaces are used set loaded configs and return
         if ($this->useNamespaces()) {
             $this->config = $configs;
+
             return;
         }
 
@@ -71,7 +73,7 @@ final class Translations
     private function setNamespacePriority(?string ...$namespace_priority): void
     {
         $namespace_priority = array_filter($namespace_priority, function ($value) {
-            return !empty($value);
+            return ! empty($value);
         });
 
         // exit if no namespace priority
@@ -105,16 +107,16 @@ final class Translations
 
         $counter = 2;
         if ($key_plural_definition !== 'plural') {
-            $counter = (int)$key_plural_definition;
+            $counter = (int) $key_plural_definition;
         }
 
         $key_counter_one_value = $this->getConfig($cleared_key);
-        if (NULL !== $key_counter_one_value && !is_array($key_counter_one_value)) {
+        if (null !== $key_counter_one_value && ! is_array($key_counter_one_value)) {
             $this->setConfig($cleared_key, []);
-            $this->setConfig($cleared_key . "/1", $key_counter_one_value);
+            $this->setConfig($cleared_key.'/1', $key_counter_one_value);
         }
 
-        $this->setConfig($cleared_key . '/' . (string)$counter, $value);
+        $this->setConfig($cleared_key.'/'.(string) $counter, $value);
     }
 
     private function afterReadProcessForKeyDeepInline()
@@ -131,13 +133,13 @@ final class Translations
 
     private function afterReadAddNamespaceIfNeeded(array &$config, string $namespace): void
     {
-        if (!$this->useNamespaces()) {
+        if (! $this->useNamespaces()) {
             $config[] = $this->config;
 
             return;
         }
 
-        $namespace_key = $this->useNamespaces() ? $namespace : NULL;
+        $namespace_key = $this->useNamespaces() ? $namespace : null;
         // use array_filter to remove references
         $config[$namespace_key] = array_filter($this->config, function ($v) {
             return $v;

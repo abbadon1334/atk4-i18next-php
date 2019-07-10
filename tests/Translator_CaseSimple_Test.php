@@ -19,7 +19,7 @@ class Translator_CaseSimple_Test extends TranslatorBaseTestCase
 
     public function testFallback()
     {
-        $this->setupTranslatorLanguages('it', 'en');;
+        $this->setupTranslatorLanguages('it', 'en');
 
         $result = $this->translator->_('friend');
         $this->assertEquals('Un conoscente', $result);

@@ -6,5 +6,4 @@ use atk4\core\Exception;
 
 class LanguageAlreadyPresent extends Exception
 {
-
 }

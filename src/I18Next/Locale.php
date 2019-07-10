@@ -1,5 +1,6 @@
-<?php declare(strict_types=1);
+<?php
 
+declare(strict_types=1);
 
 namespace I18Next;
 
@@ -17,9 +18,9 @@ class Locale
 
     public function __construct(string $code)
     {
-        $this->code         = $code;
+        $this->code = $code;
         $this->translations = new Translations();
-        $this->processor    = new Processor($this->translations);
+        $this->processor = new Processor($this->translations);
     }
 
     /**
@@ -30,8 +31,7 @@ class Locale
      */
     public function load(string $path, bool $use_filename_as_namespace, ?string ...$namespace_priority): void
     {
-        $this->translations->load($path . DIRECTORY_SEPARATOR . $this->code, $use_filename_as_namespace, ...
-            $namespace_priority);
+        $this->translations->load($path.DIRECTORY_SEPARATOR.$this->code, $use_filename_as_namespace, ...$namespace_priority);
     }
 
     public function useNamespace(): bool
@@ -39,7 +39,7 @@ class Locale
         return $this->translations->useNamespaces();
     }
 
-    public function process(string $key, ?array $parameters = NULL, ?string $context = NULL): ?string
+    public function process(string $key, ?array $parameters = null, ?string $context = null): ?string
     {
         return $this->processor->process($key, $parameters, $context);
     }
