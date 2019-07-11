@@ -69,7 +69,7 @@ final class Value extends AbstractProcessor
             }
 
             if (is_array($value)) {
-                $value = $value[$token[1]];
+                $value = $value[$token[1]] ?? '{{'.$index.'}}';
             }
         }
 

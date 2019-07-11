@@ -49,6 +49,24 @@ class Translator_CaseNamespace_Test extends TranslatorBaseCase
         $this->assertEquals('namespace3 chiave', $result);
     }
 
+    public function testNamespaceSwitch()
+    {
+        $this->translator->useFilenameAsNamespace(true);
+        $this->translator->setNamespacePriority('namespace3', 'namespace1', 'namespace3');
+        $this->setupTranslatorLanguages('it', 'en');
+        $result = $this->translator->_('namespace3:nskey', ['namespace' => 'namespace1']);
+        $this->assertEquals('namespace1 chiave', $result);
+    }
+
+    public function testNamespaceSetViaParameters()
+    {
+        $this->translator->useFilenameAsNamespace(true);
+        $this->translator->setNamespacePriority('namespace3', 'namespace1', 'namespace3');
+        $this->setupTranslatorLanguages('it', 'en');
+        $result = $this->translator->_('nskey', ['namespace' => 'namespace1']);
+        $this->assertEquals('namespace1 chiave', $result);
+    }
+
     public function testNoPriorityWithprefixedNamespaceNoFallbackLanguage()
     {
         $this->translator->useFilenameAsNamespace(true);
