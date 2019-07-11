@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor>
+    <parser>
+        <default-package-name><![CDATA[ATk4 - I18Next Translation library]]></default-package-name>
+        <target>build</target>
+        <markers>
+            <item>TODO</item>
+            <item>FIXME</item>
+        </markers>
+    </parser>
+    <transformer>
+        <target>docs/html</target>
+    </transformer>
+    <files>
+        <directory>src</directory>
+        <ignore>tests/*</ignore>
+    </files>
+</phpdocumentor>

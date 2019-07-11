@@ -13,7 +13,9 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.2",
-        "atk4/core": "dev-develop@dev"
+        "atk4/core": "dev-develop@dev",
+        "thecodingmachine/phpstan-safe-rule": "^0.1.3",
+        "thecodingmachine/safe": "^0.1.16"
     },
     "require-dev": {
         "atk4/data": "dev-develop@dev",
@@ -23,8 +25,7 @@
         "phpmetrics/phpmetrics": "dev-master@dev",
         "phpstan/phpstan": "0.11.12",
         "phpunit/phpunit": "8.2.4",
-        "squizlabs/php_codesniffer": "3.4.2",
-        "symfony/yaml": "~2.1|~3.0|~4.0"
+        "squizlabs/php_codesniffer": "3.4.2"
     },
     "config": {
         "sort-packages": true
@@ -52,7 +53,10 @@
         "metrics": [
             "mkdir -p ./build/report",
             "mv ./build/report ./build/report_$(date +\"%Y.%m.%d_%H%M%S\")",
-            "phpmetrics --config=./.phpmetrics.json .",
+            "phpmetrics --config=./.phpmetrics.json ."
+        ],
+        "metrics-web": [
+            "composer run metrics",
             "firefox ./build/report/phpmetrics.html/index.html"
         ],
         "metrics-clear": [
@@ -64,24 +68,56 @@
             "mv ./build/coverage ./build/coverage_$(date +\"%Y.%m.%d_%H%M%S\")",
             "phpunit --configuration phpunit.xml"
         ],
-        "unit-html": [
+        "unit-coverage": [
             "mkdir -p ./build/coverage",
             "mv ./build/coverage ./build/coverage_$(date +\"%Y.%m.%d_%H%M%S\")",
-            "phpunit --configuration phpunit.xml --coverage-html ./build/coverage",
+            "phpunit --configuration phpunit.xml --coverage-html ./build/coverage"
+        ],
+        "coverage-web": [
+            "composer run unit-coverage",
             "firefox ./build/coverage/index.html"
         ],
         "unit-clear": [
             "rm -rf ./build/coverage_*",
             "rm -rf ./build/coverage"
         ],
-        "gen-test-cases": [
-            "mkdir -p ./tests/data/locales",
-            "rm -rf ./tests/data/locales",
-            "mkdir -p ./tests/data/locales",
-            "php ./tests/data/utils/create_cases.php"
+        "doc-setup": [
+            "composer run doc-setdown",
+            "mkdir -p phpdocs",
+            "wget -P phpdocs https://github.com/phpDocumentor/phpDocumentor2/archive/develop.zip",
+            "cd phpdocs && unzip develop.zip",
+            "rm phpdocs/develop.zip",
+            "mv phpdocs/phpDocumentor2-develop/* -t phpdocs",
+            "rm -rf phpdocs/phpDocumentor2-develop",
+            "cd phpdocs && composer install --no-interaction --prefer-source",
+            "cd phpdocs && composer require abbadon1334/phpdoc-to-rst --prefer-dist",
+            "cd phpdocs && echo \"APP_ENV=dev\nAPP_SECRET=3f48b02b6f8e6ad6e8c07d0b03762d31\" > .env"
         ],
-        "show-test-cases": [
-            "php ./tests/data/utils/show_cases.php"
-        ]
+        "doc-build": [
+            "composer run doc-clear",
+            "mkdir -p ./docs",
+            "chmod +x phpdocs/bin/phpdoc",
+            "php phpdocs/bin/phpdoc --config=phpdoc.dist.xml --template=./phpdocs/data/templates/abstract --visibility=\"public\" --force -n",
+            "php phpdocs/bin/phpdoc-to-rst generate --repo-base \"$PWD\" --repo-github https://github.com/abbadon1334/phpdoc-to-rst -t docs/rst/ src/"
+        ],
+        "doc-clear": [
+            "mkdir -p ./docs",
+            "rm -rf ./docs"
+        ],
+        "doc-setdown": [
+            "mkdir -p ./phpdocs",
+            "rm -rf ./phpdocs"
+        ],
+        "build-all": [
+            "composer run doc-setup",
+            "composer run doc-build",
+            "composer run unit-coverage",
+            "cp -r build/coverage docs/coverage",
+            "composer run metrics",
+            "cp -r build/report/phpmetrics.html docs/metrics"
+        ],
+        "config": {
+            "process-timeout":6000
+        }
     }
 }

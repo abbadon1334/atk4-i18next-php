@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace I18Next\Locale\Processor;
 
-class Key extends AbstractProcessor
+/**
+ * @internal
+ */
+final class Key extends AbstractProcessor
 {
     /**
      * @param string      $key
@@ -49,7 +52,7 @@ class Key extends AbstractProcessor
 
         $key_all_plurals_keys = array_keys($key_all_plurals);
 
-        $counter = $counter ?? 1;
+        $counter             = $counter ?? 1;
         $key_all_plurals_max = (int) end($key_all_plurals_keys);
         if ($counter > $key_all_plurals_max) {
             return end($key_all_plurals);
@@ -80,7 +83,7 @@ class Key extends AbstractProcessor
 
         $key_all_plurals_keys = array_keys($key_all_plurals);
 
-        $counter = $counter ?? 1;
+        $counter             = $counter ?? 1;
         $key_all_plurals_max = (int) end($key_all_plurals_keys);
         if ($counter > $key_all_plurals_max) {
             return end($key_all_plurals);
@@ -92,7 +95,7 @@ class Key extends AbstractProcessor
     private function processWithNamespace($key)
     {
         $key_namespace = $this->getKeyNamespace($key);
-        $key = $this->getOnlyKeyFromNamespacedKey($key, $key_namespace);
+        $key           = $this->getOnlyKeyFromNamespacedKey($key, $key_namespace);
 
         // try get original namespaced key
         $found = $this->process($key_namespace.'/'.$key);

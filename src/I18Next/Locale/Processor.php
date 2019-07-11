@@ -7,21 +7,24 @@ namespace I18Next\Locale;
 use I18Next\Locale\Processor\Key;
 use I18Next\Locale\Processor\Value;
 
-class Processor
+/**
+ * @internal
+ */
+final class Processor
 {
     /** @var Translations */
-    protected $translations;
+    private $translations;
 
     /** @var Key */
-    protected $processorKey;
+    private $processorKey;
 
     /** @var Value */
-    protected $processorValue;
+    private $processorValue;
 
     public function __construct(Translations $translations)
     {
-        $this->translations = $translations;
-        $this->processorKey = new Key($this->translations);
+        $this->translations   = $translations;
+        $this->processorKey   = new Key($this->translations);
         $this->processorValue = new Value($this->translations);
     }
 
@@ -34,21 +37,57 @@ class Processor
      */
     public function process(string $key, ?array $parameters = null, ?string $context = null): ?string
     {
-        $counter = $this->getCountFromParameters($parameters);
-        $context = $this->getContextFromParameters($parameters, $context);
+        /**
+         * @TODO PARSING OF Key must happen here
+         */
+        $counter   = $this->getCountFromParameters($parameters);
+        $context   = $this->getContextFromParameters($parameters, $context);
+
+        $key       = $this->processKeyForNamespaces($key, $this->getNamespaceFromParameters($parameters));
 
         $found_key = $this->processorKey->processKey($key, $context, $counter);
 
         return $this->processorValue->processValue($found_key, $parameters);
     }
 
-    protected function getCountFromParameters(?array $parameters = null): ?int
+    private function getKeyNamespace($key)
     {
-        return isset($parameters['count']) ? (int) $parameters['count'] : null;
+        preg_match('/^(\S+)\:/', $key, $matches);
+
+        if (2 !== count($matches)) {
+            return null;
+        }
+
+        return $matches[1];
     }
 
-    protected function getContextFromParameters(?array $parameters = null, ?string $context = null): ?string
+    private function getCountFromParameters(?array $parameters = null): ?int
+    {
+        return isset($parameters['count']) ? (int)$parameters['count'] : null;
+    }
+
+    private function getContextFromParameters(?array $parameters = null, ?string $context = null): ?string
     {
         return $parameters['context'] ?? $context;
+    }
+
+    private function getNamespaceFromParameters(?array $parameters)
+    {
+        return $parameters['namespace'] ?? null;
+    }
+
+    private function processKeyForNamespaces(string $key, ?string $keyNamespaceFromParameters = null): string
+    {
+        if (null === $keyNamespaceFromParameters) {
+            return $key;
+        }
+
+        $keyNamespace = $this->getKeyNamespace($key);
+
+        if (null !== $keyNamespace) {
+            return str_replace($keyNamespace, $keyNamespaceFromParameters, $key);
+        }
+
+        return $keyNamespaceFromParameters.':'.$key;
     }
 }

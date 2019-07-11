@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace I18Next\atk4;
 
@@ -28,8 +28,8 @@ trait TranslatorI18NextTrait
      * @param string|null $domain     The domain for the message or null to use the default
      * @param string|null $locale     The locale or null to use the default
      *
-     * @return string The translated string
      * @throws Exception
+     * @return string    The translated string
      */
     public function _(
         string $message,
@@ -37,7 +37,7 @@ trait TranslatorI18NextTrait
         ?string $domain = null,
         ?string $locale = null
     ): string {
-        if ($this->translator === null) {
+        if (null === $this->translator) {
             throw new Exception('Translator for TranslatorI18NextTrait must be defined with setTranslator');
         }
 
