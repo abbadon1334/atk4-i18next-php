@@ -95,8 +95,8 @@ final class Value extends AbstractProcessor
         foreach ($matches as $match) {
             $match_found = $match[0];
 
-            $nested            = $match[1];
-            $nested_key        = strtok($nested, ',');
+            $nested = $match[1];
+            $nested_key = strtok($nested, ',');
             $nested_parameters = [];
 
             preg_match(

@@ -23,8 +23,8 @@ final class Processor
 
     public function __construct(Translations $translations)
     {
-        $this->translations   = $translations;
-        $this->processorKey   = new Key($this->translations);
+        $this->translations = $translations;
+        $this->processorKey = new Key($this->translations);
         $this->processorValue = new Value($this->translations);
     }
 
@@ -40,10 +40,10 @@ final class Processor
         /**
          * @TODO PARSING OF Key must happen here
          */
-        $counter   = $this->getCountFromParameters($parameters);
-        $context   = $this->getContextFromParameters($parameters, $context);
+        $counter = $this->getCountFromParameters($parameters);
+        $context = $this->getContextFromParameters($parameters, $context);
 
-        $key       = $this->processKeyForNamespaces($key, $this->getNamespaceFromParameters($parameters));
+        $key = $this->processKeyForNamespaces($key, $this->getNamespaceFromParameters($parameters));
 
         $found_key = $this->processorKey->processKey($key, $context, $counter);
 
@@ -57,7 +57,7 @@ final class Processor
         preg_match('/^(\S+)\:/', $key, $matches);
 
         if (2 !== count($matches)) {
-            return null;
+            return;
         }
 
         return $matches[1];
@@ -65,7 +65,7 @@ final class Processor
 
     private function getCountFromParameters(?array $parameters = null): ?int
     {
-        return isset($parameters['count']) ? (int)$parameters['count'] : null;
+        return isset($parameters['count']) ? (int) $parameters['count'] : null;
     }
 
     private function getContextFromParameters(?array $parameters = null, ?string $context = null): ?string

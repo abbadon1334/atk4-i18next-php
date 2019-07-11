@@ -2,9 +2,9 @@
 
 namespace I18Next\Tests;
 
-use I18Next\Exception\LanguageNamespaceMisuse;
 use I18Next\Exception\LanguageAlreadyPresent;
 use I18Next\Exception\LanguageLocaleNotExists;
+use I18Next\Exception\LanguageNamespaceMisuse;
 use I18Next\Exception\LanguagePathNotDefined;
 use I18Next\Exception\Misusage;
 
