@@ -1,956 +1,372 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    <meta charset="utf-8"/>
-    <title>my-doc</title>
-    <meta name="author" content=""/>
-    <meta name="description" content=""/>
-
-    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/prism.css" rel="stylesheet" media="all"/>
-    <link href="../css/template.css" rel="stylesheet" media="all"/>
-    
-    <!--[if lt IE 9]>
-    <script src="../js/html5.js"></script>
-    <![endif]-->
-    <script src="../js/jquery-1.11.0.min.js"></script>
-    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.smooth-scroll.js"></script>
-    <script src="../js/prism.min.js"></script>
-    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
-    <script type="text/javascript">
-    function loadExternalCodeSnippets() {
-        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-            var src = pre.getAttribute('data-src').replace( /\\/g, '/');
-            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-            var language = 'php';
-
-            var code = document.createElement('code');
-            code.className = 'language-' + language;
-
-            pre.textContent = '';
-
-            code.textContent = 'Loading…';
-
-            pre.appendChild(code);
-
-            var xhr = new XMLHttpRequest();
-
-            xhr.open('GET', src, true);
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4) {
-
-                    if (xhr.status < 400 && xhr.responseText) {
-                        code.textContent = xhr.responseText;
-
-                        Prism.highlightElement(code);
-                    }
-                    else if (xhr.status >= 400) {
-                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-                    }
-                    else {
-                        code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
-                    }
-                }
-            };
-
-            xhr.send(null);
-        });
-    }
-
-    $(document).ready(function(){
-        loadExternalCodeSnippets();
-    });
-    $('#source-view').on('shown', function () {
-        loadExternalCodeSnippets();
-    })
-</script>
-
-    <link rel="shortcut icon" href="../images/favicon.ico"/>
-    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>ATK4 - I18Next Translation library » \I18Next\Translator</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
 </head>
 <body>
-
 <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <i class="icon-ellipsis-vertical"></i>
-            </a>
-            <a class="brand" href="../index.html">my-doc</a>
-
-            <div class="nav-collapse">
-                <ul class="nav pull-right">
-                                        <li class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
-                            API Documentation <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                                                        <li>\I18Next</li>
-                                                    </ul>
-                    </li>
-                                        <li class="dropdown" id="charts-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Charts <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../graphs/class.html">
-                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown" id="reports-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Reports <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/deprecated.html">
-                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--<div class="go_to_top">-->
-    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
-    <!--</div>-->
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">ATK4 - I18Next Translation library</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/I18Next.html"><i class="icon-th"></i> I18Next</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">0</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
 </div>
-
-<div id="___" class="container-fluid">
-        <section class="row-fluid">
-        <div class="span2 sidebar">
-                                <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1136455562"></a>
-                                <a href="" style="margin-left: 30px; padding-left: 0">\</a>
-            </div>
-            <div id="namespace-1136455562" class="accordion-body collapse in">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2097883923"></a>
-                                <a href="" style="margin-left: 30px; padding-left: 0">I18Next</a>
-            </div>
-            <div id="namespace-2097883923" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-448787851"></a>
-                                <a href="" style="margin-left: 30px; padding-left: 0">atk4</a>
-            </div>
-            <div id="namespace-448787851" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                            <li class="trait">TranslatorI18NextTrait</li>
-                                                                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-807996178"></a>
-                                <a href="" style="margin-left: 30px; padding-left: 0">Exception</a>
-            </div>
-            <div id="namespace-807996178" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class">LanguageAlreadyPresent</li>
-                                                    <li class="class">LanguageLocaleNotExists</li>
-                                                    <li class="class">LanguageNamespaceMisuse</li>
-                                                    <li class="class">LanguagePathNotDefined</li>
-                                                    <li class="class">Misusage</li>
-                                                    <li class="class">NotFoundKey</li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1474885622"></a>
-                                <a href="" style="margin-left: 30px; padding-left: 0">Locale</a>
-            </div>
-            <div id="namespace-1474885622" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1446498248"></a>
-                                <a href="" style="margin-left: 30px; padding-left: 0">Processor</a>
-            </div>
-            <div id="namespace-1446498248" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class">AbstractProcessor</li>
-                                                    <li class="class">Key</li>
-                                                    <li class="class">Value</li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                                    <li class="class">Processor</li>
-                                                    <li class="class">Translations</li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                    <li class="interface">TranslatorInterface</li>
-                                                                                                    <li class="class">Locale</li>
-                                                    <li class="class">Translator</li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        </div>
-    </section>
-    <section class="row-fluid">
-        <div class="span10 offset2">
-            <div class="row-fluid">
-                <div class="span8 content class">
-                    <nav>
-                                                \I18Next <i class="icon-level-up"></i>
-                                            </nav>
-                    
-                    <h1><small>\I18Next</small>Translator</h1>
-                    <p><em></em></p>
-                    
-                    
-                                        
-                    <section id="summary">
-                        <h2>Summary</h2>
-                        <section class="row-fluid heading">
-                            <section class="span4">
-                                <a href="#methods">Methods</a>
-                            </section>
-                            <section class="span4">
-                                <a href="#properties">Properties</a>
-                            </section>
-                            <section class="span4">
-                                <a href="#constants">Constants</a>
-                            </section>
-                        </section>
-                        <section class="row-fluid public">
-                            <section class="span4">
-                                                                    <a href="" class="">setTranslationsPath()</a><br />
-                                                                    <a href="" class="">setNamespacePriority()</a><br />
-                                                                    <a href="" class="">useFilenameAsNamespace()</a><br />
-                                                                    <a href="" class="">setLanguagePrimary()</a><br />
-                                                                    <a href="" class="">addLanguage()</a><br />
-                                                                    <a href="" class="">setLanguageFallback()</a><br />
-                                                                    <a href="" class="">_()</a><br />
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No public properties found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No constants found</em>
-                                                            </section>
-                        </section>
-                        <section class="row-fluid protected">
-                            <section class="span4">
-                                                                    <em>No protected methods found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No protected properties found</em>
-                                                            </section>
-                            <section class="span4">
-                                <em>N/A</em>
-                            </section>
-                        </section>
-                        <section class="row-fluid private">
-                            <section class="span4">
-                                                                    <a href="" class="">getLocale()</a><br />
-                                                            </section>
-                            <section class="span4">
-                                                                    <a href="" class="">$locales</a><br />
-                                                                    <a href="" class="">$language</a><br />
-                                                                    <a href="" class="">$fallback</a><br />
-                                                                    <a href="" class="">$translations_path</a><br />
-                                                                    <a href="" class="">$loader_format</a><br />
-                                                                    <a href="" class="">$namespace_priority</a><br />
-                                                                    <a href="" class="">$use_filename_as_namespace</a><br />
-                                                            </section>
-                            <section class="span4">
-                                <em>N/A</em>
-                            </section>
-                        </section>
-                    </section>
-                </div>
-                <aside class="span4 detailsbar">
-                                        
-                    
-                    <dl>
-                        <dt>File</dt>
-                            <dd><a href=""><div class="path-wrapper">src/I18Next/Translator.php</div></a></dd>
-                                                <dt>Class hierarchy</dt>
-                            <dd class="hierarchy">
-                                                                                                                                                                    <div class="namespace-wrapper">\I18Next\Translator</div>
-                            </dd>
-
-                                                                            <dt>Implements</dt>
-                                                        <dd><a href=""><div class="namespace-wrapper">\I18Next\TranslatorInterface</div></a></dd>
-                        
-                        
-                        
-                                                
-                                                                        </dl>
-                    <h2>Tags</h2>
-                    <table class="table table-condensed">
-                                            <tr><td colspan="2"><em>None found</em></td></tr>
-                                        </table>
-                </aside>
-            </div>
-
-                        
-                                    <a id="properties" name="properties"></a>
-            <div class="row-fluid">
-                <div class="span8 content class">
-                    <h2>Properties</h2>
-                </div>
-                <aside class="span4 detailsbar"></aside>
-            </div>
-
-                                                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_locales" name="property_locales" class="anchor"></a>
-            <article class="property">
-                <h3 class="private ">$locales</h3>
-                <pre class="signature">$locales : \I18Next\Locale[]</pre>
-                <p><em></em></p>
-                
-
-                                <h4>Type</h4>
-                \I18Next\Locale[]
-                &mdash;                             </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_language" name="property_language" class="anchor"></a>
-            <article class="property">
-                <h3 class="private ">$language</h3>
-                <pre class="signature">$language : string</pre>
-                <p><em></em></p>
-                
-
-                                <h4>Type</h4>
-                string
-                &mdash;                             </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_fallback" name="property_fallback" class="anchor"></a>
-            <article class="property">
-                <h3 class="private ">$fallback</h3>
-                <pre class="signature">$fallback : string</pre>
-                <p><em></em></p>
-                
-
-                                <h4>Type</h4>
-                string
-                &mdash;                             </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_translations_path" name="property_translations_path" class="anchor"></a>
-            <article class="property">
-                <h3 class="private ">$translations_path</h3>
-                <pre class="signature">$translations_path : string</pre>
-                <p><em></em></p>
-                
-
-                                <h4>Type</h4>
-                string
-                &mdash;                             </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_loader_format" name="property_loader_format" class="anchor"></a>
-            <article class="property">
-                <h3 class="private ">$loader_format</h3>
-                <pre class="signature">$loader_format : string</pre>
-                <p><em></em></p>
-                
-
-                                <h4>Type</h4>
-                string
-                &mdash;                             </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_namespace_priority" name="property_namespace_priority" class="anchor"></a>
-            <article class="property">
-                <h3 class="private ">$namespace_priority</h3>
-                <pre class="signature">$namespace_priority : string[]</pre>
-                <p><em></em></p>
-                
-
-                                <h4>Type</h4>
-                string[]
-                &mdash;                             </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_use_filename_as_namespace" name="property_use_filename_as_namespace" class="anchor"></a>
-            <article class="property">
-                <h3 class="private ">$use_filename_as_namespace</h3>
-                <pre class="signature">$use_filename_as_namespace : bool</pre>
-                <p><em></em></p>
-                
-
-                                <h4>Type</h4>
-                bool
-                &mdash;                             </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                            
-                                    <a id="methods" name="methods"></a>
-            <div class="row-fluid">
-                <div class="span8 content class"><h2>Methods</h2></div>
-                <aside class="span4 detailsbar"></aside>
-            </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_setTranslationsPath" name="method_setTranslationsPath" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">setTranslationsPath()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">setTranslationsPath(  <span class="argument">path</span>) : void</pre>
-                <p><em>Set the root path of locales folder.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>path </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                                    <h4>Throws</h4>
-                    <dl>
-                                                    <dt>\I18Next\Exception\Misusage</dt>
-                            <dd></dd>
-                                                                    </dl>
-                
-                
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                    <dt>Inherited from</dt>
-                    <dd><a href=""><div class="path-wrapper">\I18Next\Translator</div></a></dd>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_setNamespacePriority" name="method_setNamespacePriority" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">setNamespacePriority()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">setNamespacePriority(mixed  <span class="argument">...namespace_priority</span>) : void</pre>
-                <p><em>Set namespace priority.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>mixed</td>
-                                <td>namespace_priority <small style="color: gray">variadic</small></td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                                    <h4>Throws</h4>
-                    <dl>
-                                                    <dt>\I18Next\Exception\LanguageNamespaceMisuse</dt>
-                            <dd></dd>
-                                                                    </dl>
-                
-                
-                                                            <h4>Examples</h4>
-                                                                <h5>: if set $ns1, $ns2, $ns3 it will try in all this 3 namespace starting from 1 =&gt; 2 =&gt; 3</h5>
-                        <pre class="pre-scrollable"></pre>
-                                                </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                    <dt>Inherited from</dt>
-                    <dd><a href=""><div class="path-wrapper">\I18Next\Translator</div></a></dd>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_useFilenameAsNamespace" name="method_useFilenameAsNamespace" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">useFilenameAsNamespace()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">useFilenameAsNamespace(bool|null  <span class="argument">enabled</span>) : void</pre>
-                <p><em>Set if filenames will be used as namespaces.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>bool|null</td>
-                                <td>enabled </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                                    <h4>Throws</h4>
-                    <dl>
-                                                    <dt>\I18Next\Exception\LanguageNamespaceMisuse</dt>
-                            <dd></dd>
-                                                                    </dl>
-                
-                
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                    <dt>Inherited from</dt>
-                    <dd><a href=""><div class="path-wrapper">\I18Next\Translator</div></a></dd>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_setLanguagePrimary" name="method_setLanguagePrimary" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">setLanguagePrimary()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">setLanguagePrimary(string  <span class="argument">language_code</span>) : void</pre>
-                <p><em>Set Primary Language.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>string</td>
-                                <td>language_code </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                                    <h4>Throws</h4>
-                    <dl>
-                                                    <dt>\I18Next\Exception\LanguageAlreadyPresent</dt>
-                            <dd></dd>
-                                                    <dt>\I18Next\Exception\LanguagePathNotDefined</dt>
-                            <dd></dd>
-                                                    <dt>\atk4\core\Exception</dt>
-                            <dd></dd>
-                                                                    </dl>
-                
-                
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                    <dt>Inherited from</dt>
-                    <dd><a href=""><div class="path-wrapper">\I18Next\Translator</div></a></dd>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_addLanguage" name="method_addLanguage" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">addLanguage()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">addLanguage(string  <span class="argument">code</span>) : void</pre>
-                <p><em>Add Extra languages.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>string</td>
-                                <td>code </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                                    <h4>Throws</h4>
-                    <dl>
-                                                    <dt>\atk4\core\Exception</dt>
-                            <dd></dd>
-                                                    <dt>\I18Next\Exception\LanguageAlreadyPresent</dt>
-                            <dd></dd>
-                                                    <dt>\I18Next\Exception\LanguagePathNotDefined</dt>
-                            <dd></dd>
-                                                                    </dl>
-                
-                
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                    <dt>Inherited from</dt>
-                    <dd><a href=""><div class="path-wrapper">\I18Next\Translator</div></a></dd>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_setLanguageFallback" name="method_setLanguageFallback" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">setLanguageFallback()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">setLanguageFallback(string  <span class="argument">fallback_code</span>) : void</pre>
-                <p><em>Set fallback language.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>string</td>
-                                <td>fallback_code </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                                    <h4>Throws</h4>
-                    <dl>
-                                                    <dt>\atk4\core\Exception</dt>
-                            <dd></dd>
-                                                    <dt>\I18Next\Exception\LanguageAlreadyPresent</dt>
-                            <dd></dd>
-                                                    <dt>\I18Next\Exception\LanguagePathNotDefined</dt>
-                            <dd></dd>
-                                                                    </dl>
-                
-                
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                    <dt>Inherited from</dt>
-                    <dd><a href=""><div class="path-wrapper">\I18Next\Translator</div></a></dd>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method__" name="method__" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">_()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">_(string  <span class="argument">key</span>, ?array  <span class="argument">parameters = null</span>, ?string  <span class="argument">context = null</span>, ?string  <span class="argument">locale = null</span>) : string</pre>
-                <p><em>Translates the given message.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>string</td>
-                                <td>key </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td>?array</td>
-                                <td>parameters </td>
-                                <td><p>Array of parameters used to translate message</p></td>
-                            </tr>
-                                                    <tr>
-                                <td>?string</td>
-                                <td>context </td>
-                                <td><p>The context of the request</p></td>
-                            </tr>
-                                                    <tr>
-                                <td>?string</td>
-                                <td>locale </td>
-                                <td><p>The locale or null to use the default</p></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                            &mdash; <p>The translated string</p>
-                                    
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                    <dt>Inherited from</dt>
-                    <dd><a href=""><div class="path-wrapper">\I18Next\Translator</div></a></dd>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_getLocale" name="method_getLocale" class="anchor"></a>
-            <article class="method">
-                <h3 class="private ">getLocale()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getLocale(string  <span class="argument">locale</span>) : \I18Next\I18Next\Locale</pre>
-                <p><em></em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>string</td>
-                                <td>locale </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    \I18Next\I18Next\Locale
-                                    
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                    <dt>Inherited from</dt>
-                    <dd><a href=""><div class="path-wrapper">\I18Next\Translator</div></a></dd>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    </div>
-    </section>
-
-    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="source-view-label">Translator.php</h3>
-        </div>
-        <div class="modal-body">
-            <pre data-src="../files/src/I18Next/Translator.php.txt" class="language-php line-numbers"></pre>
-        </div>
-    </div>
-
-    <footer class="row-fluid">
-        <section class="span10 offset2">
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <section class="row-fluid footer-sections">
-                        <section class="span4">
-                                                        <h1><i class="icon-code"></i></h1>
-                            <div>
-                                <ul>
-                                                                            <li>\I18Next</li>
-                                                                    </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-bar-chart"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-pushpin"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../reports/errors.html">Errors</a></li>
-                                    <li><a href="../reports/markers.html">Markers</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </section>
-                </section>
-            </section>
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <hr />
-                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on July 11th, 2019 at 21:55.
-                </section>
-            </section>
-        </section>
-    </footer>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
 </div>
-
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
+<li class="nav-header">
+<i title="Methods" class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method__" title="_() :: Translates the given message."><span class="description">Translates the given message.</span><pre>_()</pre></a></li>
+<li class="method public "><a href="#method_addLanguage" title="addLanguage() :: Add Extra languages."><span class="description">Add Extra languages.</span><pre>addLanguage()</pre></a></li>
+<li class="method public "><a href="#method_setLanguageFallback" title="setLanguageFallback() :: Set fallback language."><span class="description">Set fallback language.</span><pre>setLanguageFallback()</pre></a></li>
+<li class="method public "><a href="#method_setLanguagePrimary" title="setLanguagePrimary() :: Set Primary Language."><span class="description">Set Primary Language.</span><pre>setLanguagePrimary()</pre></a></li>
+<li class="method public "><a href="#method_setNamespacePriority" title="setNamespacePriority() :: Set namespace priority."><span class="description">Set namespace priority.</span><pre>setNamespacePriority()</pre></a></li>
+<li class="method public "><a href="#method_setTranslationsPath" title="setTranslationsPath() :: Set the root path of locales folder."><span class="description">Set the root path of locales folder.</span><pre>setTranslationsPath()</pre></a></li>
+<li class="method public "><a href="#method_useFilenameAsNamespace" title="useFilenameAsNamespace() :: Set if filenames will be used as namespaces."><span class="description">Set if filenames will be used as namespaces.</span><pre>useFilenameAsNamespace()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private "><a href="#method_getLocale" title="getLocale() :: "><span class="description">getLocale()
+        </span><pre>getLocale()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_fallback" title="$fallback() :: "><span class="description"></span><pre>$fallback</pre></a></li>
+<li class="property private "><a href="#property_language" title="$language() :: "><span class="description"></span><pre>$language</pre></a></li>
+<li class="property private "><a href="#property_loader_format" title="$loader_format() :: "><span class="description"></span><pre>$loader_format</pre></a></li>
+<li class="property private "><a href="#property_locales" title="$locales() :: "><span class="description"></span><pre>$locales</pre></a></li>
+<li class="property private "><a href="#property_namespace_priority" title="$namespace_priority() :: "><span class="description"></span><pre>$namespace_priority</pre></a></li>
+<li class="property private "><a href="#property_translations_path" title="$translations_path() :: "><span class="description"></span><pre>$translations_path</pre></a></li>
+<li class="property private "><a href="#property_use_filename_as_namespace" title="$use_filename_as_namespace() :: "><span class="description"></span><pre>$use_filename_as_namespace</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\I18Next\Translator"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/I18Next.html">I18Next</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/I18Next.Translator.html">Translator</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/global.html">\</a></td>
+</tr></table>
+<h3>
+<i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
+<a id="method__"></a><div class="element clickable method public method__ " data-toggle="collapse" data-target=".method__ .collapse" title="public">
+<h2>Translates the given message.</h2>
+<pre>_(string key, ?array parameters<code> = null</code>, ?string context<code> = null</code>, ?string locale<code> = null</code>) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\I18Next\TranslatorInterface::_()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>key</h4></div>
+<div class="subelement argument"><h4>parameters</h4></div>
+<div class="subelement argument"><h4>context</h4></div>
+<div class="subelement argument"><h4>locale</h4></div>
+</div></div>
+</div>
+<a id="method_addLanguage"></a><div class="element clickable method public method_addLanguage " data-toggle="collapse" data-target=".method_addLanguage .collapse" title="public">
+<h2>Add Extra languages.</h2>
+<pre>addLanguage(string code) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>code</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code>\atk4\core\Exception</code></th>
+<td></td>
+</tr>
+<tr>
+<th><code>\I18Next\Exception\LanguageAlreadyPresent</code></th>
+<td></td>
+</tr>
+<tr>
+<th><code>\I18Next\Exception\LanguagePathNotDefined</code></th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_setLanguageFallback"></a><div class="element clickable method public method_setLanguageFallback " data-toggle="collapse" data-target=".method_setLanguageFallback .collapse" title="public">
+<h2>Set fallback language.</h2>
+<pre>setLanguageFallback(string fallback_code) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>fallback_code</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code>\atk4\core\Exception</code></th>
+<td></td>
+</tr>
+<tr>
+<th><code>\I18Next\Exception\LanguageAlreadyPresent</code></th>
+<td></td>
+</tr>
+<tr>
+<th><code>\I18Next\Exception\LanguagePathNotDefined</code></th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_setLanguagePrimary"></a><div class="element clickable method public method_setLanguagePrimary " data-toggle="collapse" data-target=".method_setLanguagePrimary .collapse" title="public">
+<h2>Set Primary Language.</h2>
+<pre>setLanguagePrimary(string language_code) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>language_code</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code>\I18Next\Exception\LanguageAlreadyPresent</code></th>
+<td></td>
+</tr>
+<tr>
+<th><code>\I18Next\Exception\LanguagePathNotDefined</code></th>
+<td></td>
+</tr>
+<tr>
+<th><code>\atk4\core\Exception</code></th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_setNamespacePriority"></a><div class="element clickable method public method_setNamespacePriority " data-toggle="collapse" data-target=".method_setNamespacePriority .collapse" title="public">
+<h2>Set namespace priority.</h2>
+<pre>setNamespacePriority(mixed namespace_priority) </pre>
+<div class="labels"></div>
+<div class="row collapse">
+<div class="span4">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>example</th>
+<td>: if set $ns1, $ns2, $ns3 it will try in all this 3 namespace starting from 1 => 2 => 3</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>namespace_priority</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\I18Next\Exception\LanguageNamespaceMisuse</code></th>
+<td></td>
+</tr></table>
+</div>
+<div class="span4">
+<h3>Examples</h3>
+<pre class="prettyprint linenums"></pre>
+</div>
+</div>
+</div>
+<a id="method_setTranslationsPath"></a><div class="element clickable method public method_setTranslationsPath " data-toggle="collapse" data-target=".method_setTranslationsPath .collapse" title="public">
+<h2>Set the root path of locales folder.</h2>
+<pre>setTranslationsPath( path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>path</h4>
+<code></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\I18Next\Exception\Misusage</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_useFilenameAsNamespace"></a><div class="element clickable method public method_useFilenameAsNamespace " data-toggle="collapse" data-target=".method_useFilenameAsNamespace .collapse" title="public">
+<h2>Set if filenames will be used as namespaces.</h2>
+<pre>useFilenameAsNamespace(bool|null enabled) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>enabled</h4>
+<code>bool</code><code>null</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\I18Next\Exception\LanguageNamespaceMisuse</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_getLocale"></a><div class="element clickable method private method_getLocale " data-toggle="collapse" data-target=".method_getLocale .collapse" title="private">
+<h2>getLocale()
+        </h2>
+<pre>getLocale(string locale) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>locale</h4></div>
+</div></div>
+</div>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_fallback"> </a><div class="element clickable property private property_fallback" data-toggle="collapse" data-target=".property_fallback .collapse" title="private">
+<h2>$fallback</h2>
+<pre>$fallback : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_language"> </a><div class="element clickable property private property_language" data-toggle="collapse" data-target=".property_language .collapse" title="private">
+<h2>$language</h2>
+<pre>$language : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_loader_format"> </a><div class="element clickable property private property_loader_format" data-toggle="collapse" data-target=".property_loader_format .collapse" title="private">
+<h2>$loader_format</h2>
+<pre>$loader_format : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>json</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_locales"> </a><div class="element clickable property private property_locales" data-toggle="collapse" data-target=".property_locales .collapse" title="private">
+<h2>$locales</h2>
+<pre>$locales : \I18Next\Locale[]</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>[]</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_namespace_priority"> </a><div class="element clickable property private property_namespace_priority" data-toggle="collapse" data-target=".property_namespace_priority .collapse" title="private">
+<h2>$namespace_priority</h2>
+<pre>$namespace_priority : string[]</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>[]</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_translations_path"> </a><div class="element clickable property private property_translations_path" data-toggle="collapse" data-target=".property_translations_path .collapse" title="private">
+<h2>$translations_path</h2>
+<pre>$translations_path : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_use_filename_as_namespace"> </a><div class="element clickable property private property_use_filename_as_namespace" data-toggle="collapse" data-target=".property_use_filename_as_namespace .collapse" title="private">
+<h2>$use_filename_as_namespace</h2>
+<pre>$use_filename_as_namespace : bool</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 3.0.0-alpha1</a> and<br>
+            generated on 2019-07-11T22:57:15+03:00.<br></footer></div>
+</div>
 </body>
 </html>

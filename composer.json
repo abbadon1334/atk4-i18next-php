@@ -97,7 +97,7 @@
             "composer run doc-clear",
             "mkdir -p ./docs",
             "chmod +x phpdocs/bin/phpdoc",
-            "php phpdocs/bin/phpdoc --config=phpdoc.dist.xml",
+            "php phpdocs/bin/phpdoc --config=\".phpdoc.xml\" --template=\"responsive\" --force -n -vvv -t ./docs",
             "php phpdocs/bin/phpdoc-to-rst generate --repo-base \"$PWD\" --repo-github https://github.com/abbadon1334/phpdoc-to-rst -t docs/rst/ src/"
         ],
         "doc-clear": [
