@@ -6,6 +6,9 @@ namespace I18Next\Locale\Processor;
 
 use I18Next\Locale\Translations;
 
+/**
+ * @internal
+ */
 abstract class AbstractProcessor
 {
     /** @var Translations */

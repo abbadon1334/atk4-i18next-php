@@ -4,5 +4,6 @@ composer.phar
 /vendor
 .DS_Store
 .php_cs.cache
+/phpdocs
 /build
 /backup

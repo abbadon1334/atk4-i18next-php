@@ -8,13 +8,16 @@ use atk4\core\Exception;
 use I18Next\Locale\Processor;
 use I18Next\Locale\Translations;
 
-class Locale
+/**
+ * @internal
+ */
+final class Locale
 {
     /** @var string */
-    protected $code;
+    private $code;
 
-    protected $processor;
-    protected $translations;
+    private $processor;
+    private $translations;
 
     public function __construct(string $code)
     {
@@ -38,5 +41,10 @@ class Locale
     public function process(string $key, ?array $parameters = null, ?string $context = null): ?string
     {
         return $this->processor->process($key, $parameters, $context);
+    }
+
+    public function setLoaderFormat(string $format): void
+    {
+        $this->translations->setLoaderFormat($format);
     }
 }

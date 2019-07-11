@@ -73,25 +73,37 @@ $result = $this->translator->_('namespace:definitionKey', ['param1' => 'test'], 
 ## Support I18Next
 #####  http://i18next.com
 
-- [x] load json files by folder, every folder is a language code
-- [x] get a defined translation in primary language
-    - [x] if not found try in fallback language
-        - [x] if not found return original string
-- [x] Namespaces             
-    - [x] get defined translation based on prioritized fallback namespaces
+- [x] Read files from folder, every folder is a language code
+    - [x] JSON
+    - [ ] YAML
+    - [ ] PHP Array
+- [ ] Write files to a folder, every folder is a language code
+    - [ ] JSON
+    - [ ] YAML
+    - [ ] PHP Array
+- [x] Get a defined translation in primary language
+    - [x] If not found try in fallback language
+        - [x] If not found return original string
+- [ ] Collect missing requested keys
+- [x] Namespaces
+    - [x] Get defined translation based on prioritized fallback namespaces
 - [x] Context as {key}_{context}
 - [x] Plurals
-    - [x] singular as {key}
-    - [x] plurals as {key}_plural
-    - [x] multiple plurals as {key}_{int $counter}
-        - [x] manage when $counter is bigger than max defined plurals
+    - [x] Singular as {key}
+    - [x] Plurals as {key}_plural
+    - [x] Multiple plurals as {key}_{int $counter}
+        - [x] Manage when $counter is bigger than max defined plurals
+    - [x] Nested interpolate plurals
 - [x] Interpolate        
     - [x] Replace {{key}} with defined $paramater value
-        - [x] if {{key}} has a point like {{key.index}} and $parameters[index] is an array or object will retrive the value
+        - [x] If {{key}} has a point like {{key.index}} and $parameters[index] is an array or object will retrive the value
 - [x] Nesting 
     - [x] Basic
     - [x] Plurals
 - [ ] Formatting
+- [ ] Adding Helper for use method Translator::_ as global functions _
+- [ ] Adding Helper for use Translator as a global singleton instance
+- [ ] Adding Helper for search/collect calls to method Translator _ in code    
 
 ## Support ATK4 - Agile Toolkit Model
 ##### https://www.agiletoolkit.org

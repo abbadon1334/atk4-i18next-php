@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace I18Next\Locale\Processor;
 
-class Key extends AbstractProcessor
+/**
+ * @internal
+ */
+final class Key extends AbstractProcessor
 {
     /**
      * @param string      $key

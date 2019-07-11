@@ -6,7 +6,10 @@ namespace I18Next\Locale\Processor;
 
 use I18Next\Locale\Processor;
 
-class Value extends AbstractProcessor
+/**
+ * @internal
+ */
+final class Value extends AbstractProcessor
 {
     public function processValue(?string &$found_key, ?array $parameters): ?string
     {
@@ -26,8 +29,13 @@ class Value extends AbstractProcessor
             return $found_key;
         }
 
-        $re = '/{{([\S]+)}}/m';
-        preg_match_all($re, $found_key, $matches, PREG_SET_ORDER, 0);
+        preg_match_all(
+            '/{{([\S]+)}}/m',
+            $found_key,
+            $matches,
+            PREG_SET_ORDER,
+            0
+        );
 
         foreach ($matches as $group) {
             foreach ($group as $key => $index) {
@@ -52,6 +60,7 @@ class Value extends AbstractProcessor
             $value = $parameters[$token[0]] ?? null;
 
             if (is_subclass_of($value, '\atk4\data\Model', true)) {
+                /** @var \atk4\data\Model $value */
                 $value = $value->get();
             }
 
@@ -69,10 +78,15 @@ class Value extends AbstractProcessor
         return $found_key;
     }
 
-    public function processValueNested(string &$found_key, array $parameters): void
+    private function processValueNested(string &$found_key, array $parameters): void
     {
-        $re = '/\$t\((.*?)\)/';
-        preg_match_all($re, $found_key, $matches, PREG_SET_ORDER, 0);
+        preg_match_all(
+            '/\$t\((.*?)\)/',
+            $found_key,
+            $matches,
+            PREG_SET_ORDER,
+            0
+        );
 
         if (0 === count($matches)) {
             return;
@@ -85,7 +99,11 @@ class Value extends AbstractProcessor
             $nested_key = strtok($nested, ',');
             $nested_parameters = [];
 
-            preg_match('/{.*}/', $nested, $nested_matches);
+            preg_match(
+                '/{.*}/',
+                $nested,
+                $nested_matches
+            );
 
             if (count($nested_matches) > 0) {
                 $nested_parameters = $nested_matches[0];
@@ -97,7 +115,13 @@ class Value extends AbstractProcessor
                 $nested_parameters = json_decode($nested_parameters, true);
             }
 
-            $value = (new Processor($this->translations))->process($nested_key, (array) $nested_parameters);
+            $value = (new Processor($this->translations))->process((string) $nested_key, (array) $nested_parameters);
+
+            // $value can return null
+            if (null === $value) {
+                return;
+            }
+
             $found_key = str_replace($match_found, $value, $found_key);
         }
     }

@@ -8,6 +8,9 @@ use atk4\core\ConfigTrait;
 use atk4\core\Exception;
 use DirectoryIterator;
 
+/**
+ * @internal
+ */
 final class Translations
 {
     use ConfigTrait {
@@ -20,6 +23,12 @@ final class Translations
 
     /** @var bool */
     protected $use_filename_as_namespace = false;
+
+    /** @var string */
+    private $loader_format = 'json';
+
+    /** @var string */
+    private $loader_format_ext = 'json';
 
     /**
      * @param string      $path
@@ -40,12 +49,12 @@ final class Translations
             }
 
             // read config
-            $this->readConfig($fileInfo->getPathname(), 'json');
+            $this->readConfig($fileInfo->getPathname(), $this->loader_format);
 
             // normalizing
             $this->afterReadProcessForKeyCounters();
             $this->afterReadProcessForKeyDeepInline();
-            $this->afterReadAddNamespaceIfNeeded($configs, $fileInfo->getBasename('.json'));
+            $this->afterReadAddNamespaceIfNeeded($configs, $fileInfo->getBasename('.'.$this->loader_format_ext));
 
             // always reset config after every load
             // to prevent merging with other config in ConfigTrait
@@ -63,7 +72,7 @@ final class Translations
         $this->config = call_user_func_array('array_replace_recursive', $configs);
     }
 
-    public function useFilenameAsNamespace(?bool $enabled)
+    public function useFilenameAsNamespace(?bool $enabled): void
     {
         $this->use_filename_as_namespace = $enabled ?? true;
     }
@@ -87,27 +96,30 @@ final class Translations
         $this->namespace_priority = $namespace_priority;
     }
 
-    private function afterReadProcessForKeyCounters()
+    private function afterReadProcessForKeyCounters(): void
     {
         foreach ($this->config as $key => $value) {
             $key_plural_definition = explode('_', $key);
             $key_plural_definition = end($key_plural_definition);
 
-            if ($key_plural_definition === 'plural' || is_numeric($key_plural_definition)) {
+            if ('plural' === $key_plural_definition || is_numeric($key_plural_definition)) {
                 $this->processForCounterKey($key_plural_definition, $key, $value);
             }
         }
     }
 
-    private function processForCounterKey(string $key_plural_definition, string $key, string $value)
+    private function processForCounterKey(string $key_plural_definition, string $key, string $value): void
     {
         unset($this->config[$key]);
 
-        $cleared_key = substr($key, 0,
-            (strlen($key_plural_definition) + 1 /* the extra undescore before the plural_definition */) * -1);
+        $cleared_key = substr(
+            $key,
+            0,
+            (strlen($key_plural_definition) + 1 /* the extra undescore before the plural_definition */) * -1
+        );
 
         $counter = 2;
-        if ($key_plural_definition !== 'plural') {
+        if ('plural' !== $key_plural_definition) {
             $counter = (int) $key_plural_definition;
         }
 
@@ -120,10 +132,10 @@ final class Translations
         $this->setConfig($cleared_key.'/'.(string) $counter, $value);
     }
 
-    private function afterReadProcessForKeyDeepInline()
+    private function afterReadProcessForKeyDeepInline(): void
     {
         $filtered = array_filter($this->config, function ($key) {
-            return strpos($key, '.') !== false;
+            return false !== strpos($key, '.');
         }, ARRAY_FILTER_USE_KEY);
 
         foreach ($filtered as $key => $value) {
@@ -155,5 +167,13 @@ final class Translations
     public function getNamespaceRanked()
     {
         return $this->namespace_priority;
+    }
+
+    public function setLoaderFormat(string $format): void
+    {
+        $this->loader_format = $format;
+
+        // @TODO Feature - Loading different format : set extension definition here based on $format
+        $this->loader_format_ext = $format;
     }
 }
