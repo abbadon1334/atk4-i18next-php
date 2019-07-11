@@ -21,9 +21,9 @@ final class Locale
 
     public function __construct(string $code)
     {
-        $this->code         = $code;
+        $this->code = $code;
         $this->translations = new Translations();
-        $this->processor    = new Processor($this->translations);
+        $this->processor = new Processor($this->translations);
     }
 
     /**

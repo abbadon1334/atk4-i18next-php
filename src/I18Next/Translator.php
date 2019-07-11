@@ -44,7 +44,7 @@ class Translator implements TranslatorInterface
      */
     public function setTranslationsPath($path): void
     {
-        if (!empty($this->locales)) {
+        if (! empty($this->locales)) {
             throw new Misusage('setTranslationsPath must be called before : setLanguagePrimary, setLanguageFallback, addLanguage');
         }
 
@@ -61,7 +61,7 @@ class Translator implements TranslatorInterface
      */
     public function setNamespacePriority(...$namespace_priority): void
     {
-        if (!empty($this->locales)) {
+        if (! empty($this->locales)) {
             throw new LanguageNamespaceMisuse('setNamespacePriority must be called before : setLanguagePrimary, setLanguageFallback, addLanguage');
         }
 
@@ -77,7 +77,7 @@ class Translator implements TranslatorInterface
      */
     public function useFilenameAsNamespace(?bool $enabled): void
     {
-        if (!empty($this->locales)) {
+        if (! empty($this->locales)) {
             throw new LanguageNamespaceMisuse('useFilenameAsNamespace must be called before : setLanguagePrimary, setLanguageFallback, addLanguage');
         }
 
