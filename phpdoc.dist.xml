@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdocumentor>
     <parser>
-        <default-package-name><![CDATA[ATK4 - I18Next Translation library]]></default-package-name>
+        <title><![CDATA[ATK4 - I18Next Translation library]]></title>
         <target>build</target>
         <markers>
             <item>TODO</item>
@@ -15,7 +15,7 @@
         <target>docs</target>
     </transformer>
     <transformations>
-        <template name="responsive" />
+        <template name="clean" />
     </transformations>
     <files>
         <directory>src</directory>

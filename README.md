@@ -1,6 +1,6 @@
 # PHP Language library
 #### Based on i18next http://i18next.com
-#### Interpolate direct with ATk4 - Agile Toolkit Models https://www.agiletoolkit.org/
+#### Interpolate direct with ATK4 - Agile Toolkit Models https://www.agiletoolkit.org/
 
 [![Build Status](https://travis-ci.org/abbadon1334/atk4-i18next-php.svg?branch=master)](https://travis-ci.org/abbadon1334/atk4-i18next-php)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3936f18bcf2d47c38713dc49dc4cd44b)](https://www.codacy.com/app/abbadon1334/atk4-i18next-php?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=abbadon1334/atk4-i18next-php&amp;utm_campaign=Badge_Grade)

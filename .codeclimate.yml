@@ -102,19 +102,11 @@ checks:
 #
 #  radon:
 #    enabled: true
-#ratings:
-#  paths:
-#  - "src/**"
-#exclude_paths:
-#- "docs/**"
-#- "tests/**"
-#- "vendor/**"
-## exclude obsolete classes
-#- "src/Field_Many.php"
-#- "src/Field_One.php"
-#- "src/Field_SQL_One.php"
-#- "src/Relation_Many.php"
-#- "src/Relation_One.php"
-#- "src/Relation_SQL_One.php"
-## exclude classes completely inherited from other repos
-#- "src/Exception.php"
+ratings:
+  paths:
+  - "src/**"
+exclude_paths:
+- "docs/**"
+- "tests/**"
+- "vendor/**"
+- "Exception/**"
