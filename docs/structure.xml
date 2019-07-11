@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="my-doc" version="3.0.0-alpha1">
   <partials/>
-  <file path="src/I18Next/atk4/TranslatorI18NextTrait.php" generated-path="src.I18Next.atk4.TranslatorI18NextTrait.html" hash="d4c60609a5765273cae948c185218538" package="global">
+  <file path="src/I18Next/atk4/TranslatorI18NextTrait.php" generated-path="src.I18Next.atk4.TranslatorI18NextTrait.html" hash="c76afeeade3ca3dbd5463933119fec25" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="\"/>
     </docblock>
     <namespace-alias name="\I18Next\atk4">\I18Next\atk4</namespace-alias>
-    <trait namespace="I18Next\atk4" line="8" package="global">
+    <trait namespace="I18Next\atk4" line="10" package="global">
       <name>TranslatorI18NextTrait</name>
       <full_name>\I18Next\atk4\TranslatorI18NextTrait</full_name>
-      <docblock line="8">
+      <docblock line="10">
         <description></description>
         <long-description></long-description>
-        <tag name="package" line="8" description="\"/>
+        <tag name="package" line="10" description="\"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\atk4" line="18" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\atk4" line="20" package="global">
         <name>setTranslator</name>
         <full_name>\I18Next\atk4\TranslatorI18NextTrait::setTranslator()</full_name>
-        <docblock line="18">
+        <docblock line="20">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="18" description="" type="\I18Next\TranslatorInterface" variable="translator">
+          <tag name="param" line="20" description="" type="\I18Next\TranslatorInterface" variable="translator">
             <type>\I18Next\TranslatorInterface</type>
           </tag>
-          <tag name="return" line="18" description="" type="\I18Next\TranslatorInterface">
+          <tag name="return" line="20" description="" type="\I18Next\TranslatorInterface">
             <type>\I18Next\TranslatorInterface</type>
           </tag>
         </docblock>
@@ -35,31 +35,31 @@
           <type>\I18Next\TranslatorInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\atk4" line="34" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\atk4" line="36" package="global">
         <name>_</name>
         <full_name>\I18Next\atk4\TranslatorI18NextTrait::_()</full_name>
-        <docblock line="34">
+        <docblock line="36">
           <description>Translates the given message.</description>
           <long-description></long-description>
-          <tag name="param" line="34" description="&lt;p&gt;The message to be translated&lt;/p&gt;" type="string" variable="message">
+          <tag name="param" line="36" description="&lt;p&gt;The message to be translated&lt;/p&gt;" type="string" variable="message">
             <type>string</type>
           </tag>
-          <tag name="param" line="34" description="&lt;p&gt;Array of parameters used to translate message&lt;/p&gt;" type="array|null" variable="parameters">
+          <tag name="param" line="36" description="&lt;p&gt;Array of parameters used to translate message&lt;/p&gt;" type="array|null" variable="parameters">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="34" description="&lt;p&gt;The domain for the message or null to use the default&lt;/p&gt;" type="string|null" variable="domain">
+          <tag name="param" line="36" description="&lt;p&gt;The domain for the message or null to use the default&lt;/p&gt;" type="string|null" variable="domain">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="34" description="&lt;p&gt;The locale or null to use the default&lt;/p&gt;" type="string|null" variable="locale">
+          <tag name="param" line="36" description="&lt;p&gt;The locale or null to use the default&lt;/p&gt;" type="string|null" variable="locale">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="34" description="" type="\atk4\core\Exception">
+          <tag name="throws" line="36" description="" type="\atk4\core\Exception">
             <type>\atk4\core\Exception</type>
           </tag>
-          <tag name="return" line="34" description="The translated string" type="string">
+          <tag name="return" line="36" description="The translated string" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -86,25 +86,43 @@
       </method>
     </trait>
   </file>
-  <file path="src/I18Next/Exception/LanguageAlreadyPresent.php" generated-path="src.I18Next.Exception.LanguageAlreadyPresent.html" hash="104884a6f276467d27ba2c384c2757a6" package="global">
+  <file path="src/I18Next/Exception/LanguageAlreadyPresent.php" generated-path="src.I18Next.Exception.LanguageAlreadyPresent.html" hash="cdc3979b2dcdef000aa1ced477c50562" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="\"/>
     </docblock>
     <namespace-alias name="\I18Next\Exception">\I18Next\Exception</namespace-alias>
-    <class final="false" abstract="false" namespace="I18Next\Exception" line="7" package="global">
+    <class final="false" abstract="false" namespace="I18Next\Exception" line="9" package="global">
       <extends>\atk4\core\Exception</extends>
       <name>LanguageAlreadyPresent</name>
       <full_name>\I18Next\Exception\LanguageAlreadyPresent</full_name>
-      <docblock line="7">
+      <docblock line="9">
         <description></description>
         <long-description></long-description>
-        <tag name="package" line="7" description="\"/>
+        <tag name="package" line="9" description="\"/>
       </docblock>
     </class>
   </file>
-  <file path="src/I18Next/Exception/LanguageLocaleNotExists.php" generated-path="src.I18Next.Exception.LanguageLocaleNotExists.html" hash="8737049a1f6980921dc2be40516ef8a8" package="global">
+  <file path="src/I18Next/Exception/LanguageLocaleNotExists.php" generated-path="src.I18Next.Exception.LanguageLocaleNotExists.html" hash="93dce5689ab80b785eb954edfda32c55" package="global">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="\"/>
+    </docblock>
+    <namespace-alias name="\I18Next\Exception">\I18Next\Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="I18Next\Exception" line="9" package="global">
+      <extends>\atk4\core\Exception</extends>
+      <name>LanguageLocaleNotExists</name>
+      <full_name>\I18Next\Exception\LanguageLocaleNotExists</full_name>
+      <docblock line="9">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="9" description="\"/>
+      </docblock>
+    </class>
+  </file>
+  <file path="src/I18Next/Exception/LanguageNamespaceMisuse.php" generated-path="src.I18Next.Exception.LanguageNamespaceMisuse.html" hash="08e4b043e953c81876068c616b292b17" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -112,68 +130,50 @@
     </docblock>
     <namespace-alias name="\I18Next\Exception">\I18Next\Exception</namespace-alias>
     <class final="false" abstract="false" namespace="I18Next\Exception" line="7" package="global">
-      <extends>\atk4\core\Exception</extends>
-      <name>LanguageLocaleNotExists</name>
-      <full_name>\I18Next\Exception\LanguageLocaleNotExists</full_name>
+      <extends>\I18Next\Exception\Misusage</extends>
+      <name>LanguageNamespaceMisuse</name>
+      <full_name>\I18Next\Exception\LanguageNamespaceMisuse</full_name>
       <docblock line="7">
         <description></description>
         <long-description></long-description>
         <tag name="package" line="7" description="\"/>
-      </docblock>
-    </class>
-  </file>
-  <file path="src/I18Next/Exception/LanguageNamespaceMisuse.php" generated-path="src.I18Next.Exception.LanguageNamespaceMisuse.html" hash="e3e3c3143c84501392551a0df67eadde" package="global">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="\"/>
-    </docblock>
-    <namespace-alias name="\I18Next\Exception">\I18Next\Exception</namespace-alias>
-    <class final="false" abstract="false" namespace="I18Next\Exception" line="5" package="global">
-      <extends>\I18Next\Exception\Misusage</extends>
-      <name>LanguageNamespaceMisuse</name>
-      <full_name>\I18Next\Exception\LanguageNamespaceMisuse</full_name>
-      <docblock line="5">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="5" description="\"/>
         <tag name="inherited_from" description="\I18Next\Exception\Misusage" refers="\I18Next\Exception\Misusage" link="/classes/I18Next.Exception.Misusage.html"/>
       </docblock>
     </class>
   </file>
-  <file path="src/I18Next/Exception/LanguagePathNotDefined.php" generated-path="src.I18Next.Exception.LanguagePathNotDefined.html" hash="210e3a1fc917a9345e078eb32af1e69c" package="global">
+  <file path="src/I18Next/Exception/LanguagePathNotDefined.php" generated-path="src.I18Next.Exception.LanguagePathNotDefined.html" hash="1e459ce0c0105ebe04fbd4ea7d43d23e" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="\"/>
     </docblock>
     <namespace-alias name="\I18Next\Exception">\I18Next\Exception</namespace-alias>
-    <class final="false" abstract="false" namespace="I18Next\Exception" line="7" package="global">
+    <class final="false" abstract="false" namespace="I18Next\Exception" line="9" package="global">
       <extends>\atk4\core\Exception</extends>
       <name>LanguagePathNotDefined</name>
       <full_name>\I18Next\Exception\LanguagePathNotDefined</full_name>
-      <docblock line="7">
+      <docblock line="9">
         <description></description>
         <long-description></long-description>
-        <tag name="package" line="7" description="\"/>
+        <tag name="package" line="9" description="\"/>
       </docblock>
     </class>
   </file>
-  <file path="src/I18Next/Exception/Misusage.php" generated-path="src.I18Next.Exception.Misusage.html" hash="37914308bbd6e616730227fa29fa0261" package="global">
+  <file path="src/I18Next/Exception/Misusage.php" generated-path="src.I18Next.Exception.Misusage.html" hash="41f9f7ef0b0befb8e58ac63d74d8cd92" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="\"/>
     </docblock>
     <namespace-alias name="\I18Next\Exception">\I18Next\Exception</namespace-alias>
-    <class final="false" abstract="false" namespace="I18Next\Exception" line="7" package="global">
+    <class final="false" abstract="false" namespace="I18Next\Exception" line="9" package="global">
       <extends>\atk4\core\Exception</extends>
       <name>Misusage</name>
       <full_name>\I18Next\Exception\Misusage</full_name>
-      <docblock line="7">
+      <docblock line="9">
         <description></description>
         <long-description></long-description>
-        <tag name="package" line="7" description="\"/>
+        <tag name="package" line="9" description="\"/>
       </docblock>
     </class>
   </file>
@@ -227,7 +227,7 @@
       </method>
     </class>
   </file>
-  <file path="src/I18Next/Locale/Processor/Key.php" generated-path="src.I18Next.Locale.Processor.Key.html" hash="cbcfb9481e3fe96a884a226c05b42fda" package="global">
+  <file path="src/I18Next/Locale/Processor/Key.php" generated-path="src.I18Next.Locale.Processor.Key.html" hash="3aff31a302f7d5b82d09f26b55ae59f1" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -299,7 +299,7 @@
       </method>
     </class>
   </file>
-  <file path="src/I18Next/Locale/Processor/Value.php" generated-path="src.I18Next.Locale.Processor.Value.html" hash="cfe9eaa764c7af80f6a658f489ae54fb" package="global">
+  <file path="src/I18Next/Locale/Processor/Value.php" generated-path="src.I18Next.Locale.Processor.Value.html" hash="e42b948f0b21e25b9a111cfeae0c22f6" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -351,7 +351,7 @@
       </method>
     </class>
   </file>
-  <file path="src/I18Next/Locale/Processor.php" generated-path="src.I18Next.Locale.Processor.html" hash="3cfd20d7d3f6d7fed325be7c3a3a64f5" package="global">
+  <file path="src/I18Next/Locale/Processor.php" generated-path="src.I18Next.Locale.Processor.html" hash="8136afa2621a756493e85eef5b1e5f20" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -516,7 +516,7 @@
       </method>
     </class>
   </file>
-  <file path="src/I18Next/Locale.php" generated-path="src.I18Next.Locale.html" hash="4373261e7e9aba3bf0b92b00cbfecbae" package="global">
+  <file path="src/I18Next/Locale.php" generated-path="src.I18Next.Locale.html" hash="693367462d11e7b2a5775c583f1fe6dd" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -619,7 +619,7 @@
       </method>
     </class>
   </file>
-  <file path="src/I18Next/Translator.php" generated-path="src.I18Next.Translator.html" hash="bae699a52c5c59a33c76b43e870f3eba" package="global">
+  <file path="src/I18Next/Translator.php" generated-path="src.I18Next.Translator.html" hash="f10a6a64a4144253dd59a69fabf161e6" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -800,43 +800,43 @@
       </method>
     </class>
   </file>
-  <file path="src/I18Next/TranslatorInterface.php" generated-path="src.I18Next.TranslatorInterface.html" hash="e812c1c6c04339a59f3235ef0fb7a8d2" package="global">
+  <file path="src/I18Next/TranslatorInterface.php" generated-path="src.I18Next.TranslatorInterface.html" hash="3e2ca2abf467884934cd07c8bc813f51" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="\"/>
     </docblock>
     <namespace-alias name="\I18Next">\I18Next</namespace-alias>
-    <interface namespace="I18Next" line="5" package="global">
+    <interface namespace="I18Next" line="7" package="global">
       <name>TranslatorInterface</name>
       <full_name>\I18Next\TranslatorInterface</full_name>
-      <docblock line="5">
+      <docblock line="7">
         <description></description>
         <long-description></long-description>
-        <tag name="package" line="5" description="\"/>
+        <tag name="package" line="7" description="\"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="17" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="19" package="global">
         <name>_</name>
         <full_name>\I18Next\TranslatorInterface::_()</full_name>
-        <docblock line="17">
+        <docblock line="19">
           <description>Translates the given message.</description>
           <long-description></long-description>
-          <tag name="param" line="17" description="" type="string" variable="key">
+          <tag name="param" line="19" description="" type="string" variable="key">
             <type>string</type>
           </tag>
-          <tag name="param" line="17" description="&lt;p&gt;Array of parameters used to translate message&lt;/p&gt;" type="array|null" variable="parameters">
+          <tag name="param" line="19" description="&lt;p&gt;Array of parameters used to translate message&lt;/p&gt;" type="array|null" variable="parameters">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="17" description="&lt;p&gt;The context of the request&lt;/p&gt;" type="string|null" variable="context">
+          <tag name="param" line="19" description="&lt;p&gt;The context of the request&lt;/p&gt;" type="string|null" variable="context">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="17" description="&lt;p&gt;The locale or null to use the default&lt;/p&gt;" type="string|null" variable="locale">
+          <tag name="param" line="19" description="&lt;p&gt;The locale or null to use the default&lt;/p&gt;" type="string|null" variable="locale">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="17" description="The translated string" type="string">
+          <tag name="return" line="19" description="The translated string" type="string">
             <type>string</type>
           </tag>
         </docblock>

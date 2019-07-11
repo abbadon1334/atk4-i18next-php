@@ -14,7 +14,7 @@ LanguageAlreadyPresent
 
 
 	:Source:
-		`src/I18Next/Exception/LanguageAlreadyPresent.php#7 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Exception/LanguageAlreadyPresent.php#L7>`_
+		`src/I18Next/Exception/LanguageAlreadyPresent.php#9 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Exception/LanguageAlreadyPresent.php#L9>`_
 	
 	:Parent:
 		:php:class:`atk4\\core\\Exception`

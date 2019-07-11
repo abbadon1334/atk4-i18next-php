@@ -9,7 +9,7 @@
         </markers>
     </parser>
     <transformer>
-        <target>docs/html</target>
+        <target>docs</target>
     </transformer>
     <files>
         <directory>src</directory>
