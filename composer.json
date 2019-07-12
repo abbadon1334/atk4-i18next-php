@@ -100,7 +100,7 @@
             "phpdocs/phpDocumentor.phar  --config=\".phpdoc.xml\" --template=\"xml\" -t ./docs ./src",
             "vendor/bin/phpdocmd --index index.md docs/structure.xml docs/md",
             "phpdocs/phpdoc-to-rst.phar generate --repo-base \"$PWD\" --repo-github https://github.com/abbadon1334/phpdoc-to-rst -t docs/source src/",
-            "cd docs && sphinx-build -b html source docs"
+            "cd docs && sphinx-build -b html source ."
         ],
         "doc-clear": [
             "mkdir -p ./docs",
