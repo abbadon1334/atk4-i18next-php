@@ -1,0 +1,174 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Processor &#8212; ATK4 - PHP Language library 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Translations" href="Translations.html" />
+    <link rel="prev" title="AbstractProcessor" href="Processor/AbstractProcessor.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="phpdoctorst section" id="namespace-I18Next\Locale">
+<span id="processor"></span><h1>Processor<a class="headerlink" href="#namespace-I18Next\Locale" title="Permalink to this headline">¶</a></h1>
+<dl class="final class">
+<dt id="I18Next\Locale\Processor">
+<em class="property">class </em><code class="descclassname">I18Next\Locale\</code><code class="descname">Processor</code><a class="headerlink" href="#I18Next\Locale\Processor" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor.php#L13">src/I18Next/Locale/Processor.php#13</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="#I18Next\Locale\Processor::__construct" title="I18Next\Locale\Processor::__construct"><code class="xref php php-meth docutils literal notranslate"><span class="pre">public</span> <span class="pre">__construct($translations)</span></code></a></li>
+<li><a class="reference internal" href="#I18Next\Locale\Processor::process" title="I18Next\Locale\Processor::process"><code class="xref php php-meth docutils literal notranslate"><span class="pre">public</span> <span class="pre">process($key,</span> <span class="pre">$parameters,</span> <span class="pre">$context)</span></code></a></li>
+<li><code class="xref php php-meth docutils literal notranslate"><span class="pre">private</span> <span class="pre">getKeyNamespace($key)</span></code></li>
+<li><code class="xref php php-meth docutils literal notranslate"><span class="pre">private</span> <span class="pre">getCountFromParameters($parameters)</span></code></li>
+<li><code class="xref php php-meth docutils literal notranslate"><span class="pre">private</span> <span class="pre">getContextFromParameters($parameters,</span> <span class="pre">$context)</span></code></li>
+<li><code class="xref php php-meth docutils literal notranslate"><span class="pre">private</span> <span class="pre">getNamespaceFromParameters($parameters)</span></code></li>
+<li><code class="xref php php-meth docutils literal notranslate"><span class="pre">private</span> <span class="pre">processKeyForNamespaces($key,</span> <span class="pre">$keyNamespaceFromParameters)</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id1">
+<h2>Methods<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="public method">
+<dt id="I18Next\Locale\Processor::__construct">
+<em class="property">public </em><code class="descclassname">I18Next\Locale\Processor::</code><code class="descname">__construct</code><span class="sig-paren">(</span><em>$translations</em><span class="sig-paren">)</span><a class="headerlink" href="#I18Next\Locale\Processor::__construct" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor.php#L24">src/I18Next/Locale/Processor.php#24</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="public method">
+<dt id="I18Next\Locale\Processor::process">
+<em class="property">public </em><code class="descclassname">I18Next\Locale\Processor::</code><code class="descname">process</code><span class="sig-paren">(</span><em>$key</em>, <em>$parameters=null</em>, <em>$context=null</em><span class="sig-paren">)</span><a class="headerlink" href="#I18Next\Locale\Processor::process" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor.php#L38">src/I18Next/Locale/Processor.php#38</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$key</strong> (string)</li>
+<li><strong>$parameters</strong> (array | null)</li>
+<li><strong>$context</strong> (string | null)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">string | null</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">ATK4 - PHP Language library</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">I18Next</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">I18Next</a><ul>
+  <li><a href="index.html">Locale</a><ul>
+      <li>Previous: <a href="Processor/AbstractProcessor.html" title="previous chapter">AbstractProcessor</a></li>
+      <li>Next: <a href="Translations.html" title="next chapter">Translations</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Francesco Danti.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../../_sources/I18Next/Locale/Processor.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

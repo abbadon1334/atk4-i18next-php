@@ -53,11 +53,12 @@ class Translator implements TranslatorInterface
 
     /**
      * Set namespace priority.
-     * @example : if set $ns1, $ns2, $ns3 it will try in all this 3 namespace starting from 1 => 2 => 3
      *
      * @param mixed ...$namespace_priority
      *
      * @throws LanguageNamespaceMisuse
+     * @example
+     * if set $ns1, $ns2, $ns3 it will try in all this 3 namespace starting from 1 => 2 => 3
      */
     public function setNamespacePriority(...$namespace_priority): void
     {
