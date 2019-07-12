@@ -59,7 +59,6 @@ class Translator implements TranslatorInterface
      * @throws LanguageNamespaceMisuse
      * @example
      * if set $ns1, $ns2, $ns3 it will try in all this 3 namespace starting from 1 => 2 => 3
-     *
      */
     public function setNamespacePriority(...$namespace_priority): void
     {
@@ -143,7 +142,7 @@ class Translator implements TranslatorInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function _(string $key, ?array $parameters = null, ?string $context = null, ?string $locale = null): string
     {
