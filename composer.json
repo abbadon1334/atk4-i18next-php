@@ -13,26 +13,29 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.2",
-        "atk4/core": "dev-develop@dev",
+        "atk4/core": "dev-develop",
         "thecodingmachine/phpstan-safe-rule": "^0.1.3",
         "thecodingmachine/safe": "^0.1.16"
     },
     "require-dev": {
-        "atk4/data": "dev-develop@dev",
+        "atk4/data": "dev-develop",
         "codacy/coverage": "dev-master@dev",
+        "evert/phpdoc-md": "dev-master@dev",
         "friendsofphp/php-cs-fixer": "dev-master@dev",
         "phpmd/phpmd": "2.6.1",
         "phpmetrics/phpmetrics": "dev-master@dev",
         "phpstan/phpstan": "0.11.12",
         "phpunit/phpunit": "8.2.4",
-        "squizlabs/php_codesniffer": "3.4.2"
+        "squizlabs/php_codesniffer": "3.4.2",
+        "victorjonsson/markdowndocs": "^1.3"
     },
     "config": {
         "sort-packages": true
     },
     "autoload": {
         "psr-4": {
-            "I18Next\\": "src/I18Next/"
+            "I18Next\\": "src/I18Next/",
+            "atk4\\core\\": "src/I18Next/atk4/core/"
         }
     },
     "autoload-dev": {
@@ -82,23 +85,22 @@
             "rm -rf ./build/coverage"
         ],
         "doc-setup": [
-            "composer run doc-setdown",
             "mkdir -p phpdocs",
-            "wget -P phpdocs https://github.com/phpDocumentor/phpDocumentor2/archive/develop.zip",
-            "cd phpdocs && unzip develop.zip",
-            "rm phpdocs/develop.zip",
-            "mv phpdocs/phpDocumentor2-develop/* -t phpdocs",
-            "rm -rf phpdocs/phpDocumentor2-develop",
-            "cd phpdocs && composer install --no-interaction --prefer-source",
-            "cd phpdocs && composer require abbadon1334/phpdoc-to-rst --prefer-dist",
-            "cd phpdocs && echo \"APP_ENV=dev\nAPP_SECRET=3f48b02b6f8e6ad6e8c07d0b03762d31\" > .env"
+            "cd phpdocs && echo \"APP_ENV=dev\nAPP_SECRET=3f48b02b6f8e6ad6e8c07d0b03762d31\" > .env",
+            "wget -P phpdocs https://github.com/phpDocumentor/phpDocumentor2/releases/download/v3.0.0-alpha.3/phpDocumentor.phar",
+            "wget -P phpdocs https://github.com/phpDocumentor/phpDocumentor2/releases/download/v3.0.0-alpha.3/phpDocumentor.phar.pubkey",
+            "chmod +x phpdocs/phpDocumentor.phar",
+            "wget -P phpdocs https://github.com/abbadon1334/phpdoc-to-rst/releases/download/1.0/phpdoc-to-rst.phar",
+            "chmod +x phpdocs/phpdoc-to-rst.phar"
+
         ],
         "doc-build": [
-            "composer run doc-clear",
-            "mkdir -p ./docs",
-            "chmod +x phpdocs/bin/phpdoc",
-            "php phpdocs/bin/phpdoc --config=\".phpdoc.xml\" --template=\"responsive\" --force -n -vvv -t ./docs",
-            "php phpdocs/bin/phpdoc-to-rst generate --repo-base \"$PWD\" --repo-github https://github.com/abbadon1334/phpdoc-to-rst -t docs/rst/ src/"
+            "mkdir -p ./docs/api",
+            "mkdir -p ./docs/md",
+            "phpdocs/phpDocumentor.phar  --config=\".phpdoc.xml\" --template=\"xml\" -t ./docs ./src",
+            "vendor/bin/phpdocmd --index index.md docs/structure.xml docs/md",
+            "phpdocs/phpdoc-to-rst.phar generate --repo-base \"$PWD\" --repo-github https://github.com/abbadon1334/phpdoc-to-rst -t docs/source src/",
+            "cd docs && sphinx-build -b html source docs"
         ],
         "doc-clear": [
             "mkdir -p ./docs",
@@ -109,7 +111,6 @@
             "rm -rf ./phpdocs"
         ],
         "build-all": [
-            "composer run doc-setup",
             "composer run doc-build",
             "composer run unit-coverage",
             "cp -r build/coverage docs/coverage",

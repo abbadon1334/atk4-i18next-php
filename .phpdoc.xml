@@ -13,9 +13,6 @@
         </extensions>
         <visibility></visibility>
     </parser>
-    <transformer>
-        <target>docs</target>
-    </transformer>
     <files>
         <ignore-hidden>true</ignore-hidden>
         <ignore-symlinks>true</ignore-symlinks>
