@@ -14,7 +14,7 @@ TranslatorInterface
 
 
 	:Source:
-		`src/I18Next/TranslatorInterface.php#7 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/TranslatorInterface.php#L7>`_
+		`src/I18Next/TranslatorInterface.php#7 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/TranslatorInterface.php#L7>`_
 	
 
 
@@ -40,7 +40,7 @@ Methods
 			
 		
 		:Source:
-			`src/I18Next/TranslatorInterface.php#19 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/TranslatorInterface.php#L19>`_
+			`src/I18Next/TranslatorInterface.php#19 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/TranslatorInterface.php#L19>`_
 		
 		
 		:Parameters:

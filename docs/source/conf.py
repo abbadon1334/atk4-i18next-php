@@ -24,9 +24,9 @@ copyright = u'2019, Francesco Danti'
 author = u'Francesco Danti'
 
 # The short X.Y version
-version = u''
+version = u'v1.x'
 # The full version, including alpha/beta/rc tags
-release = u'1.0.0'
+#release = u'1.0.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -39,11 +39,11 @@ release = u'1.0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    #'sphinx.ext.autodoc',
+    'sphinx.ext.autodoc',
     #'sphinx.ext.doctest',
-    #'sphinx.ext.intersphinx',
+    'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
-    #'sphinx.ext.coverage',
+    'sphinx.ext.coverage',
     #'sphinx.ext.mathjax',
     #'sphinx.ext.ifconfig',
     #'sphinx.ext.viewcode',
@@ -68,7 +68,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+#language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -76,7 +76,8 @@ language = None
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = None
+pygments_style = 'sphinx'
+highlight_language = 'php'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -195,3 +196,10 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
+
+
+from sphinx.highlighting import lexers
+from pygments.lexers.web import PhpLexer
+lexers['php'] = PhpLexer(startinline=True)
+lexers['php-annotations'] = PhpLexer(startinline=True)
+primary_domain = "php"    # It seems to help sphinx in some kind (don't know why)

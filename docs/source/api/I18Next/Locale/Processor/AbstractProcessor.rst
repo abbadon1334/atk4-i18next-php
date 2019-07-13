@@ -16,7 +16,7 @@ AbstractProcessor
 
 
 	:Source:
-		`src/I18Next/Locale/Processor/AbstractProcessor.php#12 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor/AbstractProcessor.php#L12>`_
+		`src/I18Next/Locale/Processor/AbstractProcessor.php#12 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/AbstractProcessor.php#L12>`_
 	
 
 
@@ -35,7 +35,7 @@ Properties
 .. php:attr:: protected static translations
 
 	:Source:
-		`src/I18Next/Locale/Processor/AbstractProcessor.php#15 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor/AbstractProcessor.php#L15>`_
+		`src/I18Next/Locale/Processor/AbstractProcessor.php#15 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/AbstractProcessor.php#L15>`_
 	
 	:Type: :any:`\\I18Next\\Locale\\Translations <I18Next\\Locale\\Translations>` 
 
@@ -48,7 +48,7 @@ Methods
 	.. php:method:: public __construct( $translations)
 	
 		:Source:
-			`src/I18Next/Locale/Processor/AbstractProcessor.php#17 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor/AbstractProcessor.php#L17>`_
+			`src/I18Next/Locale/Processor/AbstractProcessor.php#17 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/AbstractProcessor.php#L17>`_
 		
 		
 	

@@ -16,7 +16,7 @@ Value
 
 
 	:Source:
-		`src/I18Next/Locale/Processor/Value.php#12 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor/Value.php#L12>`_
+		`src/I18Next/Locale/Processor/Value.php#12 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/Value.php#L12>`_
 	
 	:Parent:
 		:php:class:`I18Next\\Locale\\Processor\\AbstractProcessor`
@@ -43,7 +43,7 @@ Methods
 	.. php:method:: public processValue( &$found_key, $parameters)
 	
 		:Source:
-			`src/I18Next/Locale/Processor/Value.php#14 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor/Value.php#L14>`_
+			`src/I18Next/Locale/Processor/Value.php#14 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/Value.php#L14>`_
 		
 		
 	

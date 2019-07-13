@@ -1102,24 +1102,24 @@
       </docblock>
     </class>
   </file>
-  <file path="src/I18Next/atk4/core/MultiContainerTrait.php" generated-path="src.I18Next.atk4.core.MultiContainerTrait.html" hash="d9cdaaf96a11fddb8fd8656b619c8511" package="global">
+  <file path="src/I18Next/atk4/core/MultiContainerTrait.php" generated-path="src.I18Next.atk4.core.MultiContainerTrait.html" hash="a3e3f22e80160c164fbcfc6a6b0006b0" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="\"/>
     </docblock>
     <namespace-alias name="\atk4\core">\atk4\core</namespace-alias>
-    <trait namespace="atk4\core" line="10" package="atk4\core">
+    <trait namespace="atk4\core" line="8" package="global">
       <name>MultiContainerTrait</name>
       <full_name>\atk4\core\MultiContainerTrait</full_name>
-      <docblock line="10">
+      <docblock line="8">
         <description>This trait is here only for legacy.</description>
         <long-description></long-description>
-        <tag name="package" line="10" description="atk4\core"/>
+        <tag name="package" line="8" description="\"/>
       </docblock>
     </trait>
   </file>
-  <file path="src/I18Next/Translator.php" generated-path="src.I18Next.Translator.html" hash="7e55ef75b830f5bd68872e873d7908a5" package="global">
+  <file path="src/I18Next/Translator.php" generated-path="src.I18Next.Translator.html" hash="69cc8acf121d32e6dd7ec0d0bff3bcf7" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1228,8 +1228,8 @@
           <tag name="param" line="45" description="" type="" variable="path">
             <type></type>
           </tag>
-          <tag name="throws" line="45" description="" type="\I18Next\Exception\Misusage">
-            <type>\I18Next\Exception\Misusage</type>
+          <tag name="throws" line="45" description="" type="\I18Next\Misusage">
+            <type>\I18Next\Misusage</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -1238,38 +1238,38 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="64" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="63" package="global">
         <name>setNamespacePriority</name>
         <full_name>\I18Next\Translator::setNamespacePriority()</full_name>
-        <docblock line="64">
+        <docblock line="63">
           <description>Set namespace priority.</description>
           <long-description></long-description>
-          <tag name="param" line="64" description="" type="mixed" variable="namespace_priority">
+          <tag name="param" line="63" description="" type="mixed" variable="namespace_priority">
             <type>mixed</type>
           </tag>
-          <tag name="throws" line="64" description="" type="\I18Next\Exception\LanguageNamespaceMisuse">
-            <type>\I18Next\Exception\LanguageNamespaceMisuse</type>
+          <tag name="throws" line="63" description="" type="\I18Next\LanguageNamespaceMisuse">
+            <type>\I18Next\LanguageNamespaceMisuse</type>
           </tag>
-          <tag name="example" line="64" description="if set $ns1, $ns2, $ns3 it will try in all this 3 namespace starting from 1 =&gt; 2 =&gt; 3"/>
+          <tag name="example" line="63" description="if set $ns1, $ns2, $ns3 it will try in all this 3 namespace starting from 1 =&gt; 2 =&gt; 3"/>
         </docblock>
-        <argument line="64" by_reference="false">
+        <argument line="63" by_reference="false">
           <name>namespace_priority</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="80" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="79" package="global">
         <name>useFilenameAsNamespace</name>
         <full_name>\I18Next\Translator::useFilenameAsNamespace()</full_name>
-        <docblock line="80">
+        <docblock line="79">
           <description>Set if filenames will be used as namespaces.</description>
           <long-description></long-description>
-          <tag name="param" line="80" description="" type="bool|null" variable="enabled">
+          <tag name="param" line="79" description="" type="bool|null" variable="enabled">
             <type>bool</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="80" description="" type="\I18Next\Exception\LanguageNamespaceMisuse">
-            <type>\I18Next\Exception\LanguageNamespaceMisuse</type>
+          <tag name="throws" line="79" description="" type="\I18Next\LanguageNamespaceMisuse">
+            <type>\I18Next\LanguageNamespaceMisuse</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -1278,23 +1278,23 @@
           <type>bool|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="98" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="97" package="global">
         <name>setLanguagePrimary</name>
         <full_name>\I18Next\Translator::setLanguagePrimary()</full_name>
-        <docblock line="98">
+        <docblock line="97">
           <description>Set Primary Language.</description>
           <long-description></long-description>
-          <tag name="param" line="98" description="" type="string" variable="language_code">
+          <tag name="param" line="97" description="" type="string" variable="language_code">
             <type>string</type>
           </tag>
-          <tag name="throws" line="98" description="" type="\I18Next\Exception\LanguageAlreadyPresent">
-            <type>\I18Next\Exception\LanguageAlreadyPresent</type>
+          <tag name="throws" line="97" description="" type="\I18Next\LanguageAlreadyPresent">
+            <type>\I18Next\LanguageAlreadyPresent</type>
           </tag>
-          <tag name="throws" line="98" description="" type="\I18Next\Exception\LanguagePathNotDefined">
-            <type>\I18Next\Exception\LanguagePathNotDefined</type>
+          <tag name="throws" line="97" description="" type="\I18Next\LanguagePathNotDefined">
+            <type>\I18Next\LanguagePathNotDefined</type>
           </tag>
-          <tag name="throws" line="98" description="" type="\atk4\core\Exception">
-            <type>\atk4\core\Exception</type>
+          <tag name="throws" line="97" description="" type="\I18Next\Exception">
+            <type>\I18Next\Exception</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -1303,23 +1303,23 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="113" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="112" package="global">
         <name>addLanguage</name>
         <full_name>\I18Next\Translator::addLanguage()</full_name>
-        <docblock line="113">
+        <docblock line="112">
           <description>Add Extra languages.</description>
           <long-description></long-description>
-          <tag name="param" line="113" description="" type="string" variable="code">
+          <tag name="param" line="112" description="" type="string" variable="code">
             <type>string</type>
           </tag>
-          <tag name="throws" line="113" description="" type="\atk4\core\Exception">
-            <type>\atk4\core\Exception</type>
+          <tag name="throws" line="112" description="" type="\I18Next\Exception">
+            <type>\I18Next\Exception</type>
           </tag>
-          <tag name="throws" line="113" description="" type="\I18Next\Exception\LanguageAlreadyPresent">
-            <type>\I18Next\Exception\LanguageAlreadyPresent</type>
+          <tag name="throws" line="112" description="" type="\I18Next\LanguageAlreadyPresent">
+            <type>\I18Next\LanguageAlreadyPresent</type>
           </tag>
-          <tag name="throws" line="113" description="" type="\I18Next\Exception\LanguagePathNotDefined">
-            <type>\I18Next\Exception\LanguagePathNotDefined</type>
+          <tag name="throws" line="112" description="" type="\I18Next\LanguagePathNotDefined">
+            <type>\I18Next\LanguagePathNotDefined</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -1328,23 +1328,23 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="139" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="138" package="global">
         <name>setLanguageFallback</name>
         <full_name>\I18Next\Translator::setLanguageFallback()</full_name>
-        <docblock line="139">
+        <docblock line="138">
           <description>Set fallback language.</description>
           <long-description></long-description>
-          <tag name="param" line="139" description="" type="string" variable="fallback_code">
+          <tag name="param" line="138" description="" type="string" variable="fallback_code">
             <type>string</type>
           </tag>
-          <tag name="throws" line="139" description="" type="\atk4\core\Exception">
-            <type>\atk4\core\Exception</type>
+          <tag name="throws" line="138" description="" type="\I18Next\Exception">
+            <type>\I18Next\Exception</type>
           </tag>
-          <tag name="throws" line="139" description="" type="\I18Next\Exception\LanguageAlreadyPresent">
-            <type>\I18Next\Exception\LanguageAlreadyPresent</type>
+          <tag name="throws" line="138" description="" type="\I18Next\LanguageAlreadyPresent">
+            <type>\I18Next\LanguageAlreadyPresent</type>
           </tag>
-          <tag name="throws" line="139" description="" type="\I18Next\Exception\LanguagePathNotDefined">
-            <type>\I18Next\Exception\LanguagePathNotDefined</type>
+          <tag name="throws" line="138" description="" type="\I18Next\LanguagePathNotDefined">
+            <type>\I18Next\LanguagePathNotDefined</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -1353,47 +1353,46 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="148" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next" line="147" package="global">
         <name>_</name>
         <full_name>\I18Next\Translator::_()</full_name>
-        <docblock line="148">
+        <docblock line="147">
           <description>Translates the given message.</description>
           <long-description></long-description>
-          <tag name="inheritdoc" line="148" description=""/>
           <tag name="inherited_from" description="\I18Next\TranslatorInterface::_()" refers="\I18Next\TranslatorInterface::_()" link="/classes/I18Next.TranslatorInterface.html#method__"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>key</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>parameters</name>
           <default>null</default>
-          <type>array|null</type>
+          <type>?array</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>context</name>
           <default>null</default>
-          <type>string|null</type>
+          <type>?string</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>locale</name>
           <default>null</default>
-          <type>string|null</type>
+          <type>?string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next" line="171" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next" line="170" package="global">
         <name>getLocale</name>
         <full_name>\I18Next\Translator::getLocale()</full_name>
-        <docblock line="171">
+        <docblock line="170">
           <description></description>
           <long-description></long-description>
         </docblock>
         <argument line="0" by_reference="false">
           <name>locale</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
     </class>
@@ -1441,9 +1440,6 @@
       </method>
     </class>
   </file>
-  <package name="atk4" full_name="atk4">
-    <package name="core" full_name="atk4\core"/>
-  </package>
   <package name="global" full_name="global"/>
   <namespace name="I18Next" full_name="I18Next">
     <namespace name="Exception" full_name="I18Next\Exception"/>

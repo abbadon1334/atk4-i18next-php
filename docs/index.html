@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title> &mdash; ATK4 - PHP Language library 1.0.0 documentation</title>
+  <title>Agile Toolkit Translation library &mdash; ATK4 - PHP Language library  documentation</title>
   
 
   
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="I18Next" href="api/I18Next/index.html" /> 
+    <link rel="next" title="Getting started" href="getting_started.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -58,6 +58,10 @@
           
             
             
+              <div class="version">
+                v1.x
+              </div>
+            
           
 
           
@@ -79,9 +83,9 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="api/I18Next/index.html"> API documentation</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/I18Next/index.html">API documentation</a></li>
 </ul>
 
             
@@ -127,7 +131,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li></li>
+      <li>Agile Toolkit Translation library</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -146,40 +150,171 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="phpdoctorst section" id="id1">
-<h1><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="agile-toolkit-translation-library">
+  <div class="section" id="agile-toolkit-translation-library">
 <h1>Agile Toolkit Translation library<a class="headerlink" href="#agile-toolkit-translation-library" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="based-on-i18next-library">
 <h2>Based on I18Next library<a class="headerlink" href="#based-on-i18next-library" title="Permalink to this headline">¶</a></h2>
-<p>Based on i18next <a class="reference external" href="http://i18next.com">http://i18next.com</a>
-Interpolate direct with ATK4 - Agile Toolkit Models <a class="reference external" href="https://www.agiletoolkit.org/">https://www.agiletoolkit.org/</a></p>
-<p>install with composer :</p>
-<p>`
-composer require abbadon1334/atk4-i18next-php
-`</p>
+<p>Based on i18next <a class="reference external" href="http://i18next.com">http://i18next.com</a></p>
+<p>Interpolate direct with ATK4 - Agile Toolkit Models <a class="reference external" href="https://www.agiletoolkit.org/">https://www.agiletoolkit.org/</a></p>
+<p>install with composer :
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">composer</span> <span class="pre">require</span> <span class="pre">abbadon1334/atk4-i18next-php</span>
+<span class="pre">`</span></code></p>
 <p>All documentation about the original library can be found here : <a class="reference external" href="http://i18next.com/">http://i18next.com/</a></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#usage-examples">Usage examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#the-translatorinterface">The TranslatorInterface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/I18Next/index.html">API documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/I18Next/index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/I18Next/Exception/index.html">Exception</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/Exception/index.html#classes">Classes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Exception/LanguageNamespaceMisuse.html">LanguageNamespaceMisuse</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Exception/LanguageNamespaceMisuse.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Exception/LanguageAlreadyPresent.html">LanguageAlreadyPresent</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Exception/LanguageAlreadyPresent.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Exception/LanguageLocaleNotExists.html">LanguageLocaleNotExists</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Exception/LanguageLocaleNotExists.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Exception/Misusage.html">Misusage</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Exception/Misusage.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Exception/LanguagePathNotDefined.html">LanguagePathNotDefined</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Exception/LanguagePathNotDefined.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Exception/NotFoundKey.html">NotFoundKey</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Exception/NotFoundKey.html#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/I18Next/Locale/index.html">Locale</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/Locale/index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Locale/Processor/index.html">Processor</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Locale/Processor/index.html#classes">Classes</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="api/I18Next/Locale/Processor/Key.html">Key</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="api/I18Next/Locale/Processor/Key.html#summary">Summary</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="api/I18Next/Locale/Processor/Key.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="api/I18Next/Locale/Processor/Key.html#id1">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="api/I18Next/Locale/Processor/Value.html">Value</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="api/I18Next/Locale/Processor/Value.html#summary">Summary</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="api/I18Next/Locale/Processor/Value.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="api/I18Next/Locale/Processor/Value.html#id1">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="api/I18Next/Locale/Processor/AbstractProcessor.html">AbstractProcessor</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="api/I18Next/Locale/Processor/AbstractProcessor.html#summary">Summary</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="api/I18Next/Locale/Processor/AbstractProcessor.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="api/I18Next/Locale/Processor/AbstractProcessor.html#properties">Properties</a></li>
+<li class="toctree-l8"><a class="reference internal" href="api/I18Next/Locale/Processor/AbstractProcessor.html#id1">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/Locale/index.html#classes">Classes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Locale/Processor.html">Processor</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Locale/Processor.html#summary">Summary</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="api/I18Next/Locale/Processor.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Locale/Processor.html#properties">Properties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Locale/Processor.html#id1">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Locale/Translations.html">Translations</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Locale/Translations.html#summary">Summary</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="api/I18Next/Locale/Translations.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Locale/Translations.html#properties">Properties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/Locale/Translations.html#id1">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/I18Next/atk4/index.html">atk4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/atk4/index.html#traits">Traits</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/atk4/TranslatorI18NextTrait.html">TranslatorI18NextTrait</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/atk4/TranslatorI18NextTrait.html#properties">Properties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="api/I18Next/atk4/TranslatorI18NextTrait.html#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/I18Next/index.html#interfaces">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/I18Next/TranslatorInterface.html">TranslatorInterface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/TranslatorInterface.html#summary">Summary</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/TranslatorInterface.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/TranslatorInterface.html#id1">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/I18Next/index.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/I18Next/Locale.html">Locale</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/Locale.html#summary">Summary</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Locale.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/Locale.html#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/Locale.html#id1">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/I18Next/Translator.html">Translator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/Translator.html#summary">Summary</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api/I18Next/Translator.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/Translator.html#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/I18Next/Translator.html#id1">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
 <li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
 </ul>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="api/I18Next/index.html"> API documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/I18Next/index.html#namespaces">Namespaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/I18Next/index.html#interfaces">Interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/I18Next/index.html#classes">Classes</a></li>
-</ul>
-</li>
-</ul>
-</div>
 </div>
 
 
@@ -190,7 +325,7 @@ composer require abbadon1334/atk4-i18next-php
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="api/I18Next/index.html" class="btn btn-neutral float-right" title="I18Next" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

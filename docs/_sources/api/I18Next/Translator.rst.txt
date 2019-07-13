@@ -14,7 +14,7 @@ Translator
 
 
 	:Source:
-		`src/I18Next/Translator.php#14 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Translator.php#L14>`_
+		`src/I18Next/Translator.php#14 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Translator.php#L14>`_
 	
 	:Implements:
 		:php:interface:`I18Next\\TranslatorInterface` 
@@ -53,7 +53,7 @@ Methods
 			
 		
 		:Source:
-			`src/I18Next/Translator.php#45 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Translator.php#L45>`_
+			`src/I18Next/Translator.php#45 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Translator.php#L45>`_
 		
 		
 		:Parameters:
@@ -74,7 +74,7 @@ Methods
 			
 		
 		:Source:
-			`src/I18Next/Translator.php#64 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Translator.php#L64>`_
+			`src/I18Next/Translator.php#63 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Translator.php#L63>`_
 		
 		
 		:Parameters:
@@ -95,7 +95,7 @@ Methods
 			
 		
 		:Source:
-			`src/I18Next/Translator.php#80 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Translator.php#L80>`_
+			`src/I18Next/Translator.php#79 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Translator.php#L79>`_
 		
 		
 		:Parameters:
@@ -116,7 +116,7 @@ Methods
 			
 		
 		:Source:
-			`src/I18Next/Translator.php#98 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Translator.php#L98>`_
+			`src/I18Next/Translator.php#97 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Translator.php#L97>`_
 		
 		
 		:Parameters:
@@ -145,7 +145,7 @@ Methods
 			
 		
 		:Source:
-			`src/I18Next/Translator.php#113 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Translator.php#L113>`_
+			`src/I18Next/Translator.php#112 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Translator.php#L112>`_
 		
 		
 		:Parameters:
@@ -174,7 +174,7 @@ Methods
 			
 		
 		:Source:
-			`src/I18Next/Translator.php#139 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Translator.php#L139>`_
+			`src/I18Next/Translator.php#138 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Translator.php#L138>`_
 		
 		
 		:Parameters:
@@ -197,8 +197,13 @@ Methods
 
 	.. php:method:: public _( $key, $parameters=null, $context=null, $locale=null)
 	
+		.. rst-class:: phpdoc-description
+		
+			| \{@inheritdoc\}
+			
+		
 		:Source:
-			`src/I18Next/Translator.php#148 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Translator.php#L148>`_
+			`src/I18Next/Translator.php#147 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Translator.php#L147>`_
 		
 		
 	

@@ -16,7 +16,7 @@ Key
 
 
 	:Source:
-		`src/I18Next/Locale/Processor/Key.php#10 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor/Key.php#L10>`_
+		`src/I18Next/Locale/Processor/Key.php#10 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/Key.php#L10>`_
 	
 	:Parent:
 		:php:class:`I18Next\\Locale\\Processor\\AbstractProcessor`
@@ -46,7 +46,7 @@ Methods
 	.. php:method:: public processKey( $key, $context=null, $counter=null)
 	
 		:Source:
-			`src/I18Next/Locale/Processor/Key.php#19 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor/Key.php#L19>`_
+			`src/I18Next/Locale/Processor/Key.php#19 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/Key.php#L19>`_
 		
 		
 		:Parameters:

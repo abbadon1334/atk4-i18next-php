@@ -14,7 +14,7 @@ TranslatorI18NextTrait
 
 
 	:Source:
-		`src/I18Next/atk4/TranslatorI18NextTrait.php#10 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/atk4/TranslatorI18NextTrait.php#L10>`_
+		`src/I18Next/atk4/TranslatorI18NextTrait.php#10 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/atk4/TranslatorI18NextTrait.php#L10>`_
 	
 
 Properties
@@ -23,7 +23,7 @@ Properties
 .. php:attr:: protected static translator
 
 	:Source:
-		`src/I18Next/atk4/TranslatorI18NextTrait.php#13 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/atk4/TranslatorI18NextTrait.php#L13>`_
+		`src/I18Next/atk4/TranslatorI18NextTrait.php#13 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/atk4/TranslatorI18NextTrait.php#L13>`_
 	
 	:Type: :any:`\\I18Next\\TranslatorInterface <I18Next\\TranslatorInterface>` 
 
@@ -36,7 +36,7 @@ Methods
 	.. php:method:: public setTranslator( $translator)
 	
 		:Source:
-			`src/I18Next/atk4/TranslatorI18NextTrait.php#20 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/atk4/TranslatorI18NextTrait.php#L20>`_
+			`src/I18Next/atk4/TranslatorI18NextTrait.php#20 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/atk4/TranslatorI18NextTrait.php#L20>`_
 		
 		
 		:Parameters:
@@ -57,7 +57,7 @@ Methods
 			
 		
 		:Source:
-			`src/I18Next/atk4/TranslatorI18NextTrait.php#36 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/atk4/TranslatorI18NextTrait.php#L36>`_
+			`src/I18Next/atk4/TranslatorI18NextTrait.php#36 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/atk4/TranslatorI18NextTrait.php#L36>`_
 		
 		
 		:Parameters:

@@ -216,7 +216,7 @@ Translates the given message.
 
 ### getLocale
 
-    mixed I18Next\Translator::getLocale(locale)
+    mixed I18Next\Translator::getLocale(string locale)
 
 
 
@@ -226,6 +226,6 @@ Translates the given message.
 
 
 #### Arguments
-* locale **mixed**
+* locale **string**
 
 

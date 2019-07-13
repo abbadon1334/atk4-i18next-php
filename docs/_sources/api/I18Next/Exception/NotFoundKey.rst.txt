@@ -14,7 +14,7 @@ NotFoundKey
 
 
 	:Source:
-		`src/I18Next/Exception/NotFoundKey.php#10 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Exception/NotFoundKey.php#L10>`_
+		`src/I18Next/Exception/NotFoundKey.php#10 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Exception/NotFoundKey.php#L10>`_
 	
 	:Parent:
 		:php:class:`atk4\\core\\Exception`

@@ -16,7 +16,7 @@ Processor
 
 
 	:Source:
-		`src/I18Next/Locale/Processor.php#13 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor.php#L13>`_
+		`src/I18Next/Locale/Processor.php#13 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor.php#L13>`_
 	
 
 
@@ -46,7 +46,7 @@ Methods
 	.. php:method:: public __construct( $translations)
 	
 		:Source:
-			`src/I18Next/Locale/Processor.php#24 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor.php#L24>`_
+			`src/I18Next/Locale/Processor.php#24 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor.php#L24>`_
 		
 		
 	
@@ -57,7 +57,7 @@ Methods
 	.. php:method:: public process( $key, $parameters=null, $context=null)
 	
 		:Source:
-			`src/I18Next/Locale/Processor.php#38 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale/Processor.php#L38>`_
+			`src/I18Next/Locale/Processor.php#38 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor.php#L38>`_
 		
 		
 		:Parameters:

@@ -16,7 +16,7 @@ Locale
 
 
 	:Source:
-		`src/I18Next/Locale.php#14 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale.php#L14>`_
+		`src/I18Next/Locale.php#14 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L14>`_
 	
 
 
@@ -43,7 +43,7 @@ Methods
 	.. php:method:: public __construct( $code)
 	
 		:Source:
-			`src/I18Next/Locale.php#22 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale.php#L22>`_
+			`src/I18Next/Locale.php#22 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L22>`_
 		
 		
 	
@@ -54,7 +54,7 @@ Methods
 	.. php:method:: public load( $path, $use_filename_as_namespace, ...$namespace_priority)
 	
 		:Source:
-			`src/I18Next/Locale.php#36 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale.php#L36>`_
+			`src/I18Next/Locale.php#36 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L36>`_
 		
 		
 		:Parameters:
@@ -72,7 +72,7 @@ Methods
 	.. php:method:: public process( $key, $parameters=null, $context=null)
 	
 		:Source:
-			`src/I18Next/Locale.php#41 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale.php#L41>`_
+			`src/I18Next/Locale.php#41 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L41>`_
 		
 		
 	
@@ -83,7 +83,7 @@ Methods
 	.. php:method:: public setLoaderFormat( $format)
 	
 		:Source:
-			`src/I18Next/Locale.php#46 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/src/I18Next/Locale.php#L46>`_
+			`src/I18Next/Locale.php#46 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L46>`_
 		
 		
 	
