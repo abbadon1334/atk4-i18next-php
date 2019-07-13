@@ -22,12 +22,12 @@ class Translator_Atk4Trait_Test extends TranslatorBaseCase
 
         $app->add($child = new ATK4ChildMock());
 
-        $result = $child->_('friend', null, null, 'en');
+        $result = $child->_('friend', NULL, NULL, 'en');
         $this->assertEquals('A friend', $result);
 
         $this->translator->addLanguage('ro');
 
-        $result = $child->_('friend', null, null, 'ro');
+        $result = $child->_('friend', NULL, NULL, 'ro');
         $this->assertEquals('Un prieten', $result);
     }
 
@@ -36,6 +36,18 @@ class Translator_Atk4Trait_Test extends TranslatorBaseCase
         $this->expectException(Exception::class);
         $app = new ATK4AppScopeMock();
         $app->_('friend');
+    }
+
+    public function testDirect()
+    {
+        $this->setupTranslatorLanguages('it', 'en');
+
+        $app = new ATK4AppScopeMock();
+        $app->setTranslator($this->translator);
+
+        $result = $app->_('Ho trovato, $t(friend)');
+        $this->assertEquals('Ho trovato, Un conoscente', $result);
+
     }
 }
 

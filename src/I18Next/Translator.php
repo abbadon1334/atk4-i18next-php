@@ -38,11 +38,11 @@ class Translator implements TranslatorInterface
     /**
      * Set the root path of locales folder.
      *
-     * @param $path
+     * @param string $path
      *
      * @throws Misusage
      */
-    public function setTranslationsPath($path): void
+    public function setTranslationsPath(string $path): void
     {
         if (! empty($this->locales)) {
             throw new Misusage('setTranslationsPath must be called before : setLanguagePrimary, setLanguageFallback, addLanguage');

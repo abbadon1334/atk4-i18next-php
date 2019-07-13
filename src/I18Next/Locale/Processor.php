@@ -47,9 +47,16 @@ final class Processor
 
         $found_key = $this->processorKey->processKey($key, $context, $counter);
 
-        //$found_key = $found_key ?? $key; // too much recursion and problem with plurals
+        $found_key = $found_key ?? $key; // too much recursion and problem with plurals
 
-        return $this->processorValue->processValue($found_key, $parameters);
+        $found_key = $this->processorValue->processValue($found_key, $parameters);
+
+        if ($found_key !== $key)
+        {
+            return $found_key;
+        }
+
+        return null;
     }
 
     private function getKeyNamespace($key)
