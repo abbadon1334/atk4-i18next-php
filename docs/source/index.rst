@@ -18,6 +18,7 @@ All documentation about the original library can be found here : http://i18next.
 
 
 .. toctree::
+    :maxdepth: 1
 
    getting_started
    API documentation <api/I18Next/index>

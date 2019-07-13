@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DIContainerTrait &mdash; ATK4 - PHP Language library  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> ATK4 - PHP Language library
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.x
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../I18Next/index.html">API documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">ATK4 - PHP Language library</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>DIContainerTrait</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/atk4/core/DIContainerTrait.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="phpdoctorst section" id="namespace-atk4\core">
+<span id="dicontainertrait"></span><h1>DIContainerTrait<a class="headerlink" href="#namespace-atk4\core" title="Permalink to this headline">¶</a></h1>
+<dl class="trait">
+<dt id="atk4\core\DIContainerTrait">
+<em class="property">trait </em><code class="descclassname">atk4\core\</code><code class="descname">DIContainerTrait</code><a class="headerlink" href="#atk4\core\DIContainerTrait" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">A class with this trait will have setDefaults() method that can</div>
+<div class="line">be passed list of default properties.</div>
+</div>
+<div class="phpdoc-description line-block">
+<div class="line">$view-&gt;setDefaults([‘ui’ =&gt; ‘segment’]);</div>
+<div class="line"><br /></div>
+<div class="line">Typically you would want to do that inside your constructor. The</div>
+<div class="line">default handling of the properties is:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">- only apply properties that are defined</div>
+<div class="line">- only set property if it’s current value is null</div>
+<div class="line">- ignore defaults that have null value</div>
+<div class="line">- if existing property and default have array, then both arrays will be merged</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Several classes may opt to extend setDefaults, for example in Agile UI</div>
+<div class="line">setDefaults is extended to support classes and content:</div>
+<div class="line"><br /></div>
+<div class="line">$segment-&gt;setDefaults([‘Hello There’, ‘red’, ‘ui’=&gt;’segment’]);</div>
+<div class="line"><br /></div>
+<div class="line">WARNING: Do not use this trait unless you have a lot of properties</div>
+<div class="line">to inject. Also follow the guidelines on</div>
+<div class="line"><a class="reference external" href="https://github.com/atk4/ui/wiki/Object-Constructors">https://github.com/atk4/ui/wiki/Object-Constructors</a></div>
+<div class="line"><br /></div>
+<div class="line">Relying on this trait excessively may cause anger management issues to</div>
+<div class="line">some code reviewers.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DIContainerTrait.php#L31">vendor/atk4/core/src/DIContainerTrait.php#31</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<dl class="attr">
+<dt id="atk4\core\DIContainerTrait::$_DIContainerTrait">
+<em class="property">public </em><em class="property">static </em><em class="property">property </em><code class="descclassname">atk4\core\DIContainerTrait::$</code><code class="descname">_DIContainerTrait</code><a class="headerlink" href="#atk4\core\DIContainerTrait::$_DIContainerTrait" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Check this property to see if trait is present in the object.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DIContainerTrait.php#L38">vendor/atk4/core/src/DIContainerTrait.php#38</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="public method">
+<dt id="atk4\core\DIContainerTrait::setDefaults">
+<em class="property">public </em><code class="descclassname">atk4\core\DIContainerTrait::</code><code class="descname">setDefaults</code><span class="sig-paren">(</span><em>$properties=[]</em>, <em>$passively=false</em><span class="sig-paren">)</span><a class="headerlink" href="#atk4\core\DIContainerTrait::setDefaults" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Call from __construct() to initialize the properties allowing</div>
+<div class="line">developer to pass Dependency Injector Container.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DIContainerTrait.php#L47">vendor/atk4/core/src/DIContainerTrait.php#47</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$properties</strong> (array)</li>
+<li><strong>$passively</strong> (bool)  if true, existing non-null argument values will be kept</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="protected method">
+<dt id="atk4\core\DIContainerTrait::setMissingProperty">
+<em class="property">protected </em><code class="descclassname">atk4\core\DIContainerTrait::</code><code class="descname">setMissingProperty</code><span class="sig-paren">(</span><em>$key</em>, <em>$value</em><span class="sig-paren">)</span><a class="headerlink" href="#atk4\core\DIContainerTrait::setMissingProperty" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Sets object property.</div>
+</div>
+<div class="phpdoc-description line-block">
+<div class="line">Throws exception.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DIContainerTrait.php#L76">vendor/atk4/core/src/DIContainerTrait.php#76</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$key</strong> (mixed)</li>
+<li><strong>$value</strong> (mixed)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Francesco Danti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

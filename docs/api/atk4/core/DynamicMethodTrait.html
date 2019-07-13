@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DynamicMethodTrait &mdash; ATK4 - PHP Language library  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> ATK4 - PHP Language library
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.x
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../I18Next/index.html">API documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">ATK4 - PHP Language library</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>DynamicMethodTrait</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/atk4/core/DynamicMethodTrait.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="phpdoctorst section" id="namespace-atk4\core">
+<span id="dynamicmethodtrait"></span><h1>DynamicMethodTrait<a class="headerlink" href="#namespace-atk4\core" title="Permalink to this headline">¶</a></h1>
+<dl class="trait">
+<dt id="atk4\core\DynamicMethodTrait">
+<em class="property">trait </em><code class="descclassname">atk4\core\</code><code class="descname">DynamicMethodTrait</code><a class="headerlink" href="#atk4\core\DynamicMethodTrait" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">This trait makes it possible for you to add dynamic methods</div>
+<div class="line">into your object.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DynamicMethodTrait.php#L9">vendor/atk4/core/src/DynamicMethodTrait.php#9</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<dl class="attr">
+<dt id="atk4\core\DynamicMethodTrait::$_dynamicMethodTrait">
+<em class="property">public </em><em class="property">static </em><em class="property">property </em><code class="descclassname">atk4\core\DynamicMethodTrait::$</code><code class="descname">_dynamicMethodTrait</code><a class="headerlink" href="#atk4\core\DynamicMethodTrait::$_dynamicMethodTrait" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Check this property to see if trait is present in the object.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DynamicMethodTrait.php#L16">vendor/atk4/core/src/DynamicMethodTrait.php#16</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="public method">
+<dt id="atk4\core\DynamicMethodTrait::__call">
+<em class="property">public </em><code class="descclassname">atk4\core\DynamicMethodTrait::</code><code class="descname">__call</code><span class="sig-paren">(</span><em>$method</em>, <em>$arguments</em><span class="sig-paren">)</span><a class="headerlink" href="#atk4\core\DynamicMethodTrait::__call" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Magic method - tries to call dynamic method and throws exception if</div>
+<div class="line">this was not possible.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DynamicMethodTrait.php#L25">vendor/atk4/core/src/DynamicMethodTrait.php#25</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$arguments</strong> (array)  Array of arguments to pass to this method</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="public method">
+<dt id="atk4\core\DynamicMethodTrait::tryCall">
+<em class="property">public </em><code class="descclassname">atk4\core\DynamicMethodTrait::</code><code class="descname">tryCall</code><span class="sig-paren">(</span><em>$method</em>, <em>$arguments</em><span class="sig-paren">)</span><a class="headerlink" href="#atk4\core\DynamicMethodTrait::tryCall" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Tries to call dynamic method.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DynamicMethodTrait.php#L47">vendor/atk4/core/src/DynamicMethodTrait.php#47</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$arguments</strong> (array)  Array of arguments to pass to this method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">mixed | null</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="public method">
+<dt id="atk4\core\DynamicMethodTrait::addMethod">
+<em class="property">public </em><code class="descclassname">atk4\core\DynamicMethodTrait::</code><code class="descname">addMethod</code><span class="sig-paren">(</span><em>$name</em>, <em>$callable</em><span class="sig-paren">)</span><a class="headerlink" href="#atk4\core\DynamicMethodTrait::addMethod" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Add new method for this object.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DynamicMethodTrait.php#L69">vendor/atk4/core/src/DynamicMethodTrait.php#69</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$name</strong> (string | array)  Name of new method of $this object</li>
+<li><strong>$callable</strong> (callable)  Callback</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="public method">
+<dt id="atk4\core\DynamicMethodTrait::hasMethod">
+<em class="property">public </em><code class="descclassname">atk4\core\DynamicMethodTrait::</code><code class="descname">hasMethod</code><span class="sig-paren">(</span><em>$name</em><span class="sig-paren">)</span><a class="headerlink" href="#atk4\core\DynamicMethodTrait::hasMethod" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Return if this object has specified method (either native or dynamic).</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DynamicMethodTrait.php#L108">vendor/atk4/core/src/DynamicMethodTrait.php#108</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$name</strong> (string)  Name of the method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="public method">
+<dt id="atk4\core\DynamicMethodTrait::removeMethod">
+<em class="property">public </em><code class="descclassname">atk4\core\DynamicMethodTrait::</code><code class="descname">removeMethod</code><span class="sig-paren">(</span><em>$name</em><span class="sig-paren">)</span><a class="headerlink" href="#atk4\core\DynamicMethodTrait::removeMethod" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Remove dynamically registered method.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DynamicMethodTrait.php#L122">vendor/atk4/core/src/DynamicMethodTrait.php#122</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$name</strong> (string)  Name of the method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="public method">
+<dt id="atk4\core\DynamicMethodTrait::addGlobalMethod">
+<em class="property">public </em><code class="descclassname">atk4\core\DynamicMethodTrait::</code><code class="descname">addGlobalMethod</code><span class="sig-paren">(</span><em>$name</em>, <em>$callable</em><span class="sig-paren">)</span><a class="headerlink" href="#atk4\core\DynamicMethodTrait::addGlobalMethod" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Agile Toolkit objects allow method injection. This is quite similar</div>
+<div class="line">to technique used in JavaScript:.</div>
+</div>
+<div class="phpdoc-description line-block">
+<div class="line">obj.test = function() { .. }</div>
+<div class="line"><br /></div>
+<div class="line">All non-existent method calls on all Agile Toolkit objects will be</div>
+<div class="line">tried against local table of registered methods and then against</div>
+<div class="line">global registered methods.</div>
+<div class="line"><br /></div>
+<div class="line">addGlobalMethod allows you to register a globally-recognized method for</div>
+<div class="line">all Agile Toolkit objects. PHP is not particularly fast about executing</div>
+<div class="line">methods like that, but this technique can be used for adding</div>
+<div class="line">backward-compatibility or debugging, etc.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DynamicMethodTrait.php#L152">vendor/atk4/core/src/DynamicMethodTrait.php#152</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$name</strong> (string)  Name of the method</li>
+<li><strong>$callable</strong> (callable)  Calls your function($object, $arg1, $arg2)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">See:</th><td class="field-body"><p class="first"><code class="xref any docutils literal notranslate"><span class="pre">\atk4\core\self::hasMethod()</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">See:</th><td class="field-body"><p class="first last"><code class="xref any docutils literal notranslate"><span class="pre">\atk4\core\self::hasMethod()</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="public method">
+<dt id="atk4\core\DynamicMethodTrait::hasGlobalMethod">
+<em class="property">public </em><code class="descclassname">atk4\core\DynamicMethodTrait::</code><code class="descname">hasGlobalMethod</code><span class="sig-paren">(</span><em>$name</em><span class="sig-paren">)</span><a class="headerlink" href="#atk4\core\DynamicMethodTrait::hasGlobalMethod" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Return true if such global method exists.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DynamicMethodTrait.php#L172">vendor/atk4/core/src/DynamicMethodTrait.php#172</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$name</strong> (string)  Name of the method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="public method">
+<dt id="atk4\core\DynamicMethodTrait::removeGlobalMethod">
+<em class="property">public </em><code class="descclassname">atk4\core\DynamicMethodTrait::</code><code class="descname">removeGlobalMethod</code><span class="sig-paren">(</span><em>$name</em><span class="sig-paren">)</span><a class="headerlink" href="#atk4\core\DynamicMethodTrait::removeGlobalMethod" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Remove dynamically registered global method.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><p class="first"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/DynamicMethodTrait.php#L187">vendor/atk4/core/src/DynamicMethodTrait.php#187</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$name</strong> (string)  Name of the method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">$this</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Francesco Danti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

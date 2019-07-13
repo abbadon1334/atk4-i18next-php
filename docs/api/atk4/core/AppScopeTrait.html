@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AppScopeTrait &mdash; ATK4 - PHP Language library  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> ATK4 - PHP Language library
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.x
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../I18Next/index.html">API documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">ATK4 - PHP Language library</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>AppScopeTrait</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/atk4/core/AppScopeTrait.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="phpdoctorst section" id="namespace-atk4\core">
+<span id="appscopetrait"></span><h1>AppScopeTrait<a class="headerlink" href="#namespace-atk4\core" title="Permalink to this headline">¶</a></h1>
+<dl class="trait">
+<dt id="atk4\core\AppScopeTrait">
+<em class="property">trait </em><code class="descclassname">atk4\core\</code><code class="descname">AppScopeTrait</code><a class="headerlink" href="#atk4\core\AppScopeTrait" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Typical software design will create the application scope. Most frameworks</div>
+<div class="line">relies on “static” properties, methods and classes. This does puts some</div>
+<div class="line">limitations on your implementation (you can’t have multiple applications).</div>
+</div>
+<div class="phpdoc-description line-block">
+<div class="line">App Scope will pass the ‘app’ property into all the object that you’re</div>
+<div class="line">adding, so that you know for sure which application you work with.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/AppScopeTrait.php#L13">vendor/atk4/core/src/AppScopeTrait.php#13</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<dl class="attr">
+<dt id="atk4\core\AppScopeTrait::$_appScopeTrait">
+<em class="property">public </em><em class="property">static </em><em class="property">property </em><code class="descclassname">atk4\core\AppScopeTrait::$</code><code class="descname">_appScopeTrait</code><a class="headerlink" href="#atk4\core\AppScopeTrait::$_appScopeTrait" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Check this property to see if trait is present in the object.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/AppScopeTrait.php#L20">vendor/atk4/core/src/AppScopeTrait.php#20</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attr">
+<dt id="atk4\core\AppScopeTrait::$app">
+<em class="property">public </em><em class="property">static </em><em class="property">property </em><code class="descclassname">atk4\core\AppScopeTrait::$</code><code class="descname">app</code><a class="headerlink" href="#atk4\core\AppScopeTrait::$app" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">Always points to current Application.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/AppScopeTrait.php#L27">vendor/atk4/core/src/AppScopeTrait.php#27</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><code class="xref any docutils literal notranslate"><span class="pre">\atk4\ui\App</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attr">
+<dt id="atk4\core\AppScopeTrait::$max_name_length">
+<em class="property">public </em><em class="property">static </em><em class="property">property </em><code class="descclassname">atk4\core\AppScopeTrait::$</code><code class="descname">max_name_length</code><a class="headerlink" href="#atk4\core\AppScopeTrait::$max_name_length" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">When using mechanism for ContainerTrait, they inherit name of the</div>
+<div class="line">parent to generate unique name for a child. In a framework it makes</div>
+<div class="line">sense if you have a unique identifiers for all the objects because</div>
+<div class="line">this enables you to use them as session keys, get arguments, etc.</div>
+</div>
+<div class="phpdoc-description line-block">
+<div class="line">Unfortunately if those keys become too long it may be a problem,</div>
+<div class="line">so ContainerTrait contains a mechanism for auto-shortening the</div>
+<div class="line">name based around max_name_length. The mechanism does only work</div>
+<div class="line">if AppScopeTrait is used, $app property is set and has a</div>
+<div class="line">max_name_length defined.</div>
+<div class="line"><br /></div>
+<div class="line">Minimum is 20</div>
+<div class="line"><br /></div>
+<div class="line">See <a class="reference external" href="http://stackoverflow.com/a/9399615/1466341">http://stackoverflow.com/a/9399615/1466341</a> for more info.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/AppScopeTrait.php#L47">vendor/atk4/core/src/AppScopeTrait.php#47</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attr">
+<dt id="atk4\core\AppScopeTrait::$unique_hashes">
+<em class="property">public </em><em class="property">static </em><em class="property">property </em><code class="descclassname">atk4\core\AppScopeTrait::$</code><code class="descname">unique_hashes</code><a class="headerlink" href="#atk4\core\AppScopeTrait::$unique_hashes" title="Permalink to this definition">¶</a></dt>
+<dd><div class="phpdoc-description line-block">
+<div class="line">As more names are shortened, the substituted part is being placed into</div>
+<div class="line">this hash and the value contains the new key. This helps to avoid creating</div>
+<div class="line">many sequential prefixes for the same character sequence. Those</div>
+<div class="line">hashes can also be used to re-build the long name of the object, but</div>
+<div class="line">this functionality is not essential and excluded from traits. You</div>
+<div class="line">can find it in a test suite.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"><a class="reference external" href="https://github.com/atk4/core/blob/master/vendor/atk4/core/src/AppScopeTrait.php#L59">vendor/atk4/core/src/AppScopeTrait.php#59</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Francesco Danti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
