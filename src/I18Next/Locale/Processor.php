@@ -51,8 +51,7 @@ final class Processor
 
         $found_key = $this->processorValue->processValue($found_key, $parameters);
 
-        if ($found_key !== $key)
-        {
+        if ($found_key !== $key) {
             return $found_key;
         }
 
