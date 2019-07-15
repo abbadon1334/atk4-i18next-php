@@ -9,11 +9,10 @@ class Translator_CasePluralInterval_Test extends TranslatorBaseCase
 {
     /**
      * Testing this :
-     * "key4_interval": "(1){one item};(2-7){a few items};(7-inf){a lot of items};"
+     * "key4_interval": "(1){one item};(2-7){a few items};(7-inf){a lot of items};".
      *
      * "key4_interval": "(1){one item};(2-7){a few items};(7-inf){a lot of items};"
      */
-
     public function testNoCount()
     {
         $this->setupTranslatorLanguages('en');
@@ -59,11 +58,11 @@ class Translator_CasePluralInterval_Test extends TranslatorBaseCase
         $this->expectException(TranslationSyntaxError::class);
 
         $path = '/tmp/locale_exception';
-        @mkdir($path . '/en', 0777, true);
+        @mkdir($path.'/en', 0777, true);
 
         file_put_contents(
-            $path . '/en/exception.json',
-            json_encode(["key4_interval" => "(1){one item};2-7){a few items};(7-inf){a lot of items};"])
+            $path.'/en/exception.json',
+            json_encode(['key4_interval' => '(1){one item};2-7){a few items};(7-inf){a lot of items};'])
         );
 
         $this->translator = new Translator();
@@ -76,11 +75,11 @@ class Translator_CasePluralInterval_Test extends TranslatorBaseCase
         $this->expectException(TranslationSyntaxError::class);
 
         $path = '/tmp/locale_exception';
-        @mkdir($path . '/en', 0777, true);
+        @mkdir($path.'/en', 0777, true);
 
         file_put_contents(
-            $path . '/en/exception.json',
-            json_encode(["key4_interval" => "(1){one item};(2-7){a few items};(7-inf){a lot of items}"])
+            $path.'/en/exception.json',
+            json_encode(['key4_interval' => '(1){one item};(2-7){a few items};(7-inf){a lot of items}'])
         );
 
         $this->translator = new Translator();
