@@ -100,7 +100,7 @@ Methods
 
 ### setTranslationsPath
 
-    mixed I18Next\Translator::setTranslationsPath(path)
+    mixed I18Next\Translator::setTranslationsPath(string path)
 
 Set the root path of locales folder.
 
@@ -110,7 +110,7 @@ Set the root path of locales folder.
 
 
 #### Arguments
-* path **mixed**
+* path **string**
 
 
 

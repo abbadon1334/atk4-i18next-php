@@ -9,6 +9,7 @@ API Index
         * [NotFoundKey](I18Next-Exception-NotFoundKey.md)
         * [LanguageAlreadyPresent](I18Next-Exception-LanguageAlreadyPresent.md)
         * [LanguageNamespaceMisuse](I18Next-Exception-LanguageNamespaceMisuse.md)
+        * [TranslationSyntaxError](I18Next-Exception-TranslationSyntaxError.md)
     * [TranslatorInterface](I18Next-TranslatorInterface.md)
     * [Locale](I18Next-Locale.md)
         * [Processor](I18Next-Locale-Processor.md)
@@ -17,4 +18,5 @@ API Index
             * [AbstractProcessor](I18Next-Locale-Processor-AbstractProcessor.md)
         * [Translations](I18Next-Locale-Translations.md)
     * [Translator](I18Next-Translator.md)
+    * [TranslatorStatic](I18Next-TranslatorStatic.md)
 

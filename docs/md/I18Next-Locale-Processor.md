@@ -30,7 +30,7 @@ Properties
 
 ### $processorKey
 
-    private \I18Next\Locale\Processor\Key $processorKey
+    private \I18Next\Locale\Key $processorKey
 
 
 
@@ -41,7 +41,7 @@ Properties
 
 ### $processorValue
 
-    private \I18Next\Locale\Processor\Value $processorValue
+    private \I18Next\Locale\Value $processorValue
 
 
 
@@ -56,7 +56,7 @@ Methods
 
 ### __construct
 
-    mixed I18Next\Locale\Processor::__construct(translations)
+    mixed I18Next\Locale\Processor::__construct(\I18Next\Locale\Translations translations)
 
 
 
@@ -66,7 +66,7 @@ Methods
 
 
 #### Arguments
-* translations **mixed**
+* translations **[I18Next\Locale\Translations](I18Next-Locale-Translations.md)**
 
 
 
@@ -106,7 +106,7 @@ Methods
 
 ### getCountFromParameters
 
-    mixed I18Next\Locale\Processor::getCountFromParameters(parameters)
+    mixed I18Next\Locale\Processor::getCountFromParameters(?array parameters)
 
 
 
@@ -116,13 +116,13 @@ Methods
 
 
 #### Arguments
-* parameters **mixed**
+* parameters **?array**
 
 
 
 ### getContextFromParameters
 
-    mixed I18Next\Locale\Processor::getContextFromParameters(parameters, context)
+    mixed I18Next\Locale\Processor::getContextFromParameters(?array parameters, ?string context)
 
 
 
@@ -132,14 +132,14 @@ Methods
 
 
 #### Arguments
-* parameters **mixed**
-* context **mixed**
+* parameters **?array**
+* context **?string**
 
 
 
 ### getNamespaceFromParameters
 
-    mixed I18Next\Locale\Processor::getNamespaceFromParameters(parameters)
+    mixed I18Next\Locale\Processor::getNamespaceFromParameters(?array parameters)
 
 
 
@@ -149,13 +149,13 @@ Methods
 
 
 #### Arguments
-* parameters **mixed**
+* parameters **?array**
 
 
 
 ### processKeyForNamespaces
 
-    mixed I18Next\Locale\Processor::processKeyForNamespaces(key, keyNamespaceFromParameters)
+    mixed I18Next\Locale\Processor::processKeyForNamespaces(string key, ?string keyNamespaceFromParameters)
 
 
 
@@ -165,7 +165,7 @@ Methods
 
 
 #### Arguments
-* key **mixed**
-* keyNamespaceFromParameters **mixed**
+* key **string**
+* keyNamespaceFromParameters **?string**
 
 

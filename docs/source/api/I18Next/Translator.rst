@@ -57,7 +57,7 @@ Methods
 		
 		
 		:Parameters:
-			* **$path**  
+			* **$path** (string)  
 
 		
 		:Throws: :any:`\\I18Next\\Exception\\Misusage <I18Next\\Exception\\Misusage>` 

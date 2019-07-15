@@ -16,7 +16,7 @@ Translations
 
 
 	:Source:
-		`src/I18Next/Locale/Translations.php#14 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L14>`_
+		`src/I18Next/Locale/Translations.php#15 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L15>`_
 	
 	:Used traits:
 		:php:trait:`atk4\\core\\ConfigTrait` 
@@ -34,6 +34,7 @@ Methods
 * :php:meth:`private setNamespacePriority\($namespace\_priority\)<I18Next\\Locale\\Translations::setNamespacePriority\(\)>`
 * :php:meth:`private afterReadProcessForKeyCounters\(\)<I18Next\\Locale\\Translations::afterReadProcessForKeyCounters\(\)>`
 * :php:meth:`private processForCounterKey\($key\_plural\_definition, $key, $value\)<I18Next\\Locale\\Translations::processForCounterKey\(\)>`
+* :php:meth:`private processForIntervalKey\($key\_plural\_definition, $key, $value\)<I18Next\\Locale\\Translations::processForIntervalKey\(\)>`
 * :php:meth:`private afterReadProcessForKeyDeepInline\(\)<I18Next\\Locale\\Translations::afterReadProcessForKeyDeepInline\(\)>`
 * :php:meth:`private afterReadAddNamespaceIfNeeded\($config, $namespace\)<I18Next\\Locale\\Translations::afterReadAddNamespaceIfNeeded\(\)>`
 * :php:meth:`public useNamespaces\(\)<I18Next\\Locale\\Translations::useNamespaces\(\)>`
@@ -47,7 +48,7 @@ Properties
 .. php:attr:: protected static namespace_priority
 
 	:Source:
-		`src/I18Next/Locale/Translations.php#22 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L22>`_
+		`src/I18Next/Locale/Translations.php#23 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L23>`_
 	
 	:Type: string[] 
 
@@ -55,7 +56,7 @@ Properties
 .. php:attr:: protected static use_filename_as_namespace
 
 	:Source:
-		`src/I18Next/Locale/Translations.php#25 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L25>`_
+		`src/I18Next/Locale/Translations.php#26 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L26>`_
 	
 	:Type: bool 
 
@@ -68,7 +69,7 @@ Methods
 	.. php:method:: public load( $path, $use_filename_as_namespace, ...$namespace_priority)
 	
 		:Source:
-			`src/I18Next/Locale/Translations.php#40 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L40>`_
+			`src/I18Next/Locale/Translations.php#41 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L41>`_
 		
 		
 		:Parameters:
@@ -86,7 +87,7 @@ Methods
 	.. php:method:: public useFilenameAsNamespace( $enabled)
 	
 		:Source:
-			`src/I18Next/Locale/Translations.php#75 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L75>`_
+			`src/I18Next/Locale/Translations.php#77 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L77>`_
 		
 		
 	
@@ -97,7 +98,7 @@ Methods
 	.. php:method:: public useNamespaces()
 	
 		:Source:
-			`src/I18Next/Locale/Translations.php#162 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L162>`_
+			`src/I18Next/Locale/Translations.php#243 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L243>`_
 		
 		
 	
@@ -108,7 +109,7 @@ Methods
 	.. php:method:: public getNamespaceRanked()
 	
 		:Source:
-			`src/I18Next/Locale/Translations.php#167 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L167>`_
+			`src/I18Next/Locale/Translations.php#248 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L248>`_
 		
 		
 	
@@ -119,7 +120,7 @@ Methods
 	.. php:method:: public setLoaderFormat( $format)
 	
 		:Source:
-			`src/I18Next/Locale/Translations.php#172 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L172>`_
+			`src/I18Next/Locale/Translations.php#253 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L253>`_
 		
 		
 	

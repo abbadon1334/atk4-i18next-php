@@ -85,7 +85,7 @@ Methods
 
 ### useFilenameAsNamespace
 
-    mixed I18Next\Locale\Translations::useFilenameAsNamespace(enabled)
+    mixed I18Next\Locale\Translations::useFilenameAsNamespace(?bool enabled)
 
 
 
@@ -95,7 +95,7 @@ Methods
 
 
 #### Arguments
-* enabled **mixed**
+* enabled **?bool**
 
 
 
@@ -130,7 +130,7 @@ Methods
 
 ### processForCounterKey
 
-    mixed I18Next\Locale\Translations::processForCounterKey(key_plural_definition, key, value)
+    mixed I18Next\Locale\Translations::processForCounterKey(string key_plural_definition, string key, string value)
 
 
 
@@ -140,9 +140,27 @@ Methods
 
 
 #### Arguments
-* key_plural_definition **mixed**
-* key **mixed**
-* value **mixed**
+* key_plural_definition **string**
+* key **string**
+* value **string**
+
+
+
+### processForIntervalKey
+
+    mixed I18Next\Locale\Translations::processForIntervalKey(string key_plural_definition, string key, string value)
+
+
+
+
+
+* Visibility: **private**
+
+
+#### Arguments
+* key_plural_definition **string**
+* key **string**
+* value **string**
 
 
 
@@ -161,7 +179,7 @@ Methods
 
 ### afterReadAddNamespaceIfNeeded
 
-    mixed I18Next\Locale\Translations::afterReadAddNamespaceIfNeeded(config, namespace)
+    mixed I18Next\Locale\Translations::afterReadAddNamespaceIfNeeded(array config, string namespace)
 
 
 
@@ -171,8 +189,8 @@ Methods
 
 
 #### Arguments
-* config **mixed**
-* namespace **mixed**
+* config **array**
+* namespace **string**
 
 
 
@@ -204,7 +222,7 @@ Methods
 
 ### setLoaderFormat
 
-    mixed I18Next\Locale\Translations::setLoaderFormat(format)
+    mixed I18Next\Locale\Translations::setLoaderFormat(string format)
 
 
 
@@ -214,6 +232,6 @@ Methods
 
 
 #### Arguments
-* format **mixed**
+* format **string**
 
 

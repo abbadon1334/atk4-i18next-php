@@ -39,6 +39,7 @@ Classes
 	:maxdepth: 1
 	
 	Locale <Locale>
+	TranslatorStatic <TranslatorStatic>
 	Translator <Translator>
 
 

@@ -18,6 +18,7 @@ Classes
 .. toctree::
 	:maxdepth: 1
 	
+	TranslationSyntaxError <TranslationSyntaxError>
 	LanguageNamespaceMisuse <LanguageNamespaceMisuse>
 	LanguageAlreadyPresent <LanguageAlreadyPresent>
 	LanguageLocaleNotExists <LanguageLocaleNotExists>
