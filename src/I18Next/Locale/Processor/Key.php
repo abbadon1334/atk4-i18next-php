@@ -20,8 +20,7 @@ final class Key extends AbstractProcessor
     {
         $key_piped = $this->processDirectPipedKey($key, $counter);
 
-        if (null !== $key_piped)
-        {
+        if (null !== $key_piped) {
             return $key_piped;
         }
 
@@ -42,18 +41,17 @@ final class Key extends AbstractProcessor
     {
         $key_piped = explode('|', $key);
 
-        if(count($key_piped) === 1)
-        {
+        if (count($key_piped) === 1) {
             return null;
         }
 
-        if(null === $counter || 1 === $counter)
-        {
+        if (null === $counter || 1 === $counter) {
             return $key_piped[0];
         }
 
         return $key_piped[1];
     }
+
     /**
      * @param string   $key
      * @param int|null $counter

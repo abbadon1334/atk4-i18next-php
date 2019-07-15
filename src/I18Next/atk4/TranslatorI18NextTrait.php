@@ -39,7 +39,6 @@ trait TranslatorI18NextTrait
         ?string $domain = null,
         ?string $locale = null
     ): string {
-
         if (null === $this->translator) {
             throw new Exception('Translator for TranslatorI18NextTrait must be defined with setTranslator');
         }
