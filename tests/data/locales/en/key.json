@@ -23,5 +23,6 @@
     "key_4": "many",
     "key_5": "other",
     "key_nesting_interpolate1": "hello world",
-    "key_nesting_interpolate2": "say {{val}}"
+    "key_nesting_interpolate2": "say {{val}}",
+    "key4_interval": "(1){one item};(2-7){a few items};(7-inf){a lot of items};"
 }

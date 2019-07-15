@@ -131,6 +131,9 @@ $cases = [
         'en' => 'user : {{user.first_name}} {{user.last_name}} with email : {{address.email}}',
         'it' => 'utente : {{user.first_name}} {{user.last_name}} con email : {{address.email}}',
     ],
+    'key4_interval' => [
+        'en' => '(1){one item};(2-7){a few items};(7-inf){a lot of items};',
+    ],
 ];
 
 $path_def = [];
