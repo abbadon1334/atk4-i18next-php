@@ -38,10 +38,14 @@ final class KeyInterval extends AbstractProcessorKey
 
         $count_intervals = count(explode(';', trim($this->value, ';')));
 
-        $re = '/\((\S*)\)\{(.[^\}]*)\}/m';
         //$str = '(1){one item};(2-7){a few items};(7-inf){a lot of items};';
-
-        preg_match_all($re, $this->value, $matches, PREG_SET_ORDER, 0);
+        preg_match_all(
+            '/\((\S*)\)\{(.[^\}]*)\}/m',
+            $this->value,
+            $matches,
+            PREG_SET_ORDER,
+            0
+        );
 
         if (count($matches) !== $count_intervals) {
             throw new TranslationSyntaxError([
