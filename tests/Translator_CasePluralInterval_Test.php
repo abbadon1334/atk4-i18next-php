@@ -87,21 +87,4 @@ class Translator_CasePluralInterval_Test extends TranslatorBaseCase
         $this->translator->setTranslationsPath($path);
         $this->translator->setLanguagePrimary('en');
     }
-
-    public function testException3()
-    {
-        $this->expectException(TranslationSyntaxError::class);
-
-        $path = '/tmp/locale_exception';
-        @mkdir($path . '/en', 0777, true);
-
-        file_put_contents(
-            $path . '/en/exception.json',
-            json_encode(["key4_interval" => "(1){one item};"])
-        );
-
-        $this->translator = new Translator();
-        $this->translator->setTranslationsPath($path);
-        $this->translator->setLanguagePrimary('en');
-    }
 }
