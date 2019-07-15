@@ -33,8 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "I18Next\\": "src/I18Next/",
-            "atk4\\core\\": "src/I18Next/atk4/core/"
+            "I18Next\\": "src/I18Next/"
         }
     },
     "autoload-dev": {
