@@ -1,14 +1,13 @@
 <?php
 
-
 namespace I18Next\Locale\Processor\Key;
 
 final class KeyPlural extends AbstractProcessorKey
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
-    static public function willBeProcessed(string $key): bool
+    public static function willBeProcessed(string $key): bool
     {
         if ('plural' !== $key) {
             return false;
@@ -18,10 +17,10 @@ final class KeyPlural extends AbstractProcessorKey
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function process(): void
     {
-        $this->results[$this->getKeyCleared() . '/2'] = $this->value;
+        $this->results[$this->getKeyCleared().'/2'] = $this->value;
     }
 }
