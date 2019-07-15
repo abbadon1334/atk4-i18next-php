@@ -175,7 +175,7 @@ final class Translations
 
             /*
             if (count($match) < 3) {
-            
+
                 throw new TranslationSyntaxError([
                     'Interval value syntax incorrect : '.$value,
                     'key' => $key,
