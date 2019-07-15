@@ -176,6 +176,7 @@ final class Translations
 
         foreach($matches as $match)
         {
+            /*
             if(count($match) < 3)
             {
                 throw new TranslationSyntaxError([
@@ -186,6 +187,7 @@ final class Translations
                     'error_match' => $match
                 ]);
             }
+            */
 
             $interval    = explode('-', $match[1]);
 
