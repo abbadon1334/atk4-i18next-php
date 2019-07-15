@@ -172,7 +172,10 @@ final class Translations
         }
 
         foreach ($matches as $match) {
+
+            /*
             if (count($match) < 3) {
+
                 throw new TranslationSyntaxError([
                     'Interval value syntax incorrect : '.$value,
                     'key' => $key,
@@ -181,6 +184,7 @@ final class Translations
                     'error_match' => $match,
                 ]);
             }
+            */
 
             $interval = explode('-', $match[1]);
 

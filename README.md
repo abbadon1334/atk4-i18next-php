@@ -73,18 +73,17 @@ $result = $this->translator->_('namespace:definitionKey', ['param1' => 'test'], 
 ## Support I18Next
 #####  http://i18next.com
 
-- [x] Read files from folder, every folder is a language code
+- [x] Read translations files from folder, every folder is a language code
     - [x] JSON
     - [ ] YAML
     - [ ] PHP Array
-- [ ] Write files to a folder, every folder is a language code
+- [ ] Write translations files to a folder, every folder is a language code
     - [ ] JSON
     - [ ] YAML
     - [ ] PHP Array
 - [x] Get a defined translation in primary language
     - [x] If not found try in fallback language
         - [x] If not found return original string
-- [ ] Collect missing requested keys
 - [x] Namespaces
     - [x] Get defined translation based on prioritized fallback namespaces
 - [x] Context as {key}_{context}
@@ -94,6 +93,7 @@ $result = $this->translator->_('namespace:definitionKey', ['param1' => 'test'], 
     - [x] Multiple plurals as {key}_{int $counter}
         - [x] Manage when $counter is bigger than max defined plurals
     - [x] Nested interpolate plurals
+    - [x] Intervals
 - [x] Interpolate        
     - [x] Replace {{key}} with defined $paramater value
         - [x] If {{key}} has a point like {{key.index}} and $parameters[index] is an array or object will retrive the value
@@ -101,9 +101,11 @@ $result = $this->translator->_('namespace:definitionKey', ['param1' => 'test'], 
     - [x] Basic
     - [x] Plurals
 - [ ] Formatting
-- [ ] Adding Helper for use method Translator::_ as global functions _
-- [ ] Adding Helper for use Translator as a global singleton instance
-- [ ] Adding Helper for search/collect calls to method Translator _ in code    
+- [x] Adding Helper for use method Translator::_ as global functions __
+- [x] Adding Helper for use Translator as a global singleton instance
+- [ ] Collect missing requested keys
+- [ ] Adding Helper for search/collect calls to method Translator _ in code
+- [x] Added direct translations using key as translation    
 
 ## Support ATK4 - Agile Toolkit Model
 ##### https://www.agiletoolkit.org
