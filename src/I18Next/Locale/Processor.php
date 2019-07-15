@@ -21,6 +21,11 @@ final class Processor
     /** @var Value */
     private $processorValue;
 
+    /**
+     * Processor constructor.
+     *
+     * @param Translations $translations
+     */
     public function __construct(Translations $translations)
     {
         $this->translations = $translations;
@@ -58,6 +63,11 @@ final class Processor
         return null;
     }
 
+    /**
+     * @param $key
+     *
+     * @return mixed|void
+     */
     private function getKeyNamespace($key)
     {
         preg_match('/^(\S+)\:/', $key, $matches);
@@ -69,21 +79,43 @@ final class Processor
         return $matches[1];
     }
 
+    /**
+     * @param array|null $parameters
+     *
+     * @return int|null
+     */
     private function getCountFromParameters(?array $parameters = null): ?int
     {
         return isset($parameters['count']) ? (int) $parameters['count'] : null;
     }
 
+    /**
+     * @param array|null  $parameters
+     * @param string|null $context
+     *
+     * @return string|null
+     */
     private function getContextFromParameters(?array $parameters = null, ?string $context = null): ?string
     {
         return $parameters['context'] ?? $context;
     }
 
+    /**
+     * @param array|null $parameters
+     *
+     * @return mixed|null
+     */
     private function getNamespaceFromParameters(?array $parameters)
     {
         return $parameters['namespace'] ?? null;
     }
 
+    /**
+     * @param string      $key
+     * @param string|null $keyNamespaceFromParameters
+     *
+     * @return string
+     */
     private function processKeyForNamespaces(string $key, ?string $keyNamespaceFromParameters = null): string
     {
         if (null === $keyNamespaceFromParameters) {
