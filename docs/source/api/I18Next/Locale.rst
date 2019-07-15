@@ -42,9 +42,18 @@ Methods
 
 	.. php:method:: public __construct( $code)
 	
-		:Source:
-			`src/I18Next/Locale.php#22 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L22>`_
+		.. rst-class:: phpdoc-description
 		
+			| Locale constructor\.
+			
+		
+		:Source:
+			`src/I18Next/Locale.php#33 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L33>`_
+		
+		
+		:Parameters:
+			* **$code** (string)  
+
 		
 	
 	
@@ -54,7 +63,7 @@ Methods
 	.. php:method:: public load( $path, $use_filename_as_namespace, ...$namespace_priority)
 	
 		:Source:
-			`src/I18Next/Locale.php#36 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L36>`_
+			`src/I18Next/Locale.php#47 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L47>`_
 		
 		
 		:Parameters:
@@ -72,9 +81,16 @@ Methods
 	.. php:method:: public process( $key, $parameters=null, $context=null)
 	
 		:Source:
-			`src/I18Next/Locale.php#41 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L41>`_
+			`src/I18Next/Locale.php#59 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L59>`_
 		
 		
+		:Parameters:
+			* **$key** (string)  
+			* **$parameters** (array | null)  
+			* **$context** (string | null)  
+
+		
+		:Returns: string | null 
 	
 	
 
@@ -83,8 +99,12 @@ Methods
 	.. php:method:: public setLoaderFormat( $format)
 	
 		:Source:
-			`src/I18Next/Locale.php#46 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L46>`_
+			`src/I18Next/Locale.php#67 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale.php#L67>`_
 		
+		
+		:Parameters:
+			* **$format** (string)  
+
 		
 	
 	

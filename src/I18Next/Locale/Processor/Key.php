@@ -31,6 +31,12 @@ final class Key extends AbstractProcessor
         return $this->processWithNamespaceWithCounter($key, $counter);
     }
 
+    /**
+     * @param string   $key
+     * @param int|null $counter
+     *
+     * @return mixed|null
+     */
     private function processWithCounter(string $key, ?int $counter = null)
     {
         if (null === $counter) {
@@ -61,6 +67,11 @@ final class Key extends AbstractProcessor
         return $this->process($key.'/'.$counter);
     }
 
+    /**
+     * @param $key
+     *
+     * @return mixed|null
+     */
     private function process($key)
     {
         $key = str_replace('.', '/', $key);
@@ -68,6 +79,12 @@ final class Key extends AbstractProcessor
         return $this->translations->getConfig($key) ?? null;
     }
 
+    /**
+     * @param string   $key
+     * @param int|null $counter
+     *
+     * @return mixed|null
+     */
     private function processWithNamespaceWithCounter(string $key, ?int $counter = null)
     {
         if (null === $counter) {
@@ -92,6 +109,11 @@ final class Key extends AbstractProcessor
         return $this->processWithNamespace($key.'/'.$counter);
     }
 
+    /**
+     * @param $key
+     *
+     * @return mixed|null
+     */
     private function processWithNamespace($key)
     {
         $key_namespace = $this->getKeyNamespace($key);
@@ -115,6 +137,11 @@ final class Key extends AbstractProcessor
         }
     }
 
+    /**
+     * @param $key
+     *
+     * @return string|null
+     */
     private function getKeyNamespace($key)
     {
         // any strange charcter is forced by filesystem and i hope common sense
@@ -125,6 +152,12 @@ final class Key extends AbstractProcessor
         return null !== $result ? trim($result, ':') : null;
     }
 
+    /**
+     * @param $key
+     * @param $namespace
+     *
+     * @return bool|string
+     */
     private function getOnlyKeyFromNamespacedKey($key, $namespace)
     {
         return substr($key, $namespace ? strlen($namespace.':') : 0);

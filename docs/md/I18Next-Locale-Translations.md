@@ -83,9 +83,25 @@ Methods
 
 
 
+### loadSingle
+
+    array I18Next\Locale\Translations::loadSingle(string path)
+
+
+
+
+
+* Visibility: **private**
+
+
+#### Arguments
+* path **string**
+
+
+
 ### useFilenameAsNamespace
 
-    mixed I18Next\Locale\Translations::useFilenameAsNamespace(?bool enabled)
+    mixed I18Next\Locale\Translations::useFilenameAsNamespace(bool|null enabled)
 
 
 
@@ -95,7 +111,7 @@ Methods
 
 
 #### Arguments
-* enabled **?bool**
+* enabled **bool|null**
 
 
 
@@ -115,6 +131,24 @@ Methods
 
 
 
+### processKeyVariation
+
+    mixed I18Next\Locale\Translations::processKeyVariation(string processorClass, string key, value)
+
+
+
+
+
+* Visibility: **private**
+
+
+#### Arguments
+* processorClass **string**
+* key **string**
+* value **mixed**
+
+
+
 ### afterReadProcessForKeyCounters
 
     mixed I18Next\Locale\Translations::afterReadProcessForKeyCounters()
@@ -125,42 +159,6 @@ Methods
 
 * Visibility: **private**
 
-
-
-
-### processForCounterKey
-
-    mixed I18Next\Locale\Translations::processForCounterKey(string key_plural_definition, string key, string value)
-
-
-
-
-
-* Visibility: **private**
-
-
-#### Arguments
-* key_plural_definition **string**
-* key **string**
-* value **string**
-
-
-
-### processForIntervalKey
-
-    mixed I18Next\Locale\Translations::processForIntervalKey(string key_plural_definition, string key, string value)
-
-
-
-
-
-* Visibility: **private**
-
-
-#### Arguments
-* key_plural_definition **string**
-* key **string**
-* value **string**
 
 
 
@@ -196,7 +194,7 @@ Methods
 
 ### useNamespaces
 
-    mixed I18Next\Locale\Translations::useNamespaces()
+    bool I18Next\Locale\Translations::useNamespaces()
 
 
 
@@ -209,7 +207,7 @@ Methods
 
 ### getNamespaceRanked
 
-    mixed I18Next\Locale\Translations::getNamespaceRanked()
+    string[] I18Next\Locale\Translations::getNamespaceRanked()
 
 
 

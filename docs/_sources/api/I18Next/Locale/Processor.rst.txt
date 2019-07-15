@@ -45,9 +45,18 @@ Methods
 
 	.. php:method:: public __construct( $translations)
 	
-		:Source:
-			`src/I18Next/Locale/Processor.php#24 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor.php#L24>`_
+		.. rst-class:: phpdoc-description
 		
+			| Processor constructor\.
+			
+		
+		:Source:
+			`src/I18Next/Locale/Processor.php#29 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor.php#L29>`_
+		
+		
+		:Parameters:
+			* **$translations** (:any:`I18Next\\Locale\\Translations <I18Next\\Locale\\Translations>`)  
+
 		
 	
 	
@@ -57,7 +66,7 @@ Methods
 	.. php:method:: public process( $key, $parameters=null, $context=null)
 	
 		:Source:
-			`src/I18Next/Locale/Processor.php#38 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor.php#L38>`_
+			`src/I18Next/Locale/Processor.php#43 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor.php#L43>`_
 		
 		
 		:Parameters:

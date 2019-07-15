@@ -20,7 +20,7 @@ Properties
 
 ### $translations
 
-    protected \I18Next\Locale\Translations $translations
+    protected \I18Next\Locale\Processor\Translations $translations
 
 
 
@@ -35,7 +35,7 @@ Methods
 
 ### processValue
 
-    mixed I18Next\Locale\Processor\Value::processValue(found_key, parameters)
+    string|null I18Next\Locale\Processor\Value::processValue(string|null found_key, array|null parameters)
 
 
 
@@ -45,14 +45,14 @@ Methods
 
 
 #### Arguments
-* found_key **mixed**
-* parameters **mixed**
+* found_key **string|null**
+* parameters **array|null**
 
 
 
 ### processValueInterpolate
 
-    mixed I18Next\Locale\Processor\Value::processValueInterpolate(found_key, parameters)
+    mixed|string I18Next\Locale\Processor\Value::processValueInterpolate(string found_key, array|null parameters)
 
 
 
@@ -62,14 +62,14 @@ Methods
 
 
 #### Arguments
-* found_key **mixed**
-* parameters **mixed**
+* found_key **string**
+* parameters **array|null**
 
 
 
 ### processValueReplaceParameter
 
-    mixed I18Next\Locale\Processor\Value::processValueReplaceParameter(found_key, index, parameters)
+    mixed|string I18Next\Locale\Processor\Value::processValueReplaceParameter(string found_key, index, parameters)
 
 
 
@@ -79,7 +79,7 @@ Methods
 
 
 #### Arguments
-* found_key **mixed**
+* found_key **string**
 * index **mixed**
 * parameters **mixed**
 
@@ -87,7 +87,7 @@ Methods
 
 ### processValueNested
 
-    mixed I18Next\Locale\Processor\Value::processValueNested(found_key, parameters)
+    mixed I18Next\Locale\Processor\Value::processValueNested(string found_key, array parameters)
 
 
 
@@ -97,16 +97,16 @@ Methods
 
 
 #### Arguments
-* found_key **mixed**
-* parameters **mixed**
+* found_key **string**
+* parameters **array**
 
 
 
 ### __construct
 
-    mixed I18Next\Locale\Processor\AbstractProcessor::__construct(translations)
+    mixed I18Next\Locale\Processor\AbstractProcessor::__construct(\I18Next\Locale\Processor\Translations translations)
 
-
+AbstractProcessor constructor.
 
 
 
@@ -115,6 +115,6 @@ Methods
 
 
 #### Arguments
-* translations **mixed**
+* translations **I18Next\Locale\Processor\Translations**
 
 

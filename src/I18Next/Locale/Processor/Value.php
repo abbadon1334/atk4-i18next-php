@@ -11,15 +11,23 @@ use I18Next\Locale\Processor;
  */
 final class Value extends AbstractProcessor
 {
+    /**
+     * @param string|null $found_key
+     * @param array|null  $parameters
+     *
+     * @return string|null
+     */
     public function processValue(?string &$found_key, ?array $parameters): ?string
     {
-        if (null === $found_key) {
-            return null;
-        }
-
         return $this->processValueInterpolate($found_key, $parameters);
     }
 
+    /**
+     * @param string     $found_key
+     * @param array|null $parameters
+     *
+     * @return mixed|string
+     */
     private function processValueInterpolate(string &$found_key, ?array $parameters = null)
     {
         $parameters = $parameters ?? [];
@@ -51,6 +59,13 @@ final class Value extends AbstractProcessor
         return $found_key;
     }
 
+    /**
+     * @param string $found_key
+     * @param        $index
+     * @param        $parameters
+     *
+     * @return mixed|string
+     */
     private function processValueReplaceParameter(string &$found_key, $index, $parameters)
     {
         $value = $parameters[$index] ?? null;
@@ -78,6 +93,10 @@ final class Value extends AbstractProcessor
         return $found_key;
     }
 
+    /**
+     * @param string $found_key
+     * @param array  $parameters
+     */
     private function processValueNested(string &$found_key, array $parameters): void
     {
         preg_match_all(
@@ -116,11 +135,6 @@ final class Value extends AbstractProcessor
             }
 
             $value = (new Processor($this->translations))->process((string) $nested_key, (array) $nested_parameters);
-
-            // $value can return null
-            if (null === $value) {
-                return;
-            }
 
             $found_key = str_replace($match_found, $value, $found_key);
         }

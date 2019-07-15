@@ -43,9 +43,15 @@ Methods
 	.. php:method:: public processValue( &$found_key, $parameters)
 	
 		:Source:
-			`src/I18Next/Locale/Processor/Value.php#14 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/Value.php#L14>`_
+			`src/I18Next/Locale/Processor/Value.php#20 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/Value.php#L20>`_
 		
 		
+		:Parameters:
+			* **$found_key** (string | null)  
+			* **$parameters** (array | null)  
+
+		
+		:Returns: string | null 
 	
 	
 

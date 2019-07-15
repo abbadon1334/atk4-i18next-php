@@ -20,7 +20,7 @@ Properties
 
 ### $translations
 
-    protected \I18Next\Locale\Translations $translations
+    protected \I18Next\Locale\Processor\Translations $translations
 
 
 
@@ -35,9 +35,9 @@ Methods
 
 ### __construct
 
-    mixed I18Next\Locale\Processor\AbstractProcessor::__construct(translations)
+    mixed I18Next\Locale\Processor\AbstractProcessor::__construct(\I18Next\Locale\Processor\Translations translations)
 
-
+AbstractProcessor constructor.
 
 
 
@@ -45,6 +45,6 @@ Methods
 
 
 #### Arguments
-* translations **mixed**
+* translations **I18Next\Locale\Processor\Translations**
 
 

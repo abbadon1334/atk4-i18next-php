@@ -12,6 +12,15 @@ Processor
 \\I18Next\\Locale\\Processor
 
 
+Namespaces
+----------
+
+.. toctree::
+	:maxdepth: 1
+	
+	Key <Key/index>
+
+
 Classes
 -------
 

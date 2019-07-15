@@ -30,7 +30,7 @@ Properties
 
 ### $processor
 
-    private mixed $processor
+    private \I18Next\Processor $processor
 
 
 
@@ -41,7 +41,7 @@ Properties
 
 ### $translations
 
-    private mixed $translations
+    private \I18Next\Translations $translations
 
 
 
@@ -56,9 +56,9 @@ Methods
 
 ### __construct
 
-    mixed I18Next\Locale::__construct(code)
+    mixed I18Next\Locale::__construct(string code)
 
-
+Locale constructor.
 
 
 
@@ -66,7 +66,7 @@ Methods
 
 
 #### Arguments
-* code **mixed**
+* code **string**
 
 
 
@@ -90,7 +90,7 @@ Methods
 
 ### process
 
-    mixed I18Next\Locale::process(key, parameters, context)
+    string|null I18Next\Locale::process(string key, array|null parameters, string|null context)
 
 
 
@@ -100,15 +100,15 @@ Methods
 
 
 #### Arguments
-* key **mixed**
-* parameters **mixed**
-* context **mixed**
+* key **string**
+* parameters **array|null**
+* context **string|null**
 
 
 
 ### setLoaderFormat
 
-    mixed I18Next\Locale::setLoaderFormat(format)
+    mixed I18Next\Locale::setLoaderFormat(string format)
 
 
 
@@ -118,6 +118,6 @@ Methods
 
 
 #### Arguments
-* format **mixed**
+* format **string**
 
 

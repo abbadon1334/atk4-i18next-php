@@ -58,7 +58,7 @@ Methods
 
     mixed I18Next\Locale\Processor::__construct(\I18Next\Locale\Translations translations)
 
-
+Processor constructor.
 
 
 
@@ -90,7 +90,7 @@ Methods
 
 ### getKeyNamespace
 
-    mixed I18Next\Locale\Processor::getKeyNamespace(key)
+    mixed|void I18Next\Locale\Processor::getKeyNamespace(key)
 
 
 
@@ -106,7 +106,7 @@ Methods
 
 ### getCountFromParameters
 
-    mixed I18Next\Locale\Processor::getCountFromParameters(?array parameters)
+    int|null I18Next\Locale\Processor::getCountFromParameters(array|null parameters)
 
 
 
@@ -116,13 +116,13 @@ Methods
 
 
 #### Arguments
-* parameters **?array**
+* parameters **array|null**
 
 
 
 ### getContextFromParameters
 
-    mixed I18Next\Locale\Processor::getContextFromParameters(?array parameters, ?string context)
+    string|null I18Next\Locale\Processor::getContextFromParameters(array|null parameters, string|null context)
 
 
 
@@ -132,14 +132,14 @@ Methods
 
 
 #### Arguments
-* parameters **?array**
-* context **?string**
+* parameters **array|null**
+* context **string|null**
 
 
 
 ### getNamespaceFromParameters
 
-    mixed I18Next\Locale\Processor::getNamespaceFromParameters(?array parameters)
+    mixed|null I18Next\Locale\Processor::getNamespaceFromParameters(array|null parameters)
 
 
 
@@ -149,13 +149,13 @@ Methods
 
 
 #### Arguments
-* parameters **?array**
+* parameters **array|null**
 
 
 
 ### processKeyForNamespaces
 
-    mixed I18Next\Locale\Processor::processKeyForNamespaces(string key, ?string keyNamespaceFromParameters)
+    string I18Next\Locale\Processor::processKeyForNamespaces(string key, string|null keyNamespaceFromParameters)
 
 
 
@@ -166,6 +166,6 @@ Methods
 
 #### Arguments
 * key **string**
-* keyNamespaceFromParameters **?string**
+* keyNamespaceFromParameters **string|null**
 
 

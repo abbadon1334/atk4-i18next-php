@@ -173,7 +173,7 @@ Methods
 
     mixed I18Next\TranslatorStatic::register()
 
-Register global function _
+Register global function _.
 
 
 

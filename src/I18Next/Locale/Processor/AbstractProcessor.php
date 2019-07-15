@@ -14,6 +14,11 @@ abstract class AbstractProcessor
     /** @var Translations */
     protected $translations;
 
+    /**
+     * AbstractProcessor constructor.
+     *
+     * @param Translations $translations
+     */
     public function __construct(Translations $translations)
     {
         $this->translations = $translations;
