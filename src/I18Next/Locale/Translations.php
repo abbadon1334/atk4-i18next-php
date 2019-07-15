@@ -172,15 +172,16 @@ final class Translations
         }
 
         foreach ($matches as $match) {
+
             /*
-            if(count($match) < 3)
-            {
+            if (count($match) < 3) {
+            
                 throw new TranslationSyntaxError([
-                    'Interval value syntax incorrect : ' . $value,
+                    'Interval value syntax incorrect : '.$value,
                     'key' => $key,
                     'value' => $value,
                     'matches' => $matches,
-                    'error_match' => $match
+                    'error_match' => $match,
                 ]);
             }
             */
