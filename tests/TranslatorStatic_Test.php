@@ -5,9 +5,8 @@ namespace I18Next;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class TranslatorStatic_Test
+ * Class TranslatorStatic_Test.
  *
- * @package I18Next
  * @runTestsInSeparateProcesses
  */
 class TranslatorStatic_Test extends TestCase
@@ -18,8 +17,8 @@ class TranslatorStatic_Test extends TestCase
     {
         TranslatorStatic::setTranslationsPath($this->path);
         $this->addToAssertionCount(1);
-
     }
+
     /*
     public function testSetTranslationsPath()
     {

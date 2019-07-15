@@ -10,7 +10,7 @@ use I18Next\TranslatorStatic;
  *
  * @return string
  */
-function __(string $key, ?array $parameters = NULL, ?string $context = NULL, ?string $locale = NULL): string
+function __(string $key, ?array $parameters = null, ?string $context = null, ?string $locale = null): string
 {
     return TranslatorStatic::_($key, $parameters, $context, $locale);
 }

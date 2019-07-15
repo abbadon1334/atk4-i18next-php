@@ -6,7 +6,6 @@ namespace I18Next;
 
 use atk4\core\Exception;
 use I18Next\Exception\LanguageAlreadyPresent;
-use I18Next\Exception\LanguageLocaleNotExists;
 use I18Next\Exception\LanguageNamespaceMisuse;
 use I18Next\Exception\LanguagePathNotDefined;
 use I18Next\Exception\Misusage;
@@ -18,13 +17,13 @@ final class TranslatorStatic
 
     public static function instance() : Translator
     {
-        if(!self::$translator)
-        {
+        if (! self::$translator) {
             self::$translator = new Translator();
         }
 
         return self::$translator;
     }
+
     /**
      * @param string $path
      *
@@ -99,13 +98,13 @@ final class TranslatorStatic
      *
      * @return string
      */
-    public static function _(string $key, ?array $parameters = NULL, ?string $context = NULL, ?string $locale = NULL): string
+    public static function _(string $key, ?array $parameters = null, ?string $context = null, ?string $locale = null): string
     {
         return self::instance()->_($key, $parameters, $context, $locale);
     }
 
     /**
-     * Register global function _
+     * Register global function _.
      */
     public static function register()
     {

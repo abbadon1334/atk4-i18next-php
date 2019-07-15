@@ -138,7 +138,6 @@ final class Translations
         $this->setConfig($cleared_key.'/'.(string) $counter, $value);
     }
 
-
     private function processForIntervalKey(string $key_plural_definition, string $key, string $value): void
     {
         $cleared_key = substr(
@@ -147,67 +146,62 @@ final class Translations
             (strlen($key_plural_definition) + 1 /* the extra undescore before the plural_definition */) * -1
         );
 
-        $check_last = substr($value,-1) === ';';
+        $check_last = substr($value, -1) === ';';
 
-        if(!$check_last)
-        {
+        if (! $check_last) {
             throw new TranslationSyntaxError([
-                'Interval declaration must end with ";" (' . $key .' => ' . $value . ')',
+                'Interval declaration must end with ";" ('.$key.' => '.$value.')',
                 'key' => $key,
-                'value' => $value
+                'value' => $value,
             ]);
         }
 
-        $count_intervals = count(explode(';', trim($value,';')));
+        $count_intervals = count(explode(';', trim($value, ';')));
 
         $re = '/\((\S*)\)\{(.[^\}]*)\}/m';
         //$str = '(1){one item};(2-7){a few items};(7-inf){a lot of items};';
 
         preg_match_all($re, $value, $matches, PREG_SET_ORDER, 0);
 
-        if(count($matches) !== $count_intervals)
-        {
+        if (count($matches) !== $count_intervals) {
             throw new TranslationSyntaxError([
-                'Interval declaration syntax error (' . $key .' => ' . $value . ')',
+                'Interval declaration syntax error ('.$key.' => '.$value.')',
                 'key' => $key,
-                'value' => $value
+                'value' => $value,
             ]);
         }
 
-        foreach($matches as $match)
-        {
+        foreach ($matches as $match) {
+
             /*
-            if(count($match) < 3)
-            {
+            if (count($match) < 3) {
+
                 throw new TranslationSyntaxError([
-                    'Interval value syntax incorrect : ' . $value,
+                    'Interval value syntax incorrect : '.$value,
                     'key' => $key,
                     'value' => $value,
                     'matches' => $matches,
-                    'error_match' => $match
+                    'error_match' => $match,
                 ]);
             }
             */
 
-            $interval    = explode('-', $match[1]);
+            $interval = explode('-', $match[1]);
 
             $interval_start = $interval[0];
-            $interval_end   = $interval[1] ?? $interval[0];
-            if($interval_end === "inf")
-            {
+            $interval_end = $interval[1] ?? $interval[0];
+            if ($interval_end === 'inf') {
                 $interval_end = $interval_start;
             }
 
             $translation = $match[2];
 
-            if($interval_start === $interval_end)
-            {
+            if ($interval_start === $interval_end) {
                 $this->setConfig($cleared_key.'/'.(string) $interval_start, $translation);
                 continue;
             }
 
-            for($i = $interval_start; $i < $interval_end;$i++)
-            {
+            for ($i = $interval_start; $i < $interval_end; $i++) {
                 $this->setConfig($cleared_key.'/'.(string) $i, $translation);
             }
         }
