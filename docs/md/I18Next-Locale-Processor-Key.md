@@ -20,7 +20,7 @@ Properties
 
 ### $translations
 
-    protected \I18Next\Locale\Translations $translations
+    protected \I18Next\Locale\Processor\Translations $translations
 
 
 
@@ -53,7 +53,7 @@ Methods
 
 ### processWithCounter
 
-    mixed I18Next\Locale\Processor\Key::processWithCounter(key, counter)
+    mixed|null I18Next\Locale\Processor\Key::processWithCounter(string key, int|null counter)
 
 
 
@@ -63,14 +63,14 @@ Methods
 
 
 #### Arguments
-* key **mixed**
-* counter **mixed**
+* key **string**
+* counter **int|null**
 
 
 
 ### process
 
-    mixed I18Next\Locale\Processor\Key::process(key)
+    mixed|null I18Next\Locale\Processor\Key::process(key)
 
 
 
@@ -86,7 +86,7 @@ Methods
 
 ### processWithNamespaceWithCounter
 
-    mixed I18Next\Locale\Processor\Key::processWithNamespaceWithCounter(key, counter)
+    mixed|null I18Next\Locale\Processor\Key::processWithNamespaceWithCounter(string key, int|null counter)
 
 
 
@@ -96,14 +96,14 @@ Methods
 
 
 #### Arguments
-* key **mixed**
-* counter **mixed**
+* key **string**
+* counter **int|null**
 
 
 
 ### processWithNamespace
 
-    mixed I18Next\Locale\Processor\Key::processWithNamespace(key)
+    mixed|null I18Next\Locale\Processor\Key::processWithNamespace(key)
 
 
 
@@ -119,7 +119,7 @@ Methods
 
 ### getKeyNamespace
 
-    mixed I18Next\Locale\Processor\Key::getKeyNamespace(key)
+    string|null I18Next\Locale\Processor\Key::getKeyNamespace(key)
 
 
 
@@ -135,7 +135,7 @@ Methods
 
 ### getOnlyKeyFromNamespacedKey
 
-    mixed I18Next\Locale\Processor\Key::getOnlyKeyFromNamespacedKey(key, namespace)
+    bool|string I18Next\Locale\Processor\Key::getOnlyKeyFromNamespacedKey(key, namespace)
 
 
 
@@ -152,9 +152,9 @@ Methods
 
 ### __construct
 
-    mixed I18Next\Locale\Processor\AbstractProcessor::__construct(translations)
+    mixed I18Next\Locale\Processor\AbstractProcessor::__construct(\I18Next\Locale\Processor\Translations translations)
 
-
+AbstractProcessor constructor.
 
 
 
@@ -163,6 +163,6 @@ Methods
 
 
 #### Arguments
-* translations **mixed**
+* translations **I18Next\Locale\Processor\Translations**
 
 

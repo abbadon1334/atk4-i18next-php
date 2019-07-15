@@ -47,9 +47,18 @@ Methods
 
 	.. php:method:: public __construct( $translations)
 	
-		:Source:
-			`src/I18Next/Locale/Processor/AbstractProcessor.php#17 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/AbstractProcessor.php#L17>`_
+		.. rst-class:: phpdoc-description
 		
+			| AbstractProcessor constructor\.
+			
+		
+		:Source:
+			`src/I18Next/Locale/Processor/AbstractProcessor.php#22 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Processor/AbstractProcessor.php#L22>`_
+		
+		
+		:Parameters:
+			* **$translations** (:any:`I18Next\\Locale\\Translations <I18Next\\Locale\\Translations>`)  
+
 		
 	
 	
