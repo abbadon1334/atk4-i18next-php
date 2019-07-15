@@ -16,8 +16,14 @@ final class Key extends AbstractProcessor
      *
      * @return string|null
      */
-    public function processKey(string $key, ?string $context = null, ?int $counter = null)
+    public function processKey(string $key, ?string $context = null, ?int $counter = null) :?string
     {
+        $key_piped = $this->processDirectPipedKey($key, $counter);
+
+        if (null !== $key_piped) {
+            return $key_piped;
+        }
+
         // if defined add context needed in any case
         if ($context) {
             $key .= '_'.$context;
@@ -29,6 +35,21 @@ final class Key extends AbstractProcessor
         }
 
         return $this->processWithNamespaceWithCounter($key, $counter);
+    }
+
+    private function processDirectPipedKey($key, ?int $counter = null) : ?string
+    {
+        $key_piped = explode('|', $key);
+
+        if (count($key_piped) === 1) {
+            return null;
+        }
+
+        if (null === $counter || 1 === $counter) {
+            return $key_piped[0];
+        }
+
+        return $key_piped[1];
     }
 
     /**
