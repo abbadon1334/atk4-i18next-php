@@ -1,17 +1,15 @@
 <?php
 
-
 namespace I18Next\Locale\Processor\Key;
-
 
 final class KeyCounter extends AbstractProcessorKey
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
-    static public function willBeProcessed(string $key): bool
+    public static function willBeProcessed(string $key): bool
     {
-        if (!is_numeric($key)) {
+        if (! is_numeric($key)) {
             return false;
         }
 
@@ -19,10 +17,10 @@ final class KeyCounter extends AbstractProcessorKey
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function process(): void
     {
-        $this->results[$this->getKeyCleared() . '/' . $this->key_plural] = $this->value;
+        $this->results[$this->getKeyCleared().'/'.$this->key_plural] = $this->value;
     }
 }

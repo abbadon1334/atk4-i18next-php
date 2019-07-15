@@ -1,8 +1,6 @@
 <?php
 
-
 namespace I18Next\Locale\Processor\Key;
-
 
 abstract class AbstractProcessorKey
 {
@@ -28,8 +26,8 @@ abstract class AbstractProcessorKey
     public function __construct(string $key_plural, string $key, $value)
     {
         $this->key_plural = $key_plural;
-        $this->key        = $key;
-        $this->value      = $value;
+        $this->key = $key;
+        $this->value = $value;
     }
 
     /**
@@ -70,10 +68,7 @@ abstract class AbstractProcessorKey
      *
      * @return bool
      */
-    abstract static public function willBeProcessed(string $key): bool;
+    abstract public static function willBeProcessed(string $key): bool;
 
-    /**
-     *
-     */
     abstract protected function process(): void;
 }

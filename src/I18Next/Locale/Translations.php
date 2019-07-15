@@ -9,9 +9,6 @@ use atk4\core\Exception;
 use DirectoryIterator;
 use I18Next\Exception\TranslationSyntaxError;
 use I18Next\Locale\Processor\Key\AbstractProcessorKey;
-use I18Next\Locale\Processor\Key\KeyCounter;
-use I18Next\Locale\Processor\Key\KeyInterval;
-use I18Next\Locale\Processor\Key\KeyPlural;
 
 /**
  * @internal
@@ -71,7 +68,7 @@ final class Translations
     {
         $configs = [];
         foreach (new DirectoryIterator($path) as $fileInfo) {
-            if (!$fileInfo->isFile()) {
+            if (! $fileInfo->isFile()) {
                 continue;
             }
 
@@ -82,12 +79,13 @@ final class Translations
             $this->afterReadProcessForKeyCounters();
             $this->afterReadProcessForKeyDeepInline();
 
-            $this->afterReadAddNamespaceIfNeeded($configs, $fileInfo->getBasename('.' . $this->loader_format_ext));
+            $this->afterReadAddNamespaceIfNeeded($configs, $fileInfo->getBasename('.'.$this->loader_format_ext));
 
             // always reset config after every load
             // to prevent merging with other config in ConfigTrait
             $this->config = [];
         }
+
         return $configs;
     }
 
@@ -123,12 +121,11 @@ final class Translations
         $key_plural_definition = explode('_', $key);
         $key_plural_definition = end($key_plural_definition);
 
-        $processorClass = '\I18Next\Locale\Processor\Key\\' . $processorClass;
+        $processorClass = '\I18Next\Locale\Processor\Key\\'.$processorClass;
 
         /** @var AbstractProcessorKey $processorClass */
         $processor = new $processorClass($key_plural_definition, $key, $value);
-        if(!$processorClass::willBeProcessed($key_plural_definition))
-        {
+        if (! $processorClass::willBeProcessed($key_plural_definition)) {
             return;
         }
 
@@ -139,8 +136,7 @@ final class Translations
             $this->setConfig($cleared_key.'/1', $key_plural_one);
         }
 
-        foreach($processor->getResult() as $processed_key => $processed_value)
-        {
+        foreach ($processor->getResult() as $processed_key => $processed_value) {
             $this->setConfig($processed_key, $processed_value);
         }
     }
@@ -151,15 +147,12 @@ final class Translations
     private function afterReadProcessForKeyCounters(): void
     {
         foreach ($this->config as $key => $value) {
-            $this->processKeyVariation("KeyPlural", $key, $value);
-            $this->processKeyVariation("KeyCounter", $key, $value);
-            $this->processKeyVariation("KeyInterval", $key, $value);
+            $this->processKeyVariation('KeyPlural', $key, $value);
+            $this->processKeyVariation('KeyCounter', $key, $value);
+            $this->processKeyVariation('KeyInterval', $key, $value);
         }
     }
 
-    /**
-     *
-     */
     private function afterReadProcessForKeyDeepInline(): void
     {
         $filtered = array_filter($this->config, function ($key) {
@@ -217,5 +210,4 @@ final class Translations
         // @TODO Feature - Loading different format : set extension definition here based on $format
         $this->loader_format_ext = $format;
     }
-
 }
