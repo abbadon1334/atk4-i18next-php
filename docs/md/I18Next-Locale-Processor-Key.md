@@ -51,6 +51,23 @@ Methods
 
 
 
+### processDirectPipedKey
+
+    mixed I18Next\Locale\Processor\Key::processDirectPipedKey(key, ?int counter)
+
+
+
+
+
+* Visibility: **private**
+
+
+#### Arguments
+* key **mixed**
+* counter **?int**
+
+
+
 ### processWithCounter
 
     mixed|null I18Next\Locale\Processor\Key::processWithCounter(string key, int|null counter)

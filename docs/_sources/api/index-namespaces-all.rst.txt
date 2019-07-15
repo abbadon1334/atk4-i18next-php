@@ -15,6 +15,5 @@ Namespaces
 	\I18Next\Locale\Processor <I18Next/Locale/Processor/index>
 	\I18Next\Locale\Processor\Key <I18Next/Locale/Processor/Key/index>
 	\I18Next\atk4 <I18Next/atk4/index>
-	\atk4\core <atk4/core/index>
 	
 	

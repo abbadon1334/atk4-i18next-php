@@ -16,7 +16,7 @@ Translations
 
 
 	:Source:
-		`src/I18Next/Locale/Translations.php#19 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L19>`_
+		`src/I18Next/Locale/Translations.php#16 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L16>`_
 	
 	:Used traits:
 		:php:trait:`atk4\\core\\ConfigTrait` 
@@ -48,7 +48,7 @@ Properties
 .. php:attr:: protected static namespace_priority
 
 	:Source:
-		`src/I18Next/Locale/Translations.php#27 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L27>`_
+		`src/I18Next/Locale/Translations.php#24 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L24>`_
 	
 	:Type: string[] 
 
@@ -56,7 +56,7 @@ Properties
 .. php:attr:: protected static use_filename_as_namespace
 
 	:Source:
-		`src/I18Next/Locale/Translations.php#30 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L30>`_
+		`src/I18Next/Locale/Translations.php#27 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L27>`_
 	
 	:Type: bool 
 
@@ -69,7 +69,7 @@ Methods
 	.. php:method:: public load( $path, $use_filename_as_namespace, ...$namespace_priority)
 	
 		:Source:
-			`src/I18Next/Locale/Translations.php#45 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L45>`_
+			`src/I18Next/Locale/Translations.php#42 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L42>`_
 		
 		
 		:Parameters:
@@ -87,7 +87,7 @@ Methods
 	.. php:method:: public useFilenameAsNamespace( $enabled)
 	
 		:Source:
-			`src/I18Next/Locale/Translations.php#97 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L97>`_
+			`src/I18Next/Locale/Translations.php#95 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L95>`_
 		
 		
 		:Parameters:
@@ -102,7 +102,7 @@ Methods
 	.. php:method:: public useNamespaces()
 	
 		:Source:
-			`src/I18Next/Locale/Translations.php#197 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L197>`_
+			`src/I18Next/Locale/Translations.php#190 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L190>`_
 		
 		
 		:Returns: bool 
@@ -114,7 +114,7 @@ Methods
 	.. php:method:: public getNamespaceRanked()
 	
 		:Source:
-			`src/I18Next/Locale/Translations.php#205 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L205>`_
+			`src/I18Next/Locale/Translations.php#198 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L198>`_
 		
 		
 		:Returns: string[] 
@@ -126,7 +126,7 @@ Methods
 	.. php:method:: public setLoaderFormat( $format)
 	
 		:Source:
-			`src/I18Next/Locale/Translations.php#213 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L213>`_
+			`src/I18Next/Locale/Translations.php#206 <https://github.com/abbadon1334/atk4-i18next-php/blob/master/src/I18Next/Locale/Translations.php#L206>`_
 		
 		
 		:Parameters:

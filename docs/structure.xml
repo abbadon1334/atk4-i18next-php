@@ -322,6 +322,194 @@
       </docblock>
     </class>
   </file>
+  <file path="src/I18Next/Locale/Processor/Key/KeyPlural.php" generated-path="src.I18Next.Locale.Processor.Key.KeyPlural.html" hash="500b301853d50a0de0ba042614afd90c" package="global">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="\"/>
+    </docblock>
+    <namespace-alias name="\I18Next\Locale\Processor\Key">\I18Next\Locale\Processor\Key</namespace-alias>
+    <class final="true" abstract="false" namespace="I18Next\Locale\Processor\Key" line="5" package="global">
+      <extends>\I18Next\Locale\Processor\Key\AbstractProcessorKey</extends>
+      <name>KeyPlural</name>
+      <full_name>\I18Next\Locale\Processor\Key\KeyPlural</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="\"/>
+        <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="8" package="global">
+        <name>$key_plural</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key_plural</full_name>
+        <default></default>
+        <docblock line="8">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="8" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="11" package="global">
+        <name>$key</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key</full_name>
+        <default></default>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="11" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="14" package="global">
+        <name>$value</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$value</full_name>
+        <default></default>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="14" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="17" package="global">
+        <name>$results</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$results</full_name>
+        <default>[]</default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="17" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="10" package="global">
+        <name>willBeProcessed</name>
+        <full_name>\I18Next\Locale\Processor\Key\KeyPlural::willBeProcessed()</full_name>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_willBeProcessed"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="22" package="global">
+        <name>process</name>
+        <full_name>\I18Next\Locale\Processor\Key\KeyPlural::process()</full_name>
+        <docblock line="22">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_process"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="26" package="global">
+        <name>__construct</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::__construct()</full_name>
+        <docblock line="26">
+          <description>AbstractProcessorKey constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="" type="string" variable="key_plural">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="26" description="" type="string" variable="key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="26" description="" type="" variable="value">
+            <type></type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key_plural</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>value</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="36" package="global">
+        <name>getKeyCleared</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getKeyCleared()</full_name>
+        <docblock line="36">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="36" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="49" package="global">
+        <name>getResult</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getResult()</full_name>
+        <docblock line="49">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="49" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="61" package="global">
+        <name>check</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::check()</full_name>
+        <docblock line="61">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="61" description="" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="true" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="71" package="global">
+        <name>willBeProcessed</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="71" description="" type="string" variable="key">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="71" description="" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="73" package="global">
+        <name>process</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()</full_name>
+        <docblock line="73">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+    </class>
+  </file>
   <file path="src/I18Next/Exception/Misusage.php" generated-path="src.I18Next.Exception.Misusage.html" hash="41f9f7ef0b0befb8e58ac63d74d8cd92" package="global">
     <docblock line="0">
       <description></description>
@@ -587,7 +775,7 @@
       </docblock>
     </class>
   </file>
-  <file path="src/I18Next/Locale/Processor/Key.php" generated-path="src.I18Next.Locale.Processor.Key.html" hash="b1f94cf4f6b1ba7844277e27e16f5fe0" package="global">
+  <file path="src/I18Next/Locale/Processor/Key.php" generated-path="src.I18Next.Locale.Processor.Key.html" hash="61cd45609741063e3611ca42be6cecd3" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -655,20 +843,38 @@
           <type>int|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="40" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="41" package="global">
+        <name>processDirectPipedKey</name>
+        <full_name>\I18Next\Locale\Processor\Key::processDirectPipedKey()</full_name>
+        <docblock line="41">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>counter</name>
+          <default>null</default>
+          <type>?int</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="63" package="global">
         <name>processWithCounter</name>
         <full_name>\I18Next\Locale\Processor\Key::processWithCounter()</full_name>
-        <docblock line="40">
+        <docblock line="63">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="40" description="" type="string" variable="key">
+          <tag name="param" line="63" description="" type="string" variable="key">
             <type>string</type>
           </tag>
-          <tag name="param" line="40" description="" type="int|null" variable="counter">
+          <tag name="param" line="63" description="" type="int|null" variable="counter">
             <type>int</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="40" description="" type="mixed|null">
+          <tag name="return" line="63" description="" type="mixed|null">
             <type>mixed</type>
             <type>null</type>
           </tag>
@@ -684,16 +890,16 @@
           <type>int|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="75" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="98" package="global">
         <name>process</name>
         <full_name>\I18Next\Locale\Processor\Key::process()</full_name>
-        <docblock line="75">
+        <docblock line="98">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="75" description="" type="" variable="key">
+          <tag name="param" line="98" description="" type="" variable="key">
             <type></type>
           </tag>
-          <tag name="return" line="75" description="" type="mixed|null">
+          <tag name="return" line="98" description="" type="mixed|null">
             <type>mixed</type>
             <type>null</type>
           </tag>
@@ -704,20 +910,20 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="88" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="111" package="global">
         <name>processWithNamespaceWithCounter</name>
         <full_name>\I18Next\Locale\Processor\Key::processWithNamespaceWithCounter()</full_name>
-        <docblock line="88">
+        <docblock line="111">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="88" description="" type="string" variable="key">
+          <tag name="param" line="111" description="" type="string" variable="key">
             <type>string</type>
           </tag>
-          <tag name="param" line="88" description="" type="int|null" variable="counter">
+          <tag name="param" line="111" description="" type="int|null" variable="counter">
             <type>int</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="88" description="" type="mixed|null">
+          <tag name="return" line="111" description="" type="mixed|null">
             <type>mixed</type>
             <type>null</type>
           </tag>
@@ -733,16 +939,16 @@
           <type>int|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="117" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="140" package="global">
         <name>processWithNamespace</name>
         <full_name>\I18Next\Locale\Processor\Key::processWithNamespace()</full_name>
-        <docblock line="117">
+        <docblock line="140">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="117" description="" type="" variable="key">
+          <tag name="param" line="140" description="" type="" variable="key">
             <type></type>
           </tag>
-          <tag name="return" line="117" description="" type="mixed|null">
+          <tag name="return" line="140" description="" type="mixed|null">
             <type>mixed</type>
             <type>null</type>
           </tag>
@@ -753,16 +959,16 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="145" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="168" package="global">
         <name>getKeyNamespace</name>
         <full_name>\I18Next\Locale\Processor\Key::getKeyNamespace()</full_name>
-        <docblock line="145">
+        <docblock line="168">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="145" description="" type="" variable="key">
+          <tag name="param" line="168" description="" type="" variable="key">
             <type></type>
           </tag>
-          <tag name="return" line="145" description="" type="string|null">
+          <tag name="return" line="168" description="" type="string|null">
             <type>string</type>
             <type>null</type>
           </tag>
@@ -773,19 +979,19 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="161" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale\Processor" line="184" package="global">
         <name>getOnlyKeyFromNamespacedKey</name>
         <full_name>\I18Next\Locale\Processor\Key::getOnlyKeyFromNamespacedKey()</full_name>
-        <docblock line="161">
+        <docblock line="184">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="161" description="" type="" variable="key">
+          <tag name="param" line="184" description="" type="" variable="key">
             <type></type>
           </tag>
-          <tag name="param" line="161" description="" type="" variable="namespace">
+          <tag name="param" line="184" description="" type="" variable="namespace">
             <type></type>
           </tag>
-          <tag name="return" line="161" description="" type="bool|string">
+          <tag name="return" line="184" description="" type="bool|string">
             <type>bool</type>
             <type>string</type>
           </tag>
@@ -980,49 +1186,61 @@
       </method>
     </class>
   </file>
-  <file path="src/I18Next/Locale/Translations.php" generated-path="src.I18Next.Locale.Translations.html" hash="87d540ab9f3ff2179f795c0c5dc017cd" package="global">
+  <file path="src/I18Next/Locale/Translations.php" generated-path="src.I18Next.Locale.Translations.html" hash="8550d5f315435ffae99eb8bfacecd64c" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="\"/>
     </docblock>
     <namespace-alias name="\I18Next\Locale">\I18Next\Locale</namespace-alias>
-    <class final="true" abstract="false" namespace="I18Next\Locale" line="19" package="global">
+    <class final="true" abstract="false" namespace="I18Next\Locale" line="16" package="global">
       <name>Translations</name>
       <full_name>\I18Next\Locale\Translations</full_name>
-      <docblock line="19">
+      <docblock line="16">
         <description></description>
         <long-description></long-description>
-        <tag name="internal" line="19" description=""/>
-        <tag name="package" line="19" description="\"/>
+        <tag name="internal" line="16" description=""/>
+        <tag name="package" line="16" description="\"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="I18Next\Locale" line="27" package="global">
+      <property static="false" visibility="protected" namespace="I18Next\Locale" line="24" package="global">
         <name>$namespace_priority</name>
         <full_name>\I18Next\Locale\Translations::$namespace_priority</full_name>
         <default>[]</default>
-        <docblock line="27">
+        <docblock line="24">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="27" description="" type="string[]" variable="">
+          <tag name="var" line="24" description="" type="string[]" variable="">
             <type>string[]</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale" line="30" package="global">
+      <property static="false" visibility="protected" namespace="I18Next\Locale" line="27" package="global">
         <name>$use_filename_as_namespace</name>
         <full_name>\I18Next\Locale\Translations::$use_filename_as_namespace</full_name>
         <default>false</default>
-        <docblock line="30">
+        <docblock line="27">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="30" description="" type="bool" variable="">
+          <tag name="var" line="27" description="" type="bool" variable="">
             <type>bool</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="I18Next\Locale" line="33" package="global">
+      <property static="false" visibility="private" namespace="I18Next\Locale" line="30" package="global">
         <name>$loader_format</name>
         <full_name>\I18Next\Locale\Translations::$loader_format</full_name>
+        <default>json</default>
+        <docblock line="30">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="30" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="I18Next\Locale" line="33" package="global">
+        <name>$loader_format_ext</name>
+        <full_name>\I18Next\Locale\Translations::$loader_format_ext</full_name>
         <default>json</default>
         <docblock line="33">
           <description></description>
@@ -1032,35 +1250,23 @@
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="I18Next\Locale" line="36" package="global">
-        <name>$loader_format_ext</name>
-        <full_name>\I18Next\Locale\Translations::$loader_format_ext</full_name>
-        <default>json</default>
-        <docblock line="36">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="36" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale" line="45" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale" line="42" package="global">
         <name>load</name>
         <full_name>\I18Next\Locale\Translations::load()</full_name>
-        <docblock line="45">
+        <docblock line="42">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="45" description="" type="string" variable="path">
+          <tag name="param" line="42" description="" type="string" variable="path">
             <type>string</type>
           </tag>
-          <tag name="param" line="45" description="" type="bool" variable="use_filename_as_namespace">
+          <tag name="param" line="42" description="" type="bool" variable="use_filename_as_namespace">
             <type>bool</type>
           </tag>
-          <tag name="param" line="45" description="" type="string|null" variable="namespace_priority">
+          <tag name="param" line="42" description="" type="string|null" variable="namespace_priority">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="45" description="" type="\I18Next\Locale\Exception">
+          <tag name="throws" line="42" description="" type="\I18Next\Locale\Exception">
             <type>\I18Next\Locale\Exception</type>
           </tag>
         </docblock>
@@ -1074,28 +1280,28 @@
           <default></default>
           <type/>
         </argument>
-        <argument line="45" by_reference="false">
+        <argument line="42" by_reference="false">
           <name>namespace_priority</name>
           <default></default>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="70" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="67" package="global">
         <name>loadSingle</name>
         <full_name>\I18Next\Locale\Translations::loadSingle()</full_name>
-        <docblock line="70">
+        <docblock line="67">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="70" description="" type="string" variable="path">
+          <tag name="param" line="67" description="" type="string" variable="path">
             <type>string</type>
           </tag>
-          <tag name="return" line="70" description="" type="array">
+          <tag name="return" line="67" description="" type="array">
             <type>array</type>
           </tag>
-          <tag name="throws" line="70" description="" type="\I18Next\Locale\Exception">
+          <tag name="throws" line="67" description="" type="\I18Next\Locale\Exception">
             <type>\I18Next\Locale\Exception</type>
           </tag>
-          <tag name="throws" line="70" description="" type="\I18Next\Locale\TranslationSyntaxError">
+          <tag name="throws" line="67" description="" type="\I18Next\Locale\TranslationSyntaxError">
             <type>\I18Next\Locale\TranslationSyntaxError</type>
           </tag>
         </docblock>
@@ -1105,13 +1311,13 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale" line="97" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale" line="95" package="global">
         <name>useFilenameAsNamespace</name>
         <full_name>\I18Next\Locale\Translations::useFilenameAsNamespace()</full_name>
-        <docblock line="97">
+        <docblock line="95">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="97" description="" type="bool|null" variable="enabled">
+          <tag name="param" line="95" description="" type="bool|null" variable="enabled">
             <type>bool</type>
             <type>null</type>
           </tag>
@@ -1122,27 +1328,27 @@
           <type>bool|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="105" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="103" package="global">
         <name>setNamespacePriority</name>
         <full_name>\I18Next\Locale\Translations::setNamespacePriority()</full_name>
-        <docblock line="105">
+        <docblock line="103">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="105" description="" type="string|null" variable="namespace_priority">
+          <tag name="param" line="103" description="" type="string|null" variable="namespace_priority">
             <type>string</type>
             <type>null</type>
           </tag>
         </docblock>
-        <argument line="105" by_reference="false">
+        <argument line="103" by_reference="false">
           <name>namespace_priority</name>
           <default></default>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="121" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="119" package="global">
         <name>processKeyVariation</name>
         <full_name>\I18Next\Locale\Translations::processKeyVariation()</full_name>
-        <docblock line="121">
+        <docblock line="119">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -1162,35 +1368,35 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="151" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="147" package="global">
         <name>afterReadProcessForKeyCounters</name>
         <full_name>\I18Next\Locale\Translations::afterReadProcessForKeyCounters()</full_name>
-        <docblock line="151">
+        <docblock line="147">
           <description></description>
           <long-description></long-description>
-          <tag name="throws" line="151" description="" type="\I18Next\Locale\Exception">
+          <tag name="throws" line="147" description="" type="\I18Next\Locale\Exception">
             <type>\I18Next\Locale\Exception</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="163" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="156" package="global">
         <name>afterReadProcessForKeyDeepInline</name>
         <full_name>\I18Next\Locale\Translations::afterReadProcessForKeyDeepInline()</full_name>
-        <docblock line="163">
+        <docblock line="156">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="179" package="global">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="I18Next\Locale" line="172" package="global">
         <name>afterReadAddNamespaceIfNeeded</name>
         <full_name>\I18Next\Locale\Translations::afterReadAddNamespaceIfNeeded()</full_name>
-        <docblock line="179">
+        <docblock line="172">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="179" description="" type="array" variable="config">
+          <tag name="param" line="172" description="" type="array" variable="config">
             <type>array</type>
           </tag>
-          <tag name="param" line="179" description="" type="string" variable="namespace">
+          <tag name="param" line="172" description="" type="string" variable="namespace">
             <type>string</type>
           </tag>
         </docblock>
@@ -1205,35 +1411,35 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale" line="197" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale" line="190" package="global">
         <name>useNamespaces</name>
         <full_name>\I18Next\Locale\Translations::useNamespaces()</full_name>
-        <docblock line="197">
+        <docblock line="190">
           <description></description>
           <long-description></long-description>
-          <tag name="return" line="197" description="" type="bool">
+          <tag name="return" line="190" description="" type="bool">
             <type>bool</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale" line="205" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale" line="198" package="global">
         <name>getNamespaceRanked</name>
         <full_name>\I18Next\Locale\Translations::getNamespaceRanked()</full_name>
-        <docblock line="205">
+        <docblock line="198">
           <description></description>
           <long-description></long-description>
-          <tag name="return" line="205" description="" type="string[]">
+          <tag name="return" line="198" description="" type="string[]">
             <type>string[]</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale" line="213" package="global">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale" line="206" package="global">
         <name>setLoaderFormat</name>
         <full_name>\I18Next\Locale\Translations::setLoaderFormat()</full_name>
-        <docblock line="213">
+        <docblock line="206">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="213" description="" type="string" variable="format">
+          <tag name="param" line="206" description="" type="string" variable="format">
             <type>string</type>
           </tag>
         </docblock>
@@ -1245,7 +1451,7 @@
       </method>
     </class>
   </file>
-  <file path="src/I18Next/atk4/TranslatorI18NextTrait.php" generated-path="src.I18Next.atk4.TranslatorI18NextTrait.html" hash="c76afeeade3ca3dbd5463933119fec25" package="global">
+  <file path="src/I18Next/atk4/TranslatorI18NextTrait.php" generated-path="src.I18Next.atk4.TranslatorI18NextTrait.html" hash="6f4ae398111a18004bd41f50104e69a3" package="global">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1267,8 +1473,8 @@
         <docblock line="13">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="13" description="" type="\I18Next\TranslatorInterface" variable="">
-            <type>\I18Next\TranslatorInterface</type>
+          <tag name="var" line="13" description="" type="\I18Next\atk4\TranslatorInterface" variable="">
+            <type>\I18Next\atk4\TranslatorInterface</type>
           </tag>
         </docblock>
       </property>
@@ -1278,11 +1484,11 @@
         <docblock line="20">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="20" description="" type="\I18Next\TranslatorInterface" variable="translator">
-            <type>\I18Next\TranslatorInterface</type>
+          <tag name="param" line="20" description="" type="\I18Next\atk4\TranslatorInterface" variable="translator">
+            <type>\I18Next\atk4\TranslatorInterface</type>
           </tag>
-          <tag name="return" line="20" description="" type="\I18Next\TranslatorInterface">
-            <type>\I18Next\TranslatorInterface</type>
+          <tag name="return" line="20" description="" type="\I18Next\atk4\TranslatorInterface">
+            <type>\I18Next\atk4\TranslatorInterface</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -1312,8 +1518,8 @@
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="36" description="" type="\atk4\core\Exception">
-            <type>\atk4\core\Exception</type>
+          <tag name="throws" line="36" description="" type="\I18Next\atk4\Exception">
+            <type>\I18Next\atk4\Exception</type>
           </tag>
           <tag name="return" line="36" description="The translated string" type="string">
             <type>string</type>
@@ -1341,6 +1547,194 @@
         </argument>
       </method>
     </trait>
+  </file>
+  <file path="src/I18Next/Locale/Processor/Key/KeyCounter.php" generated-path="src.I18Next.Locale.Processor.Key.KeyCounter.html" hash="104e4b18077b8ffb78c4636f5f5bd4bc" package="global">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="\"/>
+    </docblock>
+    <namespace-alias name="\I18Next\Locale\Processor\Key">\I18Next\Locale\Processor\Key</namespace-alias>
+    <class final="true" abstract="false" namespace="I18Next\Locale\Processor\Key" line="5" package="global">
+      <extends>\I18Next\Locale\Processor\Key\AbstractProcessorKey</extends>
+      <name>KeyCounter</name>
+      <full_name>\I18Next\Locale\Processor\Key\KeyCounter</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="\"/>
+        <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="8" package="global">
+        <name>$key_plural</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key_plural</full_name>
+        <default></default>
+        <docblock line="8">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="8" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="11" package="global">
+        <name>$key</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key</full_name>
+        <default></default>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="11" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="14" package="global">
+        <name>$value</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$value</full_name>
+        <default></default>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="14" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="17" package="global">
+        <name>$results</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$results</full_name>
+        <default>[]</default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="17" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="10" package="global">
+        <name>willBeProcessed</name>
+        <full_name>\I18Next\Locale\Processor\Key\KeyCounter::willBeProcessed()</full_name>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_willBeProcessed"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="22" package="global">
+        <name>process</name>
+        <full_name>\I18Next\Locale\Processor\Key\KeyCounter::process()</full_name>
+        <docblock line="22">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_process"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="26" package="global">
+        <name>__construct</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::__construct()</full_name>
+        <docblock line="26">
+          <description>AbstractProcessorKey constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="" type="string" variable="key_plural">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="26" description="" type="string" variable="key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="26" description="" type="" variable="value">
+            <type></type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key_plural</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>value</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="36" package="global">
+        <name>getKeyCleared</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getKeyCleared()</full_name>
+        <docblock line="36">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="36" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="49" package="global">
+        <name>getResult</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getResult()</full_name>
+        <docblock line="49">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="49" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="61" package="global">
+        <name>check</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::check()</full_name>
+        <docblock line="61">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="61" description="" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="true" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="71" package="global">
+        <name>willBeProcessed</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="71" description="" type="string" variable="key">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="71" description="" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="73" package="global">
+        <name>process</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()</full_name>
+        <docblock line="73">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+    </class>
   </file>
   <file path="src/I18Next/Exception/LanguageAlreadyPresent.php" generated-path="src.I18Next.Exception.LanguageAlreadyPresent.html" hash="cdc3979b2dcdef000aa1ced477c50562" package="global">
     <docblock line="0">
@@ -1377,6 +1771,163 @@
         <tag name="package" line="7" description="\"/>
         <tag name="inherited_from" description="\I18Next\Exception\Misusage" refers="\I18Next\Exception\Misusage" link="/classes/I18Next.Exception.Misusage.html"/>
       </docblock>
+    </class>
+  </file>
+  <file path="src/I18Next/Locale/Processor/Key/AbstractProcessorKey.php" generated-path="src.I18Next.Locale.Processor.Key.AbstractProcessorKey.html" hash="726b107786dde184d54e0520d384b082" package="global">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="\"/>
+    </docblock>
+    <namespace-alias name="\I18Next\Locale\Processor\Key">\I18Next\Locale\Processor\Key</namespace-alias>
+    <class final="false" abstract="true" namespace="I18Next\Locale\Processor\Key" line="5" package="global">
+      <name>AbstractProcessorKey</name>
+      <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="\"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="8" package="global">
+        <name>$key_plural</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key_plural</full_name>
+        <default></default>
+        <docblock line="8">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="8" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="11" package="global">
+        <name>$key</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key</full_name>
+        <default></default>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="11" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="14" package="global">
+        <name>$value</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$value</full_name>
+        <default></default>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="14" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="17" package="global">
+        <name>$results</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$results</full_name>
+        <default>[]</default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="17" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="26" package="global">
+        <name>__construct</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::__construct()</full_name>
+        <docblock line="26">
+          <description>AbstractProcessorKey constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="" type="string" variable="key_plural">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="26" description="" type="string" variable="key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="26" description="" type="" variable="value">
+            <type></type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key_plural</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="36" package="global">
+        <name>getKeyCleared</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getKeyCleared()</full_name>
+        <docblock line="36">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="36" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="49" package="global">
+        <name>getResult</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getResult()</full_name>
+        <docblock line="49">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="49" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="61" package="global">
+        <name>check</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::check()</full_name>
+        <docblock line="61">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="61" description="" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="true" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="71" package="global">
+        <name>willBeProcessed</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="71" description="" type="string" variable="key">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="71" description="" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="73" package="global">
+        <name>process</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()</full_name>
+        <docblock line="73">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
     </class>
   </file>
   <file path="src/I18Next/atk4/core/MultiContainerTrait.php" generated-path="src.I18Next.atk4.core.MultiContainerTrait.html" hash="a3e3f22e80160c164fbcfc6a6b0006b0" package="global">
@@ -1738,6 +2289,197 @@
       </method>
     </class>
   </file>
+  <file path="src/I18Next/Locale/Processor/Key/KeyInterval.php" generated-path="src.I18Next.Locale.Processor.Key.KeyInterval.html" hash="d9b3df011f94a07fe35b69f9582ed552" package="global">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="\"/>
+    </docblock>
+    <namespace-alias name="\I18Next\Locale\Processor\Key">\I18Next\Locale\Processor\Key</namespace-alias>
+    <class final="true" abstract="false" namespace="I18Next\Locale\Processor\Key" line="7" package="global">
+      <extends>\I18Next\Locale\Processor\Key\AbstractProcessorKey</extends>
+      <name>KeyInterval</name>
+      <full_name>\I18Next\Locale\Processor\Key\KeyInterval</full_name>
+      <docblock line="7">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="7" description="\"/>
+        <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="8" package="global">
+        <name>$key_plural</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key_plural</full_name>
+        <default></default>
+        <docblock line="8">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="8" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="11" package="global">
+        <name>$key</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key</full_name>
+        <default></default>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="11" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="14" package="global">
+        <name>$value</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$value</full_name>
+        <default></default>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="14" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="17" package="global">
+        <name>$results</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$results</full_name>
+        <default>[]</default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="17" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="12" package="global">
+        <name>willBeProcessed</name>
+        <full_name>\I18Next\Locale\Processor\Key\KeyInterval::willBeProcessed()</full_name>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_willBeProcessed"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="25" package="global">
+        <name>process</name>
+        <full_name>\I18Next\Locale\Processor\Key\KeyInterval::process()</full_name>
+        <docblock line="25">
+          <description></description>
+          <long-description></long-description>
+          <tag name="throws" line="25" description="" type="\I18Next\Locale\Processor\Key\TranslationSyntaxError">
+            <type>\I18Next\Locale\Processor\Key\TranslationSyntaxError</type>
+          </tag>
+          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_process"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="26" package="global">
+        <name>__construct</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::__construct()</full_name>
+        <docblock line="26">
+          <description>AbstractProcessorKey constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="" type="string" variable="key_plural">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="26" description="" type="string" variable="key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="26" description="" type="" variable="value">
+            <type></type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key_plural</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>value</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="36" package="global">
+        <name>getKeyCleared</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getKeyCleared()</full_name>
+        <docblock line="36">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="36" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="49" package="global">
+        <name>getResult</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getResult()</full_name>
+        <docblock line="49">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="49" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="61" package="global">
+        <name>check</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::check()</full_name>
+        <docblock line="61">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="61" description="" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="true" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="71" package="global">
+        <name>willBeProcessed</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="71" description="" type="string" variable="key">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="71" description="" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="73" package="global">
+        <name>process</name>
+        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()</full_name>
+        <docblock line="73">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
+      </method>
+    </class>
+  </file>
   <file path="src/I18Next/TranslatorStatic.php" generated-path="src.I18Next.TranslatorStatic.html" hash="cb0f9f4e96771eb7e0be2f2e1cb1b1a7" package="global">
     <docblock line="0">
       <description></description>
@@ -1959,730 +2701,6 @@
           <description>Register global function _.</description>
           <long-description></long-description>
         </docblock>
-      </method>
-    </class>
-  </file>
-  <file path="src/I18Next/Locale/Processor/Key/AbstractProcessorKey.php" generated-path="src.I18Next.Locale.Processor.Key.AbstractProcessorKey.html" hash="c4610f8b193cea0cb6a5621f9ea5fb6a" package="global">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="\"/>
-    </docblock>
-    <namespace-alias name="\I18Next\Locale\Processor\Key">\I18Next\Locale\Processor\Key</namespace-alias>
-    <class final="false" abstract="true" namespace="I18Next\Locale\Processor\Key" line="7" package="global">
-      <name>AbstractProcessorKey</name>
-      <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey</full_name>
-      <docblock line="7">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="7" description="\"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="10" package="global">
-        <name>$key_plural</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key_plural</full_name>
-        <default></default>
-        <docblock line="10">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="10" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="13" package="global">
-        <name>$key</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key</full_name>
-        <default></default>
-        <docblock line="13">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="13" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="16" package="global">
-        <name>$value</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$value</full_name>
-        <default></default>
-        <docblock line="16">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="16" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="19" package="global">
-        <name>$results</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$results</full_name>
-        <default>[]</default>
-        <docblock line="19">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="19" description="" type="array" variable="">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="28" package="global">
-        <name>__construct</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::__construct()</full_name>
-        <docblock line="28">
-          <description>AbstractProcessorKey constructor.</description>
-          <long-description></long-description>
-          <tag name="param" line="28" description="" type="string" variable="key_plural">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="28" description="" type="string" variable="key">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="28" description="" type="" variable="value">
-            <type></type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key_plural</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>value</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="38" package="global">
-        <name>getKeyCleared</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getKeyCleared()</full_name>
-        <docblock line="38">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="38" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="51" package="global">
-        <name>getResult</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getResult()</full_name>
-        <docblock line="51">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="51" description="" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="63" package="global">
-        <name>check</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::check()</full_name>
-        <docblock line="63">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="63" description="" type="bool">
-            <type>bool</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="true" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="73" package="global">
-        <name>willBeProcessed</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()</full_name>
-        <docblock line="73">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="73" description="" type="string" variable="key">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="73" description="" type="bool">
-            <type>bool</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="78" package="global">
-        <name>process</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()</full_name>
-        <docblock line="78">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-    </class>
-  </file>
-  <file path="src/I18Next/Locale/Processor/Key/KeyCounter.php" generated-path="src.I18Next.Locale.Processor.Key.KeyCounter.html" hash="416e91d9102fd6fcdf11aa27af64f72d" package="global">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="\"/>
-    </docblock>
-    <namespace-alias name="\I18Next\Locale\Processor\Key">\I18Next\Locale\Processor\Key</namespace-alias>
-    <class final="true" abstract="false" namespace="I18Next\Locale\Processor\Key" line="7" package="global">
-      <extends>\I18Next\Locale\Processor\Key\AbstractProcessorKey</extends>
-      <name>KeyCounter</name>
-      <full_name>\I18Next\Locale\Processor\Key\KeyCounter</full_name>
-      <docblock line="7">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="7" description="\"/>
-        <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="10" package="global">
-        <name>$key_plural</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key_plural</full_name>
-        <default></default>
-        <docblock line="10">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="10" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="13" package="global">
-        <name>$key</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key</full_name>
-        <default></default>
-        <docblock line="13">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="13" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="16" package="global">
-        <name>$value</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$value</full_name>
-        <default></default>
-        <docblock line="16">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="16" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="19" package="global">
-        <name>$results</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$results</full_name>
-        <default>[]</default>
-        <docblock line="19">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="19" description="" type="array" variable="">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="12" package="global">
-        <name>willBeProcessed</name>
-        <full_name>\I18Next\Locale\Processor\Key\KeyCounter::willBeProcessed()</full_name>
-        <docblock line="12">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_willBeProcessed"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="24" package="global">
-        <name>process</name>
-        <full_name>\I18Next\Locale\Processor\Key\KeyCounter::process()</full_name>
-        <docblock line="24">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_process"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="28" package="global">
-        <name>__construct</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::__construct()</full_name>
-        <docblock line="28">
-          <description>AbstractProcessorKey constructor.</description>
-          <long-description></long-description>
-          <tag name="param" line="28" description="" type="string" variable="key_plural">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="28" description="" type="string" variable="key">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="28" description="" type="" variable="value">
-            <type></type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key_plural</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>value</name>
-          <default></default>
-          <type/>
-        </argument>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="38" package="global">
-        <name>getKeyCleared</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getKeyCleared()</full_name>
-        <docblock line="38">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="38" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="51" package="global">
-        <name>getResult</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getResult()</full_name>
-        <docblock line="51">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="51" description="" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="63" package="global">
-        <name>check</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::check()</full_name>
-        <docblock line="63">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="63" description="" type="bool">
-            <type>bool</type>
-          </tag>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="true" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="73" package="global">
-        <name>willBeProcessed</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()</full_name>
-        <docblock line="73">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="73" description="" type="string" variable="key">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="73" description="" type="bool">
-            <type>bool</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type/>
-        </argument>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="78" package="global">
-        <name>process</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()</full_name>
-        <docblock line="78">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-    </class>
-  </file>
-  <file path="src/I18Next/Locale/Processor/Key/KeyInterval.php" generated-path="src.I18Next.Locale.Processor.Key.KeyInterval.html" hash="b8befbd50c777eb2a392cb48ef1ccf4e" package="global">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="\"/>
-    </docblock>
-    <namespace-alias name="\I18Next\Locale\Processor\Key">\I18Next\Locale\Processor\Key</namespace-alias>
-    <class final="true" abstract="false" namespace="I18Next\Locale\Processor\Key" line="9" package="global">
-      <extends>\I18Next\Locale\Processor\Key\AbstractProcessorKey</extends>
-      <name>KeyInterval</name>
-      <full_name>\I18Next\Locale\Processor\Key\KeyInterval</full_name>
-      <docblock line="9">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="9" description="\"/>
-        <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="10" package="global">
-        <name>$key_plural</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key_plural</full_name>
-        <default></default>
-        <docblock line="10">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="10" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="13" package="global">
-        <name>$key</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key</full_name>
-        <default></default>
-        <docblock line="13">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="13" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="16" package="global">
-        <name>$value</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$value</full_name>
-        <default></default>
-        <docblock line="16">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="16" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="19" package="global">
-        <name>$results</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$results</full_name>
-        <default>[]</default>
-        <docblock line="19">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="19" description="" type="array" variable="">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="14" package="global">
-        <name>willBeProcessed</name>
-        <full_name>\I18Next\Locale\Processor\Key\KeyInterval::willBeProcessed()</full_name>
-        <docblock line="14">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_willBeProcessed"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="27" package="global">
-        <name>process</name>
-        <full_name>\I18Next\Locale\Processor\Key\KeyInterval::process()</full_name>
-        <docblock line="27">
-          <description></description>
-          <long-description></long-description>
-          <tag name="throws" line="27" description="" type="\I18Next\Locale\Processor\Key\TranslationSyntaxError">
-            <type>\I18Next\Locale\Processor\Key\TranslationSyntaxError</type>
-          </tag>
-          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_process"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="28" package="global">
-        <name>__construct</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::__construct()</full_name>
-        <docblock line="28">
-          <description>AbstractProcessorKey constructor.</description>
-          <long-description></long-description>
-          <tag name="param" line="28" description="" type="string" variable="key_plural">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="28" description="" type="string" variable="key">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="28" description="" type="" variable="value">
-            <type></type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key_plural</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>value</name>
-          <default></default>
-          <type/>
-        </argument>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="38" package="global">
-        <name>getKeyCleared</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getKeyCleared()</full_name>
-        <docblock line="38">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="38" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="51" package="global">
-        <name>getResult</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getResult()</full_name>
-        <docblock line="51">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="51" description="" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="63" package="global">
-        <name>check</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::check()</full_name>
-        <docblock line="63">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="63" description="" type="bool">
-            <type>bool</type>
-          </tag>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="true" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="73" package="global">
-        <name>willBeProcessed</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()</full_name>
-        <docblock line="73">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="73" description="" type="string" variable="key">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="73" description="" type="bool">
-            <type>bool</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type/>
-        </argument>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="78" package="global">
-        <name>process</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()</full_name>
-        <docblock line="78">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-    </class>
-  </file>
-  <file path="src/I18Next/Locale/Processor/Key/KeyPlural.php" generated-path="src.I18Next.Locale.Processor.Key.KeyPlural.html" hash="c230459b0930fd41f3a1f86074b2106a" package="global">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="\"/>
-    </docblock>
-    <namespace-alias name="\I18Next\Locale\Processor\Key">\I18Next\Locale\Processor\Key</namespace-alias>
-    <class final="true" abstract="false" namespace="I18Next\Locale\Processor\Key" line="6" package="global">
-      <extends>\I18Next\Locale\Processor\Key\AbstractProcessorKey</extends>
-      <name>KeyPlural</name>
-      <full_name>\I18Next\Locale\Processor\Key\KeyPlural</full_name>
-      <docblock line="6">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="6" description="\"/>
-        <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="10" package="global">
-        <name>$key_plural</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key_plural</full_name>
-        <default></default>
-        <docblock line="10">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="10" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="13" package="global">
-        <name>$key</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$key</full_name>
-        <default></default>
-        <docblock line="13">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="13" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="16" package="global">
-        <name>$value</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$value</full_name>
-        <default></default>
-        <docblock line="16">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="16" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="19" package="global">
-        <name>$results</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::$results</full_name>
-        <default>[]</default>
-        <docblock line="19">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="19" description="" type="array" variable="">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="11" package="global">
-        <name>willBeProcessed</name>
-        <full_name>\I18Next\Locale\Processor\Key\KeyPlural::willBeProcessed()</full_name>
-        <docblock line="11">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_willBeProcessed"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="23" package="global">
-        <name>process</name>
-        <full_name>\I18Next\Locale\Processor\Key\KeyPlural::process()</full_name>
-        <docblock line="23">
-          <description></description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" refers="\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()" link="/classes/I18Next.Locale.Processor.Key.AbstractProcessorKey.html#method_process"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="28" package="global">
-        <name>__construct</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::__construct()</full_name>
-        <docblock line="28">
-          <description>AbstractProcessorKey constructor.</description>
-          <long-description></long-description>
-          <tag name="param" line="28" description="" type="string" variable="key_plural">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="28" description="" type="string" variable="key">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="28" description="" type="" variable="value">
-            <type></type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key_plural</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>value</name>
-          <default></default>
-          <type/>
-        </argument>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="38" package="global">
-        <name>getKeyCleared</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getKeyCleared()</full_name>
-        <docblock line="38">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="38" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="I18Next\Locale\Processor\Key" line="51" package="global">
-        <name>getResult</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::getResult()</full_name>
-        <docblock line="51">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="51" description="" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="63" package="global">
-        <name>check</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::check()</full_name>
-        <docblock line="63">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="63" description="" type="bool">
-            <type>bool</type>
-          </tag>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="true" static="true" visibility="public" namespace="I18Next\Locale\Processor\Key" line="73" package="global">
-        <name>willBeProcessed</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::willBeProcessed()</full_name>
-        <docblock line="73">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="73" description="" type="string" variable="key">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="73" description="" type="bool">
-            <type>bool</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>key</name>
-          <default></default>
-          <type/>
-        </argument>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
-      </method>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="I18Next\Locale\Processor\Key" line="78" package="global">
-        <name>process</name>
-        <full_name>\I18Next\Locale\Processor\Key\AbstractProcessorKey::process()</full_name>
-        <docblock line="78">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <inherited_from>\I18Next\Locale\Processor\Key\AbstractProcessorKey</inherited_from>
       </method>
     </class>
   </file>

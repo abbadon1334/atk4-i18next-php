@@ -30,6 +30,7 @@ Methods
 ~~~~~~~
 
 * :php:meth:`public processKey\($key, $context, $counter\)<I18Next\\Locale\\Processor\\Key::processKey\(\)>`
+* :php:meth:`private processDirectPipedKey\($key, $counter\)<I18Next\\Locale\\Processor\\Key::processDirectPipedKey\(\)>`
 * :php:meth:`private processWithCounter\($key, $counter\)<I18Next\\Locale\\Processor\\Key::processWithCounter\(\)>`
 * :php:meth:`private process\($key\)<I18Next\\Locale\\Processor\\Key::process\(\)>`
 * :php:meth:`private processWithNamespaceWithCounter\($key, $counter\)<I18Next\\Locale\\Processor\\Key::processWithNamespaceWithCounter\(\)>`
