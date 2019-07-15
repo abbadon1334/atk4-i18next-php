@@ -101,8 +101,8 @@ $result = $this->translator->_('namespace:definitionKey', ['param1' => 'test'], 
     - [x] Basic
     - [x] Plurals
 - [ ] Formatting
-- [ ] Adding Helper for use method Translator::_ as global functions _
-- [ ] Adding Helper for use Translator as a global singleton instance
+- [x] Adding Helper for use method Translator::_ as global functions __
+- [x] Adding Helper for use Translator as a global singleton instance
 - [ ] Collect missing requested keys
 - [ ] Adding Helper for search/collect calls to method Translator _ in code
 - [x] Added direct translations using key as translation    
