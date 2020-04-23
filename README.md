@@ -19,7 +19,7 @@ All documentation about the original library can be found here : http://i18next.
 ### How to use :
 
 ```
-$this->translator = new TranslatorMock();
+$this->translator = new Translator();
 $this->translator->setTranslationsPath(__DIR__.'/data/locales');
 ```
 
@@ -28,7 +28,7 @@ Define if filename will be used has namespace :
 $this->translator->useFilenameAsNamespace(true);
 ```
 
-Define primary and fallback language (name of the folders where library load files) :
+Define primary and fallback languages (using names of the folder) :
 ```
 $this->translator->setLanguagePrimary($language);
 $this->translator->setLanguageFallback($fallback);
