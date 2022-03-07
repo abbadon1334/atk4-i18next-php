@@ -18,7 +18,7 @@
     },
     "require-dev": {
         "atk4/data": "dev-develop",
-        "thecodingmachine/phpstan-safe-rule": "0.1.4",
+        "thecodingmachine/phpstan-safe-rule": "1.2.0",
         "codacy/coverage": "dev-master@dev",
         "evert/phpdoc-md": "dev-master@dev",
         "friendsofphp/php-cs-fixer": "dev-master@dev",
